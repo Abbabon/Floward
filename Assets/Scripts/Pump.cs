@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Pump : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StartEngine()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (ShipStateManager.Instance.Speed == ShipSpeed.Stop){
+            //TODO: PUMP IT (LOUDER!
+            ShipStateManager.Instance.SetShipSpeed(ShipSpeed.Normal);
+        }
     }
 }

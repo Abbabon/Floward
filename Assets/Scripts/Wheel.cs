@@ -136,7 +136,8 @@ public class Wheel : MonoBehaviour
                 wheelAngle -= wheelNewAngle - wheelPrevAngle;
         }
         // Make sure wheel angle never exceeds maximumSteeringAngle
-        wheelAngle = Mathf.Clamp(wheelAngle, -maximumSteeringAngle, maximumSteeringAngle);
+        //wheelAngle = Mathf.Clamp(wheelAngle, -maximumSteeringAngle, maximumSteeringAngle);
+        wheelAngle = Mathf.Clamp(wheelAngle, 0, maximumSteeringAngle);
         wheelPrevAngle = wheelNewAngle;
     }
 

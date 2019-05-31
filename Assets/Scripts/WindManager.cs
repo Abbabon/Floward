@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO: Add a no-wind condition?
 public enum WindState
 {
-    NoWind=0,
-    BackWind=1,
-    FrontWind=2,
+    BackWind=0,
+    FrontWind=1,
 }
 
 public class WindManager : MonoBehaviour
@@ -32,7 +32,7 @@ public class WindManager : MonoBehaviour
             {
                 _instance = this;
                 //Here any additional initialization should occur:
-                State = WindState.NoWind;
+                State = WindState.BackWind;
             }
         }
         DontDestroyOnLoad(this.gameObject);
@@ -44,11 +44,7 @@ public class WindManager : MonoBehaviour
         if (State != newState)
         {
             State = newState;
-            if (State == WindState.NoWind)
-            {
-                //TODO: animate, sound?
-            }
-            else if (State == WindState.BackWind)
+            if (State == WindState.BackWind)
             {
                 //TODO: animate, sound?
             }

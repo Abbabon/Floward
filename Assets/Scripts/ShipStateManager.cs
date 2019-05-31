@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public enum ShipSpeed
 {
     Stop=0,
-    Normal=1,
-    Fast=2,
-    SuperBoost=3
+    Normal=50,
+    Fast=100,
+    SuperBoost=200
 }
 
 public class ShipStateManager : MonoBehaviour
@@ -21,11 +22,16 @@ public class ShipStateManager : MonoBehaviour
     public ShipSpeed Speed { get => speed; set => speed = value; }
 
     private float greenLightTimerDuration = 3f;
-    private float shipStopBuffer = 2f;
+    private float shipStopBuffer = 5f;
 
     //TODO: consider moving to a seperate component for clarity
     public GameObject flag;
     private Animator flagAnimator;
+
+    private Animator shipAnimator;
+    public ParticleSystem sailsGreenLight;
+
+    public GameObject mainCamera;
 
     private void Awake()
     {
@@ -50,6 +56,8 @@ public class ShipStateManager : MonoBehaviour
     private void InitializeCachedVariables()
     {
         flagAnimator = flag.GetComponent<Animator>();
+        shipAnimator = GetComponent<Animator>();
+        speed = ShipSpeed.Stop;
     }
 
     // Start is called before the first frame update
@@ -84,6 +92,7 @@ public class ShipStateManager : MonoBehaviour
         {
             if (SailsController.Instance.State == SailsState.SailsUp)
             {
+                turnOnSailsGreenLight = false;
                 startStoppingShip = true;
             }
             else if (SailsController.Instance.State == SailsState.SailsDown)
@@ -99,7 +108,7 @@ public class ShipStateManager : MonoBehaviour
             }
             else if (SailsController.Instance.State == SailsState.SailsDown)
             {
-                //Do Nothing!
+                turnOnSailsGreenLight = false;
             }
         }
         return startStoppingShip;
@@ -109,38 +118,83 @@ public class ShipStateManager : MonoBehaviour
     private float sailLightTimer = 0f;
     private void ManageLights()
     {
-        if (turnOnSailsGreenLight)
+
+        //Sails Light Logic: 
+        if (turnOnSailsGreenLight && speed == ShipSpeed.Normal && SailsController.Instance.State == SailsState.SailsUp)
         {
             sailLightTimer += Time.deltaTime;
 
-            if (sailLightTimer >= greenLightTimerDuration)
+            if (sailLightTimer >= greenLightTimerDuration && sailsGreenLight.isStopped)
             {
-                //TODO: turn on green light, sound
+                Debug.Log("Turn on the green light!");
+                sailsGreenLight.Play();
+                //TODO: sound
             }
-        }
-        else 
-        {
-            //TODO: turn off green light, sound
+        
+        } else {
+            if (sailsGreenLight.isPlaying)
+                sailsGreenLight.Stop();
+
             sailLightTimer = 0f;
+            //TODO: sound
         }
     }
 
     private float shipStopTimer = 0f;
     private void ManageSpeed(bool startStoppingShip)
     {
-        if (startStoppingShip)
-        {
-            shipStopTimer += Time.deltaTime;
-
-            if (shipStopTimer >= shipStopBuffer)
+        //can't stop when already stopped
+        if (Speed != ShipSpeed.Stop){
+            if (startStoppingShip)
             {
-                speed = ShipSpeed.Stop;
-                //TODO: stop the ship animation, sound
+                shipStopTimer += Time.deltaTime;
+
+                if (shipStopTimer >= shipStopBuffer)
+                {
+                    shipStopTimer = 0;
+                    SetShipSpeed(ShipSpeed.Stop);
+                }
             }
         }
         else
         {
-            shipStopTimer = 0f;
+            shipStopTimer = 0;
         }
+    }
+
+    public void SetShipSpeed(ShipSpeed shipSpeed)
+    {
+        speed = shipSpeed;
+        Speedometer.Instance.SetTargetSpeed(shipSpeed);
+
+        float rotationSpeed;
+        switch (shipSpeed)
+        {
+            case ShipSpeed.Normal:
+                rotationSpeed = 5f;
+                break;
+            default:
+                rotationSpeed = 0.1f;
+                break;
+        }
+        RenderSettings.skybox.SetFloat("_RotationSpeed", rotationSpeed * -1);
+
+        shipAnimator.SetFloat("Speed", (int)shipSpeed);
+
+        //move camera
+        switch (shipSpeed)
+        {
+            case ShipSpeed.Stop:
+                mainCamera.transform.DOMove(new Vector3(0, 0, 2), 2f);
+                break;
+            case ShipSpeed.Normal:
+                mainCamera.transform.DOMove(new Vector3(0, 0, 0), 2f);
+                break;
+            default:
+                rotationSpeed = 0.1f;
+                break;
+        }
+
+        //TODO: stop ship animation, sound
     }
 }
