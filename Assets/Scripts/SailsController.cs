@@ -17,18 +17,18 @@ public class SailsController : MonoBehaviour
 
     private SailsState state;
     public SailsState State { get => state; set => state = value; }
+    public bool Locked = false;
 
-    public GameObject sails;
-    private Animator sailsAnimator;
+    public float SailsDurability; // in percentage
+
+    [SerializeField] private Animator sailsAnimator;
 
     private void Awake()
     {
-        Debug.Log("AWAKE");
         lock (padlock)
         {
             if (_instance != null && _instance != this)
             {
-                Debug.Log("DESTROY");
                 Destroy(this.gameObject);
             }
             else
@@ -38,13 +38,13 @@ public class SailsController : MonoBehaviour
                 InitializeSailsController();
             }
         }
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     private void InitializeSailsController()
     {
         state = SailsState.SailsDown;
-        sailsAnimator = sails.GetComponent<Animator>();
+        SailsDurability = 100f;
     }
 
     public void SetState(SailsState newState)
@@ -55,13 +55,33 @@ public class SailsController : MonoBehaviour
             if (state == SailsState.SailsUp)
             {
                 //TODO: sound?
+                SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.WavingFlag);
             }
-            else if (state == SailsState.SailsUp)
+            else if (state == SailsState.SailsDown)
             {
                 //TODO: sound?
+
+                //too hard:
+                //if (WindManager.Instance.State == WindState.BackWind)
+                    //PressureController.Instance.ReleaseRandomValve();
             }
-            sailsAnimator.SetBool("SailsUp", state == SailsState.SailsUp);
-            sailsAnimator.SetBool("SailsDown", state == SailsState.SailsDown);
+            sailsAnimator.SetBool("SailOpen", state == SailsState.SailsUp);
+        }
+    }
+
+    private void Update()
+    {
+        if (State == SailsState.SailsUp && WindController.Instance.Strength() == 3 && WindController.Instance.Direction() == WindDirection.FrontWind){
+            float newDurabilityValue = SailsDurability - GlobalGameplayVariables.Instance.DurabilityLossPerSecond * Time.deltaTime;
+            SailsDurability = Mathf.Clamp(newDurabilityValue, 0f, 100f);
+        }
+
+        //TODO: somehow reflect this to the player!
+
+        if (SailsDurability < 0.1f)
+        {
+            //TODO: Trigger tearing animation and only after that - game over sequence
+            GameManager.Instance.StartGameOverSequence();
         }
     }
 }

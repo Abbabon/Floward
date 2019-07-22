@@ -19,12 +19,10 @@ public class EffectsController : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("AWAKE");
         lock (padlock)
         {
             if (_instance != null && _instance != this)
             {
-                Debug.Log("DESTROY");
                 Destroy(this.gameObject);
             }
             else
@@ -35,7 +33,7 @@ public class EffectsController : MonoBehaviour
                 tornadoParticleSystem.Stop();
             }
         }
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start()

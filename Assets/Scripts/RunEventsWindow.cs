@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+
+using UnityEngine;
 using UnityEditor;
 
 public class RunEventsWindow : EditorWindow
@@ -17,3 +19,5 @@ public class RunEventsWindow : EditorWindow
         }
     }
 }
+
+#endif

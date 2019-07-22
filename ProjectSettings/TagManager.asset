@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cloud
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Fabric
   - 
   - 
   - 
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG 1
+    uniqueID: 1815367091
+    locked: 0
+  - name: Ship
+    uniqueID: 3606976445
+    locked: 0
+  - name: Forground
+    uniqueID: 681353891
     locked: 0

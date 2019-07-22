@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 0860ce0dcfe2e8d4db1a9e411ce2079f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4541390456298548150
+    second: cloud sheet v01_0
+  - first:
+      213: -7011919782358900727
+    second: cloud sheet v01_1
+  - first:
+      213: -6199254924175665301
+    second: cloud sheet v01_2
+  - first:
+      213: -3314299008218844797
+    second: cloud sheet v01_3
+  - first:
+      213: 8339273819637762089
+    second: cloud sheet v01_4
+  - first:
+      213: 7730870600818926628
+    second: cloud sheet v01_5
+  - first:
+      213: 3827932920988564874
+    second: cloud sheet v01_6
+  - first:
+      213: 4102891099029467461
+    second: cloud sheet v01_7
+  - first:
+      213: 3824002496018279423
+    second: cloud sheet v01_8
+  - first:
+      213: 5046644223079549725
+    second: cloud sheet v01_9
+  - first:
+      213: -2137093975844713372
+    second: cloud sheet v01_10
+  - first:
+      213: -158054058696887228
+    second: cloud sheet v01_11
+  - first:
+      213: 6510484306283804635
+    second: cloud sheet v01_12
+  - first:
+      213: 3577891891023082866
+    second: cloud sheet v01_13
+  - first:
+      213: 5928517368045009498
+    second: cloud sheet v01_14
+  - first:
+      213: -5297580756863170954
+    second: cloud sheet v01_15
+  - first:
+      213: -4489612289230143833
+    second: cloud sheet v01_16
+  - first:
+      213: -1208408731954272246
+    second: cloud sheet v01_17
+  - first:
+      213: 5362445163060340688
+    second: cloud sheet v01_18
+  - first:
+      213: 6192571398424827026
+    second: cloud sheet v01_19
+  - first:
+      213: -5630664848423628602
+    second: cloud sheet v01_20
+  - first:
+      213: 474798106987554984
+    second: cloud sheet v01_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cloud sheet v01_0
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1700
+        width: 608
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0897dd3b6b42ca4badf6eefefcc896a
+      internalID: 4541390456298548150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud sheet v01_1
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1563
+        width: 534
+        height: 485
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1184f448642846e4494186890d4e3c26
+      internalID: -7011919782358900727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud sheet v01_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1007
+        width: 984
+        height: 625
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c1ece6e42f1cb48a070c58c8e69def
+      internalID: -6199254924175665301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud sheet v01_4
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 961
+        width: 953
+        height: 586
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9932b41c6fc4f60479fd24651438f6b2
+      internalID: 8339273819637762089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud sheet v01_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 685
+        width: 2019
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92194002d5a61904785b88a8a23eaccc
+      internalID: 3827932920988564874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud sheet v01_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 1611
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa3eaafe3fbab74ab53f680a2357a91
+      internalID: -1208408731954272246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud sheet v01_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 1283
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a61280566904948900a7567734d5d0
+      internalID: 6192571398424827026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud sheet v01_21
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 60
+        width: 377
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fed02e274ca73f40a48375d38c491d5
+      internalID: 474798106987554984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 919b8ad50b6df164ba2fa2a6652a9faf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,21 +9,15 @@ public class WorldStateManager : MonoBehaviour
     public static WorldStateManager Instance { get { return _instance; } }
     private static readonly object padlock = new object();
 
-    private float windDirectionChangeTimer = 0f;
-    private double nextWindDirectionChange = 0f;
-
-    public float windDirectionChangeRate = 3f;
-
-    System.Random RNGesus = new System.Random();
+    [SerializeField] private float windDirectionChangeTimer = 0f;
+    [SerializeField] private double nextWindDirectionChange = 0f;
 
     private void Awake()
     {
-        Debug.Log("AWAKE");
         lock (padlock)
         {
             if (_instance != null && _instance != this)
             {
-                Debug.Log("DESTROY");
                 Destroy(this.gameObject);
             }
             else
@@ -32,49 +26,61 @@ public class WorldStateManager : MonoBehaviour
                 //Here any additional initialization should occur:
             }
         }
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start()
     {
         windDirectionChangeTimer = 0;
-        nextWindDirectionChange = GeneratePoissonNumber(windDirectionChangeRate) + GetNextWindChangeBuffer(WindManager.Instance.State);
+        RandomizeNextWindChange();
     }
 
     private void Update()
     {
-        ChangeWindDirection();
+        if (GameManager.Instance.IsRunning)
+        {
+            if (TutorialController.Instance.EnableWindChanges)
+                ChangeWindDirection();
+        }
     }
 
-    readonly int numberOfWindStates = Enum.GetValues(typeof(WindState)).Length;
     public void ChangeWindDirection()
     {
         windDirectionChangeTimer += Time.deltaTime;
 
         if (windDirectionChangeTimer >= nextWindDirectionChange)
         {
-            WindManager.Instance.State = (WindState)RNGesus.Next(0, numberOfWindStates);
-            windDirectionChangeTimer = 0;
-            nextWindDirectionChange = GeneratePoissonNumber(windDirectionChangeRate) + GetNextWindChangeBuffer(WindManager.Instance.State);
-            Debug.Log(String.Format("Next wind direction change in {0}", nextWindDirectionChange));
+            int ChangeAmount;
+            int ChangeVar = UnityEngine.Random.Range(0, 100);
+            int DirectionOfChange = UnityEngine.Random.Range(0, 2);
+
+            if (ChangeVar < 60){
+                ChangeAmount = 1;
+            }
+            else if (ChangeVar < 90){
+                ChangeAmount = 2;
+            }
+            else{
+                ChangeAmount = 3;
+            }
+
+            int FinalChange = ChangeAmount * (DirectionOfChange == 0 ? 1 : -1);
+            WindController.Instance.ChangeState(FinalChange);
+            Debug.Log(String.Format("Wind change: {0}", FinalChange));
+
+            RandomizeNextWindChange();
+            windDirectionChangeTimer = 0f;
         }
     }
 
-    private double GetNextWindChangeBuffer(WindState state)
+    private void RandomizeNextWindChange()
     {
-        switch (state)
-        {
-            case WindState.BackWind:
-                return 4f;
-            default:
-                return 3f;
-        }
+        nextWindDirectionChange = UnityEngine.Random.Range(GlobalGameplayVariables.Instance.WindChangeMin, GlobalGameplayVariables.Instance.WindChangeMax);
+        Debug.Log(String.Format("Next wind direction change in {0}", nextWindDirectionChange));
     }
 
-    private double GeneratePoissonNumber(float rate)
+    internal void SetTutorialMode()
     {
-        float res = ((float)RNGesus.Next(100) / 101.0f);
-        var a = -Math.Log(1.0f - res) / rate;
-        return a;
+        WindController.Instance.ChangeState(0);
     }
 }
