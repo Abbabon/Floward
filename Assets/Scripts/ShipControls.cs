@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipControls : MonoBehaviour
 {
     [SerializeField] private TouchController controller;
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +22,6 @@ public class ShipControls : MonoBehaviour
             if (controller.Tap && TutorialController.Instance.EnableEnginePump)
             {
                 EngineController.Instance.PumpEngine();
-                SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Pump);
             }
 
             // coooool
@@ -30,7 +29,6 @@ public class ShipControls : MonoBehaviour
             //if (controller.SwipeDown && controller.TouchInZone(TouchZone.Engine) && TutorialController.Instance.EnableCooling)
             if (controller.SwipeDown && TutorialController.Instance.EnableCooling)
             {
-                Debug.Log("Cooling");
                 EngineController.Instance.EngineCooling = true;
                 SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Cooler, true);
             }
@@ -39,7 +37,6 @@ public class ShipControls : MonoBehaviour
                 if (EngineController.Instance.EngineCooling && !controller.CurrentlyHeld)
                 {
                     EngineController.Instance.EngineCooling = false;
-                    Debug.Log("Releasing Cooling");
                 }
             }
 
@@ -71,9 +68,7 @@ public class ShipControls : MonoBehaviour
             // boost handle
 
             if (controller.SwipeDown && controller.TouchInZone(TouchZone.Boost) && TutorialController.Instance.EnableBoost)
-            //if (controller.SwipeDown && controller.TouchInZone(TouchZone.Boost) && TutorialController.Instance.EnableBoost)
             {
-                Debug.Log("Pulled!");
                 BoostController.Instance.BoostHandlePulled();
             }
         }

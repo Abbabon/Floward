@@ -21,14 +21,26 @@ public class Ship_ctrl : MonoBehaviour
     [Range(-3, 3)]
     public float wind;
 
+    [Range(0, 1)]
+    public float alertLight;
+
+    [Range(0, 100)]
+    public float speed;
+
+    public bool tap = false;
+
+    public bool fuelDrop = false;
+
     public bool boost = false;
+
+    public bool shutDown = false;
 
     void Awake()
     {
         shipAnim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         shipAnim.SetFloat("Gear", gearS);
@@ -37,14 +49,28 @@ public class Ship_ctrl : MonoBehaviour
         shipAnim.SetBool("Boost", boost);
         shipAnim.SetFloat("Wind", wind);
         shipAnim.SetFloat("FuelUsage", fuelUsage);
+        shipAnim.SetFloat("AlertLight", alertLight);
+        shipAnim.SetFloat("Speed", speed);
+        shipAnim.SetBool("ShutDown", shutDown);
 
-        //if (boost)
-        //{
-        //    boostLightsOn = 0;
-        //}
+        if (fuelDrop)
+        {
+            shipAnim.SetTrigger("FuelDrop");
+            fuelDrop = false;
+        }
+
+        if (tap)
+        {
+            shipAnim.SetBool("Tap", tap);
+            tap = false;
+        }
+
+       
     }
 
-    public void Endboost()
+    // Animation events
+
+    public void Endboost() 
     {
         boost = false;
         shipAnim.ResetTrigger("BoostStartTime");
@@ -54,5 +80,6 @@ public class Ship_ctrl : MonoBehaviour
     {
         shipAnim.SetTrigger("BoostStartTime");
     }
+
 
 }

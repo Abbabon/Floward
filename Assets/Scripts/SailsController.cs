@@ -81,7 +81,12 @@ public class SailsController : MonoBehaviour
         if (SailsDurability < 0.1f)
         {
             //TODO: Trigger tearing animation and only after that - game over sequence
-            GameManager.Instance.StartGameOverSequence();
+            TearSailOff();
         }
+    }
+
+    private void TearSailOff()
+    {
+        throw new NotImplementedException();
     }
 }

@@ -66,7 +66,6 @@ public class WorldStateManager : MonoBehaviour
 
             int FinalChange = ChangeAmount * (DirectionOfChange == 0 ? 1 : -1);
             WindController.Instance.ChangeState(FinalChange);
-            Debug.Log(String.Format("Wind change: {0}", FinalChange));
 
             RandomizeNextWindChange();
             windDirectionChangeTimer = 0f;
@@ -76,7 +75,6 @@ public class WorldStateManager : MonoBehaviour
     private void RandomizeNextWindChange()
     {
         nextWindDirectionChange = UnityEngine.Random.Range(GlobalGameplayVariables.Instance.WindChangeMin, GlobalGameplayVariables.Instance.WindChangeMax);
-        Debug.Log(String.Format("Next wind direction change in {0}", nextWindDirectionChange));
     }
 
     internal void SetTutorialMode()

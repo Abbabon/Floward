@@ -11,12 +11,15 @@ public enum TouchZone
 
 public class TouchController : MonoBehaviour
 {
-    private bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
+    private bool startTap, tap, swipeLeft, swipeRight, swipeUp, swipeDown;
     private bool currentlyHeld = false;
+    [SerializeField] private bool noSwipeWhileHolding = true;
     private bool isDragging = false;
     private Vector2 startTouch, swipeDelta;
 
     [SerializeField] private Camera mainCamera;
+
+    [SerializeField] private float swipeMagnitude = 75f;
 
     [SerializeField] private RectTransform SailsArea;
     [SerializeField] private RectTransform EngineArea;
@@ -24,81 +27,98 @@ public class TouchController : MonoBehaviour
 
     void Update()
     {
-        tap = swipeLeft = swipeRight = swipeUp = swipeDown = false;
-
-        #region Standalone Inputs
-
-        if (Input.GetMouseButtonDown(0))
+        if (GameManager.Instance.TouchEnabled)
         {
-            tap = true;
-            isDragging = true;
-            startTouch = Input.mousePosition;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            Reset();
-        }
+            tap = swipeLeft = swipeRight = swipeUp = swipeDown = false;
 
-        #endregion
+            #region Standalone Inputs
 
-        #region Mobile Inputs
-
-        if (Input.touchCount > 0)
-        {
-            if (Input.touches[0].phase == TouchPhase.Began)
+            if (Input.GetMouseButtonDown(0))
             {
-                tap = true;
                 isDragging = true;
-                startTouch = Input.touches[0].position;
+                startTouch = Input.mousePosition;
+                startTap = true;
             }
-            else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
+            else if (Input.GetMouseButtonUp(0))
             {
+                if (startTap && noSwipeWhileHolding)
+                    tap = true;
+
                 Reset();
+                noSwipeWhileHolding = true;
             }
 
-            currentlyHeld = (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Stationary);
-        }
-        else
-        {
-            currentlyHeld = Input.GetMouseButton(0);
-        }
+            #endregion
 
-        #endregion
+            #region Mobile Inputs
 
-        swipeDelta = Vector2.zero;
-
-        if (isDragging)
-        {
             if (Input.touchCount > 0)
-                swipeDelta = Input.touches[0].position - startTouch;
-            else if (Input.GetMouseButton(0))
-                swipeDelta = (Vector2)Input.mousePosition - startTouch;
-        }
-
-        if (swipeDelta.magnitude > 125)
-        {
-            float x = swipeDelta.x;
-            float y = swipeDelta.y;
-
-            if (Mathf.Abs(x) > Mathf.Abs(y))
             {
-                swipeLeft |= x < 0;
-                swipeRight |= x > 0;
+                if (Input.touches[0].phase == TouchPhase.Began)
+                {
+                    startTap = true;
+                    isDragging = true;
+                    startTouch = Input.touches[0].position;
+                }
+                else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
+                {
+                    if (startTap && noSwipeWhileHolding)
+                        tap = true;
+
+                    Reset();
+                    noSwipeWhileHolding = true;
+                }
+
+                currentlyHeld = (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Stationary);
             }
             else
             {
-                swipeDown |= y < 0;
-                swipeUp |= y > 0;
+                currentlyHeld = Input.GetMouseButton(0);
             }
 
-            Reset();
+            #endregion
+
+            swipeDelta = Vector2.zero;
+
+            if (isDragging)
+            {
+                if (Input.touchCount > 0)
+                    swipeDelta = Input.touches[0].position - startTouch;
+                else if (Input.GetMouseButton(0))
+                    swipeDelta = (Vector2)Input.mousePosition - startTouch;
+            }
+
+            if (swipeDelta.magnitude > swipeMagnitude)
+            {
+                float x = swipeDelta.x;
+                float y = swipeDelta.y;
+
+                if (Mathf.Abs(x) > Mathf.Abs(y))
+                {
+                    swipeLeft |= x < 0;
+                    swipeRight |= x > 0;
+                }
+                else
+                {
+                    swipeDown |= y < 0;
+                    swipeUp |= y > 0;
+                }
+
+                if (swipeDown || swipeUp || swipeLeft || swipeRight)
+                {
+                    noSwipeWhileHolding = false;
+                }
+
+                Reset();
+            }
         }
     }
 
-    void Reset()
+    public void Reset()
     {
         startTouch = swipeDelta = Vector2.zero;
         isDragging = false;
+        startTap = false;
     }
 
     // got a tip for this from here: https://forum.unity.com/threads/detect-when-mouseposition-in-a-recttransform.500263/

@@ -36,11 +36,13 @@ public class GlobalGameplayVariables : MonoBehaviour
     [Tooltip("In PERCENTAGE per second")]
     public float OverheatLossPerSecond = 0.5f; // in percentages
     [Tooltip("In PERCENTAGE per second")]
-    public float ActiveCoolingPerSecond = 5f; // in percentages
+    public float ActiveCoolingPerSecond = 12f; // in percentages
+    [Tooltip("In Percentage per second")]
+    public float ActiveCoolingCostPerSecond = 1f; // in percentages
     [Tooltip("In PERCENTAGE per second")]
     public float PassiveCoolingPerSecond = 2.5f; // in percentages
-    [Tooltip("In Liters per second")]
-    public float EngineCoolingCostPerSecond = 1f; // in liters
+    [Tooltip("In Percentage per second")]
+    public float PassiveCoolingCostPerSecondWhenNotHot = 10f; // in percentages
     [Tooltip("In PERCENTAGE per press")]
     public float HeatPerPress = 10f; // in percentages
 

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5882408174457196313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5882408174457196315}
+  - component: {fileID: 5882408174457196312}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5882408174457196315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882408174457196313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.57, y: 11.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5882408174457196312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882408174457196313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4eadac1a94c844e0b49c14f0d0fed97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clouds:
+  - {fileID: 4280630007721295585, guid: 5fcc66a4ee6f014458ac1b651cfddb4c, type: 3}
+  - {fileID: 6644018488039783019, guid: f59393b6d4296af488a27fad5ffda37c, type: 3}
+  - {fileID: 7869921444383685526, guid: b01ff8c1ca104e849b50d5830c66d4b7, type: 3}
+  - {fileID: 8634391887351741394, guid: dfeaa166ea49a2240bcba588a7881178, type: 3}
+  - {fileID: 2502522327786096102, guid: 8b69f26b6667c874c8e60c6b3da0b570, type: 3}
+  - {fileID: 1558886630203569455, guid: 0fae6b234c4d73d4cb9111b81890debc, type: 3}
+  - {fileID: 7619173383081792128, guid: f5ae3b190c0d3634c8c45d598e8a1998, type: 3}
+  - {fileID: 4335301179624625652, guid: cd463214a790ee94e99d1a8411897f63, type: 3}
+  - {fileID: 3672184973658014775, guid: 9ee385ce80183fa499d68696ece4a1fe, type: 3}
+  - {fileID: 7080890399752047700, guid: 52284a78823329743b6e86357ba04eb9, type: 3}
+  - {fileID: 2386664878859155270, guid: 41d0d7063304eb14389236f2e4facbf6, type: 3}
+  CloudsParent: {fileID: 0}
+  minSpawnRate: 10
+  maxSpawnRate: 15
+  timer: 0

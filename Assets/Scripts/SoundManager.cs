@@ -33,7 +33,6 @@ public class SoundManager : MonoBehaviour
         {
             if (_instance != null && _instance != this)
             {
-                Debug.Log("DESTROY");
                 Destroy(this.gameObject);
             }
             else

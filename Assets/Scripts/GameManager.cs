@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     private static readonly object padlock = new object();
 
+    [SerializeField] private TouchController touchController;
+
     [SerializeField] private CanvasGroup MenuCanvas;
     [SerializeField] private CanvasGroup PauseCanvas;
     [SerializeField] private CanvasGroup TutorialCanvas;
@@ -86,6 +88,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            touchController.Reset();
             IsRunning = TouchEnabled = true;
             shipAnimator.speed = 1;
 
@@ -99,7 +102,7 @@ public class GameManager : MonoBehaviour
         ResetAllParameters();
     }
 
-   public void StartTutorial()
+    public void StartTutorial()
     {
         PauseGame();
         TutorialController.Instance.StartTutorial();
@@ -107,7 +110,7 @@ public class GameManager : MonoBehaviour
 
     internal void ResetAllParameters()
     {
-        ShipSpeedController.Instance.Speed = 0;
+        ShipSpeedController.Instance.TargetSpeed = 0;
         ShipSpeedController.Instance.miles = 0;
         EngineController.Instance.EngineCooling = false;
         EngineController.Instance.HeatLevel = 0;
@@ -129,6 +132,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("current_score", (int)ShipSpeedController.Instance.miles);
 
         faderAnimator.SetBool("Fade", true);
-        FunctionTimer.Create(() => FlowardSceneManager.Instance.LoadFloawardScene(FlowardScene.Score), 1f);        
+        FunctionTimer.Create(() => FlowardSceneManager.Instance.LoadFloawardScene(FlowardScene.Score), 1f);
     }
 }

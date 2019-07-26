@@ -55,15 +55,17 @@ public class TutorialController : MonoBehaviour
     #region FeatureFlags
 
     public bool EnableBoost;
+    public bool EnableBoostHandle;
     public bool EnableEnginePump;
     public bool EnableCooling;
+    public bool EnablePassiveCooling;
     public bool EnableSailsUp;
     public bool EnableSailsDown;
     public bool EnableWindChanges;
 
     public void SetAllFeatures(bool setting)
     {
-        EnableBoost = EnableEnginePump = EnableCooling = EnableSailsUp = EnableSailsDown = EnableWindChanges = setting;
+        EnableBoost = EnableBoostHandle = EnableEnginePump = EnablePassiveCooling = EnableCooling = EnableSailsUp = EnableSailsDown = EnableWindChanges = setting;
     }
 
     #endregion
@@ -71,7 +73,6 @@ public class TutorialController : MonoBehaviour
 
     public void StartTutorial()
     {
-        Debug.Log("Starting Tutorial!");
         currentTutorialPhase = 0;
         inTutorial = true;
         tutorialCanvasGroup.gameObject.SetActive(true);
@@ -92,7 +93,6 @@ public class TutorialController : MonoBehaviour
         PhaseEndConditionMet = false;
 
         if (currentTutorialPhase >= tutorialPhases.Count){
-            Debug.Log("Tutorial Over!");
             SetAllFeatures(true);
             inTutorial = false;
             tutorialCanvasGroup.gameObject.SetActive(false);
@@ -105,8 +105,6 @@ public class TutorialController : MonoBehaviour
 
     public void ExecuteTutorialPhase(int phaseID)
     {
-        Debug.Log(string.Format("Starting tutorial phase {0}", phaseID));
-
         if (tutorialPhases.Any(x => x.PhaseID == phaseID))
         {
             //TODO: this could be more elegant and executed via the Scriptable object but TBH I don't think it's worth it to invest the time right now.
@@ -213,18 +211,15 @@ public class TutorialController : MonoBehaviour
     {
         FunctionTimer.Create(ShowTutorialTextBox, 1f, currentTutorialPhase.ToString());
         FunctionTimer.Create(() => ShowTutorialMarker(TutorialMarker.MarkerAnimation.SwipeDown), 1f, currentTutorialPhase.ToString());
-        FunctionTimer.Create(() => EnableCooling = true, 1f, currentTutorialPhase.ToString());
-        secondPhaseTimer = 3f; //TODO: test
+        FunctionTimer.Create(() => EnableCooling = EnablePassiveCooling = true, 1f, currentTutorialPhase.ToString());
     }
 
-    private float secondPhaseTimer;
     private void SecondPhaseUpdate()
     {
 
         if (!PhaseEndConditionMet && EngineController.Instance.EngineCooling)
         {
-            secondPhaseTimer -= Time.deltaTime;
-            if (secondPhaseTimer <= 0f)
+            if (EngineController.Instance.OverheatLevel == GlobalGameplayVariables.Instance.MaxOverheat)
             {
                 PhaseEndConditionMet = true;
                 FunctionTimer.Create(AdvanceTutorialPhase, 0.5f, currentTutorialPhase.ToString());

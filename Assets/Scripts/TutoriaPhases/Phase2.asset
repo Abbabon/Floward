@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Phase2
   m_EditorClassIdentifier: 
   PhaseID: 2
-  Text: Swipe down and hold to cool the engine.
+  Text: Swipe down and hold to cool off the engine.
   SecondsToAppear: 3

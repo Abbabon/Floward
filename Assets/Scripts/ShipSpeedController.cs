@@ -13,7 +13,9 @@ public class ShipSpeedController : MonoBehaviour
     private static readonly object padlock = new object();
 
     public bool IsBoosting = false;
-    public float Speed = 0f; // in KMph, between 0 and 100
+    public float TargetSpeed = 0f; // in KMph, between 0 and 100
+    public float CurrentSpeed = 0f; // in KMph, between 0 and 100
+    [SerializeField] private float AccelerationRate = 0.01f; //parameter used for Math.Lerp of the CurrentSpeed to TargetSpeed;
 
     public CinemachineVirtualCamera virtualCamera;
 
@@ -49,7 +51,7 @@ public class ShipSpeedController : MonoBehaviour
 
     private void InitializeCachedVariables()
     {
-       
+        CameraUnit = MaxCameraDistance - MinCameraDistance;
     }
 
     // Update is called once per frame
@@ -74,11 +76,13 @@ public class ShipSpeedController : MonoBehaviour
         float newSpeedValue = (int)EngineController.Instance.CurrentGear * GlobalGameplayVariables.Instance.SpeedEngineWeight + 
             (int)(SailsController.Instance.State) * (int)(WindController.Instance.Direction()) * (int)(WindController.Instance.Strength()) * GlobalGameplayVariables.Instance.SpeedWindWeight;
 
-        Speed = Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost);
+        TargetSpeed = Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost);
+        CurrentSpeed = Mathf.Lerp(CurrentSpeed, TargetSpeed, AccelerationRate);
 
         if (IsBoosting){
-            Speed = GlobalGameplayVariables.Instance.MaxSpeed;
+            TargetSpeed = GlobalGameplayVariables.Instance.MaxSpeed;
         }
+        ship_Ctrl.speed = TargetSpeed;
     }
 
     //set background scrolling speed (if needed - the clouds query it on their own)
@@ -87,37 +91,41 @@ public class ShipSpeedController : MonoBehaviour
 
     }
 
+    [SerializeField] private float MaxCameraDistance = 8.5f;
+    [SerializeField] private float MinCameraDistance = 6.6f;
+    private float CameraUnit;
     // change camera position if needed (if boosting)
     private void ManageCamera()
     {
-        if (Speed < 2)
-        {
-            DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 6.6f, 1f);
-        }
-        else if (Speed < 30)
-        {
-            DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 7f, 1f);
-        }
-        else if (Speed < 60)
-        {
-            DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 7.3f, 1f);
+        //if (Speed < 2)
+        //{
+        //    DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 6.6f, 1f);
+        //}
+        //else if (Speed < 30)
+        //{
+        //    DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 7f, 1f);
+        //}
+        //else if (Speed < 60)
+        //{
+        //    DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 7.3f, 1f);
 
-        }
-        else if (Speed < 80)
-        {
-            DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 7.7f, 1f);
+        //}
+        //else if (Speed < 80)
+        //{
+        //    DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 7.7f, 1f);
 
-        }
-        else if (Speed > 100)//boosting
-        {
-            DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 8.5f, 1f);
-        }
+        //}
+        //else if (Speed > 100)//boosting
+        //{
+        //    DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, 8.5f, 1f);
+        //}
+        DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, MinCameraDistance + (CurrentSpeed / GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost) * CameraUnit, 0.5f);
     }
 
     //TODO: change to Km, according to the specs>?
     private void ManageMileage()
     {
-        miles += (Speed/50) * Time.deltaTime;
+        miles += (TargetSpeed/50) * Time.deltaTime;
         milesDisplay.text = ((int)miles).ToString().PadLeft(7, '0');
     }
 
@@ -155,6 +163,6 @@ public class ShipSpeedController : MonoBehaviour
 
     public float GetSpeedFactor()
     {
-        return Mathf.Max((Speed / 10f), 1f);
+        return Mathf.Max((TargetSpeed / 10f), 1f);
     }
 }
