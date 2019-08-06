@@ -13,7 +13,10 @@ public class BoostController : MonoBehaviour
     private static readonly object padlock = new object();
 
     public float boostPercentage = 0f; //from 0 to 100 of course
- 
+
+    public delegate void BoostFull();
+    public event BoostFull OnBoostFull;
+
     private void Awake()
     {
         lock (padlock)
@@ -36,10 +39,11 @@ public class BoostController : MonoBehaviour
     {
         if (GameManager.Instance.IsRunning)
         {
-            //Manage boost bar color: 
+            //Manage boost bar color:   
             if (boostPercentage >= GlobalGameplayVariables.Instance.BoostThreshold)
             {
                 DashboardManager.Instance.TurnOnBoostPullie();
+                OnBoostFull();
             }
 
             if (ShipSpeedController.Instance.IsBoosting)
@@ -75,27 +79,28 @@ public class BoostController : MonoBehaviour
 
     public void BoostHandlePulled()
     {
-        if (!ShipSpeedController.Instance.IsBoosting && IsBoostAvailable())
+        if (!ShipSpeedController.Instance.IsBoosting && IsBoostAvailable() && !EngineController.Instance.EngineInShutdown)
         {
             if (boostPercentage >= GlobalGameplayVariables.Instance.BoostThreshold)
             {
-                //TODO: make this an additive thing like tweening
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1f, 0.02f)), 0f);
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1.6f, 0.4f)), 1f);
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(3.4f, 0.08f)), 2.6f);
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(5f, 0.04f)), 6f);
+                //TODO: move to the animation shaker:
+                //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1f, 0.02f)), 0f);
+                //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1.6f, 0.4f)), 1f);
+                //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(3.4f, 0.08f)), 2.6f);
+                //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(5f, 0.04f)), 6f);
                 
                 //Handheld.Vibrate();
 
                 //DashboardManager.Instance.TurnOffDashboard();
                 DashboardManager.Instance.TurnOffBoostPullie();
-                SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Boost);
+                SoundManager.Instance.PlayOneshotound("Handle Pull + Boost");
                 ShipSpeedController.Instance.StartBoosting();
             }
 
             //TODO: animate emptying...
             //TODO: sound of negative feedback if the handle was used when tank not critical:
             boostPercentage = 0;
+            BoostLightsController.Instance.Restart();
         }
     }
 }

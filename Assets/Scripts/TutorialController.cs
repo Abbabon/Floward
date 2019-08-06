@@ -25,7 +25,10 @@ public class TutorialController : MonoBehaviour
     [SerializeField] private CanvasGroup tutorialCanvasGroup;
 	[SerializeField] private RectTransform pauseButton;
 
-	public bool InTutorial { get { return inTutorial; } }
+    [SerializeField] private bool OnBoostFullTutorialPassed;
+    [SerializeField] private bool OnStrongWindTutorialPassed;
+
+    public bool InTutorial { get { return inTutorial; } }
 
     private void Awake()
     {
@@ -40,7 +43,11 @@ public class TutorialController : MonoBehaviour
                 _instance = this;
                 //Here any additional initialization should occur:
                 SetAllFeatures(true);
-
+                OnBoostFullTutorialPassed = (PlayerPrefs.GetInt("BoostTutorialPassed") == 77);
+                BoostController.Instance.OnBoostFull += OnBoostFullTutorial;
+                OnStrongWindTutorialPassed = (PlayerPrefs.GetInt("StrongWindTutorialPassed") == 77);
+                WindController.Instance.OnWindChange += OnStrongWindTutorial;
+                SailsController.Instance.OnSailsChange += OnStrongWindTutorial;
             }
         }
         //DontDestroyOnLoad(this.gameObject);
@@ -75,8 +82,12 @@ public class TutorialController : MonoBehaviour
     {
         currentTutorialPhase = 0;
         inTutorial = true;
-        tutorialCanvasGroup.gameObject.SetActive(true);
         pauseButton.gameObject.SetActive(false);
+
+        PlayerPrefs.SetInt("BoostTutorialPassed", 0);
+        OnBoostFullTutorialPassed = false;
+        PlayerPrefs.SetInt("StrongWindTutorialPassed", 0);
+        OnStrongWindTutorialPassed = false;
 
         WorldStateManager.Instance.SetTutorialMode();
         GameManager.Instance.ResetAllParameters();
@@ -92,10 +103,9 @@ public class TutorialController : MonoBehaviour
         FunctionTimer.StopAllTimersWithName(currentTutorialPhase.ToString());
         PhaseEndConditionMet = false;
 
-        if (currentTutorialPhase >= tutorialPhases.Count){
+        if (currentTutorialPhase >= 7f){ //ending tutorial
             SetAllFeatures(true);
             inTutorial = false;
-            tutorialCanvasGroup.gameObject.SetActive(false);
             pauseButton.gameObject.SetActive(true);
         }
         else{
@@ -286,7 +296,14 @@ public class TutorialController : MonoBehaviour
     //TODO: fade in
     private void ShowTutorialTextBox()
     {
+        SoundManager.Instance.PlayOneshotound("Tutorial Message Appears");
         tutorialTextBox.SetTutorialMessage(tutorialPhases.First(x => x.PhaseID == currentTutorialPhase));
+        tutorialTextBox.GetComponent<FadeInOut>().FadeIn();
+    }
+
+    private void ShowTutorialTextBox(int specificPhaseID)
+    {
+        tutorialTextBox.SetTutorialMessage(tutorialPhases.First(x => x.PhaseID == specificPhaseID));
         tutorialTextBox.GetComponent<FadeInOut>().FadeIn();
     }
 
@@ -299,8 +316,40 @@ public class TutorialController : MonoBehaviour
 
     private void TurnOffTextBoxAndMarker()
     {
+        SoundManager.Instance.PlayOneshotound("Tutorial Message Disappears");
         tutorialTextBox.GetComponent<FadeInOut>().FadeOut();
         tutorialMarker.GetComponent<FadeInOut>().FadeOut();
+    }
+
+    #endregion
+
+    #region ConditionalTutorials
+
+    private void OnBoostFullTutorial()
+    {
+        if (!OnBoostFullTutorialPassed && !inTutorial)
+        {
+            ShowTutorialTextBox(99);
+            FunctionTimer.Create(() => TurnOffTextBoxAndMarker(), 4f);
+
+            OnBoostFullTutorialPassed = true;
+            PlayerPrefs.SetInt("BoostTutorialPassed", 77);
+        }
+    }   
+
+    private void OnStrongWindTutorial()
+    {
+        if (!OnStrongWindTutorialPassed && !inTutorial)
+        {
+            if (WindController.Instance.State == 3 && SailsController.Instance.State == SailsState.SailsUp)
+            {
+                ShowTutorialTextBox(98);
+                FunctionTimer.Create(() => TurnOffTextBoxAndMarker(), 4f);
+
+                OnStrongWindTutorialPassed = true;
+                PlayerPrefs.SetInt("StrongWindTutorialPassed", 77);
+            }
+        }
     }
 
     #endregion

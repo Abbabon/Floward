@@ -59,8 +59,6 @@ public class DashboardSailsWheel : MonoBehaviour
                 wheelAngle -= deltaAngle;
             else
                 wheelAngle += deltaAngle;
-
-            SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Sails, true);
         }
         else
         {
@@ -149,9 +147,6 @@ public class DashboardSailsWheel : MonoBehaviour
         //wheelAngle = Mathf.Clamp(wheelAngle, -maximumSteeringAngle, maximumSteeringAngle);
         wheelAngle = Mathf.Clamp(wheelAngle, 0, maximumSteeringAngle);
         wheelPrevAngle = wheelNewAngle;
-
-        if (!SailsController.Instance.Locked)
-            SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Sails, true);
     }
 
     public void ReleaseEvent(BaseEventData eventData)

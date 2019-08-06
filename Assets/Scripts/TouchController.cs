@@ -25,6 +25,9 @@ public class TouchController : MonoBehaviour
     [SerializeField] private RectTransform EngineArea;
     [SerializeField] private RectTransform BoostArea;
 
+    [SerializeField] private float _boostZoneHeight = 0.8f;
+    [SerializeField] private float _boostZoneWidth = 0.5f;
+
     void Update()
     {
         if (GameManager.Instance.TouchEnabled)
@@ -116,51 +119,67 @@ public class TouchController : MonoBehaviour
 
     public void Reset()
     {
-        startTouch = swipeDelta = Vector2.zero;
+        swipeDelta = Vector2.zero;
         isDragging = false;
         startTap = false;
     }
 
-    // got a tip for this from here: https://forum.unity.com/threads/detect-when-mouseposition-in-a-recttransform.500263/
-    public bool TouchInZone(TouchZone touchZone, int touchCount=1)
-    {
-        if (Input.touchCount >= touchCount || Input.anyKey)
-        {
-            RectTransform rect = null;
-            switch (touchZone)
-            {
-                case TouchZone.Engine:
-                    rect = EngineArea;
-                    break;
-                case TouchZone.Sails:
-                    rect = SailsArea;
-                    break;
-                case TouchZone.Boost:
-                    rect = BoostArea;
-                    break;
-                default:
-                    break;
+	// got a tip for this from here: https://forum.unity.com/threads/detect-when-mouseposition-in-a-recttransform.500263/
+	//public bool TouchInZone(TouchZone touchZone, int touchCount=1)
+	//{
+	//    if (Input.touchCount >= touchCount || Input.anyKey)
+	//    {
+	//        RectTransform rect = null;
+	//        switch (touchZone)
+	//        {
+	//            case TouchZone.Engine:
+	//                rect = EngineArea;
+	//                break;
+	//            case TouchZone.Sails:
+	//                rect = SailsArea;
+	//                break;
+	//            case TouchZone.Boost:
+	//                rect = BoostArea;
+	//                break;
+	//            default:
+	//                break;
+	//        }
+
+	//        switch (touchCount)
+	//        {
+	//            case 1:
+	//                //hacky way of enabling mouse testing:
+	//                Vector2 posOne = (Input.touchCount == 1 ? Input.touches[0].position : (Vector2)rect.InverseTransformPoint(Input.mousePosition));
+	//                //Vector2 posOne = (Input.touchCount == 1 ? Input.touches[0].position : (Vector2)Input.mousePosition);
+	//                return rect.rect.Contains(posOne);
+	//            case 2:
+	//                return rect.rect.Contains(rect.InverseTransformPoint(Input.touches[0].position)) &&
+	//                        rect.rect.Contains(rect.InverseTransformPoint(Input.touches[1].position));
+	//            default:
+	//                return false;
+	//        }
+	//    }
+
+	//    return false;
+	//}
+
+    //revised version, using percentages instead of rectangles
+	public bool TouchInZone(TouchZone touchZone, int touchCount = 1)
+	{
+		if (Input.touchCount >= touchCount || Input.anyKey)
+		{
+			if (touchZone == TouchZone.Boost)
+			{
+                if (startTouch.y > (Screen.height * _boostZoneHeight) && startTouch.x > (Screen.width * _boostZoneWidth)){
+                    return true;
+                }
             }
+		}
 
-            switch (touchCount)
-            {
-                case 1:
-                    //hacky way of enabling mouse testing:
-                    Vector2 posOne = (Input.touchCount == 1 ? Input.touches[0].position : (Vector2)rect.InverseTransformPoint(Input.mousePosition));
-                    //Vector2 posOne = (Input.touchCount == 1 ? Input.touches[0].position : (Vector2)Input.mousePosition);
-                    return rect.rect.Contains(posOne);
-                case 2:
-                    return rect.rect.Contains(rect.InverseTransformPoint(Input.touches[0].position)) &&
-                            rect.rect.Contains(rect.InverseTransformPoint(Input.touches[1].position));
-                default:
-                    return false;
-            }
-        }
+		return false;
+	}
 
-        return false;
-    }
-
-    public Vector2 SwipeDelta { get { return swipeDelta; } }
+	public Vector2 SwipeDelta { get { return swipeDelta; } }
     public Vector2 LastTapLocation { get { return startTouch; } }
 
     public bool Tap { get { return tap; } }
@@ -171,6 +190,4 @@ public class TouchController : MonoBehaviour
     public bool SwipeRight { get { return swipeRight; } }
     public bool SwipeUp { get { return swipeUp; } }
     public bool SwipeDown { get { return swipeDown; } }
-
-
 }

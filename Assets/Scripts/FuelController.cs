@@ -14,7 +14,7 @@ public class FuelController : SerializedMonoBehaviour
     [SerializeField] private float _fuel_usage_animation_factor = 1.5f;
     [SerializeField] private Ship_ctrl _ship_ctrl;
 
-    [SerializeField] private float AmountOfFuel;
+    [SerializeField] internal float AmountOfFuel;
 
     [SerializeField] private Dictionary<Gear, float> fuelCostPerGear;
 
@@ -49,7 +49,7 @@ public class FuelController : SerializedMonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.IsRunning)
+        if (GameManager.Instance.IsRunning && AmountOfFuel > 0)
         {
             if (!ShipSpeedController.Instance.IsBoosting)
             {
@@ -57,18 +57,24 @@ public class FuelController : SerializedMonoBehaviour
                                 (EngineController.Instance.EngineCooling ? GlobalGameplayVariables.Instance.ActiveCoolingCostPerSecond : 0);
                 float newValue = AmountOfFuel - (fuelDiff * Time.deltaTime);
 
-                _ship_ctrl.fuelUsage = (int)EngineController.Instance.CurrentGear + (EngineController.Instance.EngineCooling ? 1 : 0);
-
-                AmountOfFuel = Mathf.Clamp(newValue, 0f,GlobalGameplayVariables.Instance.FuelCapacity );
-
-                fuelBar.Set(AmountOfFuel / GlobalGameplayVariables.Instance.FuelCapacity);
-
-                if (AmountOfFuel < 0.1f)
-                {
-                    //TODO: Trigger ending sequence!
-                    GameManager.Instance.StartGameOverSequence();
+                if (newValue > 0){
+                    _ship_ctrl.fuelUsage = (int)EngineController.Instance.CurrentGear + (EngineController.Instance.EngineCooling ? 1 : 0);
                 }
+                AmountOfFuel = Mathf.Clamp(newValue, 0f, GlobalGameplayVariables.Instance.FuelCapacity);
+                fuelBar.Set(AmountOfFuel / GlobalGameplayVariables.Instance.FuelCapacity);
             }
         }
+    }
+
+    //should be called with the parameter from the GlobalVariablesController
+    public void FuelDrop(float amount, float heatLoss)
+    {
+        Debug.Log("Fuel Drop");
+        float newValue = AmountOfFuel - amount;
+        AmountOfFuel = Mathf.Clamp(newValue, 0f, GlobalGameplayVariables.Instance.FuelCapacity);
+        _ship_ctrl.fuelDrop = true;
+
+        SoundManager.Instance.PlayOneshotound("Fuel Drop");
+        EngineController.Instance.HeatLoss(heatLoss);
     }
 }

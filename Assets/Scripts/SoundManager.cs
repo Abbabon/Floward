@@ -12,19 +12,22 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get { return _instance; } }
     private static readonly object padlock = new object();
 
-    [Space(10)]
-    private AudioSource currentSoundEffectsAudioSource;
-    private AudioSource currentRadioAudioSource;
-
-    [SerializeField] private float StartingMusicVolume = 1f;
+    [SerializeField] private float MusicVolume = 1f;
     [SerializeField] private float MuffledMusicVolume = 0.2f;
-    [SerializeField] private float CurrentMusicVolume = 1f;
 
-    [SerializeField] private float StartingEffectsVolume = 1f;
-    [SerializeField] private float CurrentEffectsVolume = 1f;
+    [SerializeField] private float SFXVolume = 1f;
 
     [SerializeField] private Slider MusicVolumeSlider;
     [SerializeField] private Slider EffectsVolumeSlider;
+
+    private Transform _emittingLocation;
+
+    [FMODUnity.EventRef]
+    public string _RadioMockEventName;
+    FMOD.Studio.EventInstance _radioMockEventInstance;
+
+    private FMOD.Studio.Bus SFXBus;
+    private FMOD.Studio.Bus RadioBus;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,86 +41,54 @@ public class SoundManager : MonoBehaviour
             else
             {
                 _instance = this;
-                LoadSoundEffects();
+                _emittingLocation = GetComponent<Transform>();
+                //LoadSoundEffects();
+                LoadSoundPrefs();
+                _radioMockEventInstance = FMODUnity.RuntimeManager.CreateInstance(_RadioMockEventName);
+
+                SFXBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+                RadioBus = FMODUnity.RuntimeManager.GetBus("bus:/Radio");
             }
         }
 
         //ontDestroyOnLoad(this.gameObject);
     }
 
+    private void LoadSoundPrefs()
+    {
+        MusicVolume = PlayerPrefs.HasKey("MusicVolume") ? PlayerPrefs.GetFloat("MusicVolume") : 1f;
+        SFXVolume = PlayerPrefs.HasKey("SoundEffectsVolume") ? PlayerPrefs.GetFloat("SoundEffectsVolume") : 1f;
+    }
+
     private void Start()
     {
-        //TODO: set volumes according to the level set by the used
-        //TODO: set sliders according to the levels previously set
+        EffectsVolumeSlider.value = SFXVolume;
+        MusicVolumeSlider.value = MusicVolume;
+        SFXBus.setVolume(SFXVolume);
+        RadioBus.setVolume(Mathf.Min(MusicVolume, MuffledMusicVolume));
 
-        MusicVolumeSlider.value = StartingMusicVolume;
-        EffectsVolumeSlider.value = StartingEffectsVolume;
-
-        RegisterRadioAudioSource(GetComponent<AudioSource>());
         PlayRadioMusic();
-    }
-
-    public void RegisterSoundEffectsAudioSource(AudioSource audioSource){
-        currentSoundEffectsAudioSource = audioSource;
-    }
-
-    public void RegisterRadioAudioSource(AudioSource audioSource){
-        currentRadioAudioSource = audioSource;
-        currentRadioAudioSource.volume = MuffledMusicVolume;
     }
 
     #region SoundEffects
 
-    public enum SoundEffect
+    public void PlayOneshotound(string EventName)
     {
-        Boat_FuelFillingUp,
-        Boat_GreenLightOff,
-        Boat_GreenLightOn,
-        Boat_PotentialLoading,
-
-        Dashboard_Boost,
-        Dashboard_Sails,
-        Dashboard_Pump,
-        Dashboard_PotentialHandle,
-        Dashboard_Cooler,
-
-        WindChange,
-        WavingFlag,
-    }
-
-    private Dictionary<SoundEffect, AudioClip> soundEffects;
-    private void LoadSoundEffects()
-    {
-        soundEffects = new Dictionary<SoundEffect, AudioClip>();
-        foreach (SoundEffect soundEffect in (SoundEffect[])Enum.GetValues(typeof(SoundEffect)))
-        {
-            soundEffects.Add(soundEffect, Resources.Load<AudioClip>(String.Format("Effects/{0}", soundEffect)));
-        }
-    }
-
-    public void PlaySoundEffect(SoundEffect soundEffect, bool cancelIfNotPlaying=false)
-    {
-        //C# doesnt have unless :(((
-        if (!(currentSoundEffectsAudioSource.isPlaying && cancelIfNotPlaying))
-            currentSoundEffectsAudioSource.PlayOneShot(soundEffects[soundEffect]);
+        FMODUnity.RuntimeManager.PlayOneShot(String.Format("event:/{0}", EventName), _emittingLocation.position);
     }
 
     #endregion
 
     #region Radio
 
-    public void PlayRadioMusic()
+    private void PlayRadioMusic()
     {
-        if (currentRadioAudioSource != null)
-        {
-            //TODO: change here according to changes in the radio system
-            currentRadioAudioSource.Play();
-        }
+        _radioMockEventInstance.start();
     }
 
     public void DisableRadioMuffle()
     {
-        currentRadioAudioSource.volume = CurrentMusicVolume;
+        RadioBus.setVolume(MusicVolume);
     }
 
     #endregion Radio
@@ -127,21 +98,16 @@ public class SoundManager : MonoBehaviour
 
     public void SetMusicVolume(float value)
     {
-        if (currentRadioAudioSource != null)
-        {
-            CurrentMusicVolume = value;
-            currentRadioAudioSource.volume = value;
-        }
+        MusicVolume = value;
+        RadioBus.setVolume(MusicVolume);
+        PlayerPrefs.SetFloat("MusicVolume", value);
     }
 
     public void SetEffectsVolume(float value)
     {
-        if (currentSoundEffectsAudioSource != null)
-        {
-            CurrentEffectsVolume = value;
-            currentSoundEffectsAudioSource.volume = value;
-        }
-        
+        SFXVolume = value;
+        SFXBus.setVolume(SFXVolume);
+        PlayerPrefs.SetFloat("SoundEffectsVolume", value);
     }
 
     #endregion

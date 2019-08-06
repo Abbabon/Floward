@@ -10,8 +10,6 @@ public class DashboardCoolerButton : MonoBehaviour, IPointerDownHandler, IPointe
     {
         EngineController.Instance.EngineCooling = true;
 
-        SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Cooler);
-
     }
 
     public void OnPointerUp(PointerEventData eventData)

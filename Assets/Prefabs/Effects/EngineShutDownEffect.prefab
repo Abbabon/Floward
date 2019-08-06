@@ -80321,7 +80321,7 @@ Transform:
   m_GameObject: {fileID: 7953985413115605878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.35800016, y: 0.21699993, z: -0.01900065}
-  m_LocalScale: {x: 0.4804067, y: 0.4804067, z: 0.4804067}
+  m_LocalScale: {x: 0.81030196, y: 0.81030196, z: 0.81030196}
   m_Children: []
   m_Father: {fileID: 660085454139457266}
   m_RootOrder: 1
@@ -81539,9 +81539,9 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 1, g: 1, b: 1, a: 0}
-        key3: {r: 1, g: 1, b: 1, a: 0.78431374}
+        key1: {r: 1, g: 1, b: 1, a: 0.9470444}
+        key2: {r: 1, g: 1, b: 1, a: 1}
+        key3: {r: 1, g: 1, b: 1, a: 0}
         key4: {r: 1, g: 1, b: 1, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -81555,16 +81555,16 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 32768
-        atime2: 65535
-        atime3: 49151
+        atime1: 16962
+        atime2: 32768
+        atime3: 65535
         atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 4
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -84932,7 +84932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7953985413115284376
 Transform:
   m_ObjectHideFlags: 0
@@ -84942,7 +84942,7 @@ Transform:
   m_GameObject: {fileID: 7953985413115743226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.103000045, y: -0.058000162, z: -0.01900053}
-  m_LocalScale: {x: 0.4804067, y: 0.4804067, z: 0.4804067}
+  m_LocalScale: {x: 4.8968415, y: 4.8968415, z: 4.8968415}
   m_Children: []
   m_Father: {fileID: 660085454139457266}
   m_RootOrder: 2
@@ -84965,7 +84965,7 @@ ParticleSystem:
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
-  autoRandomSeed: 1
+  autoRandomSeed: 0
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
@@ -85438,7 +85438,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 0, y: 0, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0

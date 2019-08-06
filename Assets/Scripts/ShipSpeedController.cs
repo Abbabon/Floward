@@ -12,6 +12,8 @@ public class ShipSpeedController : MonoBehaviour
     public static ShipSpeedController Instance { get { return _instance; } }
     private static readonly object padlock = new object();
 
+    public float SpeedMultiplier;
+
     public bool IsBoosting = false;
     public float TargetSpeed = 0f; // in KMph, between 0 and 100
     public float CurrentSpeed = 0f; // in KMph, between 0 and 100
@@ -46,12 +48,13 @@ public class ShipSpeedController : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.Instance.RegisterSoundEffectsAudioSource(audioSource);
+
     }
 
     private void InitializeCachedVariables()
     {
         CameraUnit = MaxCameraDistance - MinCameraDistance;
+        SpeedMultiplier = 1f;
     }
 
     // Update is called once per frame
@@ -73,9 +76,9 @@ public class ShipSpeedController : MonoBehaviour
     */ 
     private void ManageSpeed()
     {
-        float newSpeedValue = (int)EngineController.Instance.CurrentGear * GlobalGameplayVariables.Instance.SpeedEngineWeight + 
-            (int)(SailsController.Instance.State) * (int)(WindController.Instance.Direction()) * (int)(WindController.Instance.Strength()) * GlobalGameplayVariables.Instance.SpeedWindWeight;
-
+        float windEffect = (SailsController.Instance.SailsAttached ? (int)(SailsController.Instance.State) * (int)(WindController.Instance.Direction()) * (int)(WindController.Instance.Strength() * GlobalGameplayVariables.Instance.SpeedWindWeight) : 0);
+        float newSpeedValue = (int)EngineController.Instance.CurrentGear * GlobalGameplayVariables.Instance.SpeedEngineWeight + windEffect;
+         
         TargetSpeed = Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost);
         CurrentSpeed = Mathf.Lerp(CurrentSpeed, TargetSpeed, AccelerationRate);
 

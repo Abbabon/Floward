@@ -6,6 +6,5 @@ public class DashboardPump : MonoBehaviour
 {
     public void StartEngine(){
         EngineController.Instance.PumpEngine();
-        SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Pump);
     }
 }

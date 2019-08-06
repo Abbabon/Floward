@@ -27,6 +27,9 @@ public class Ship_ctrl : MonoBehaviour
     [Range(0, 100)]
     public float speed;
 
+    [Range(0, 100)]
+    public float overHeat;
+
     public bool tap = false;
 
     public bool fuelDrop = false;
@@ -34,6 +37,10 @@ public class Ship_ctrl : MonoBehaviour
     public bool boost = false;
 
     public bool shutDown = false;
+
+    public bool overDrive = false;
+
+    public bool tutorial;
 
     void Awake()
     {
@@ -52,6 +59,9 @@ public class Ship_ctrl : MonoBehaviour
         shipAnim.SetFloat("AlertLight", alertLight);
         shipAnim.SetFloat("Speed", speed);
         shipAnim.SetBool("ShutDown", shutDown);
+        shipAnim.SetBool("OverDrive", overDrive);
+        shipAnim.SetFloat("OverHeat", overHeat);
+        shipAnim.SetBool("Tutorial", tutorial);
 
         if (fuelDrop)
         {
@@ -81,5 +91,8 @@ public class Ship_ctrl : MonoBehaviour
         shipAnim.SetTrigger("BoostStartTime");
     }
 
-
+    private void SetWeight(string name, float value)
+    {
+        shipAnim.SetLayerWeight(shipAnim.GetLayerIndex(name), value);
+    }
 }

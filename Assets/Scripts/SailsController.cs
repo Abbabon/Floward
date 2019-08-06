@@ -20,6 +20,10 @@ public class SailsController : MonoBehaviour
     public bool Locked = false;
 
     public float SailsDurability; // in percentage
+    public bool SailsAttached;
+
+    public delegate void SailsChange();
+    public event SailsChange OnSailsChange;
 
     [SerializeField] private Animator sailsAnimator;
 
@@ -45,17 +49,24 @@ public class SailsController : MonoBehaviour
     {
         state = SailsState.SailsDown;
         SailsDurability = 100f;
+        SailsAttached = true;
     }
 
     public void SetState(SailsState newState)
     {
-        if (state != newState)
+        if (SailsAttached && state != newState)
         {
             state = newState;
             if (state == SailsState.SailsUp)
             {
                 //TODO: sound?
-                SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.WavingFlag);
+                SoundManager.Instance.PlayOneshotound("Sails Up");
+
+                if (WindController.Instance.Direction() == WindDirection.FrontWind && EngineController.Instance.IsWorking())
+                {
+                    FuelController.Instance.FuelDrop(GlobalGameplayVariables.Instance.FuelDropOpenSails, GlobalGameplayVariables.Instance.FuelDropOpenSailsHeatLoss);
+                }
+
             }
             else if (state == SailsState.SailsDown)
             {
@@ -66,6 +77,7 @@ public class SailsController : MonoBehaviour
                     //PressureController.Instance.ReleaseRandomValve();
             }
             sailsAnimator.SetBool("SailOpen", state == SailsState.SailsUp);
+            OnSailsChange();
         }
     }
 
@@ -77,16 +89,15 @@ public class SailsController : MonoBehaviour
         }
 
         //TODO: somehow reflect this to the player!
-
-        if (SailsDurability < 0.1f)
-        {
-            //TODO: Trigger tearing animation and only after that - game over sequence
+        if (SailsDurability < 0.1f){
             TearSailOff();
         }
     }
 
     private void TearSailOff()
     {
-        throw new NotImplementedException();
+        SailsAttached = false;
+        //TODO: call animation
+        Debug.Log("Sails Torn!");
     }
 }

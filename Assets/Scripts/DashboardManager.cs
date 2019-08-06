@@ -42,15 +42,25 @@ public class DashboardManager : MonoBehaviour
         dashboardAnimator.SetBool("DashboardOn", false);
     }
 
+    private bool PullieOn = false;
     public void TurnOnBoostPullie()
     {
-        pullieAnimator.SetBool("BoostAvailable", true);
-        pullieAnimatorGlow.SetBool("BoostAvailable", true);
+        if (!PullieOn)
+        {
+            pullieAnimator.SetBool("BoostAvailable", true);
+            pullieAnimatorGlow.SetBool("BoostAvailable", true);
+            SoundManager.Instance.PlayOneshotound("Handle Appears");
+            PullieOn = true;
+        }
     }
 
     public void TurnOffBoostPullie()
     {
-        pullieAnimator.SetBool("BoostAvailable", false);
-        pullieAnimatorGlow.SetBool("BoostAvailable", false);
+        if (PullieOn)
+        {
+            pullieAnimator.SetBool("BoostAvailable", false);
+            pullieAnimatorGlow.SetBool("BoostAvailable", false);
+            PullieOn = false;
+        }
     }
 }

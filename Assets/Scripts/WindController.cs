@@ -6,7 +6,8 @@ using UnityEngine;
 public enum WindDirection
 {
     FrontWind=-1,
-    BackWind=1
+    NoWind = 0,
+    BackWind =1
 }
 
 public class WindController : MonoBehaviour
@@ -18,6 +19,13 @@ public class WindController : MonoBehaviour
 
     public int State; // runs between -3 and 3
 
+    public delegate void WindChange();
+    public event WindChange OnWindChange;
+
+    [FMODUnity.EventRef]
+    public string _WindSoundEventName;
+    FMOD.Studio.EventInstance _windSoundInstance;
+
     public int Strength()
     {
         return Math.Abs(State);
@@ -25,7 +33,15 @@ public class WindController : MonoBehaviour
 
     public WindDirection Direction()
     {
-        return (State < 0) ? WindDirection.FrontWind : WindDirection.BackWind;
+        if (State > 0){
+            return WindDirection.BackWind;
+        }
+        else if (State == 0){
+            return WindDirection.NoWind;
+        }
+        else{
+            return WindDirection.FrontWind;
+        }
     }
 
     private void Awake()
@@ -41,11 +57,17 @@ public class WindController : MonoBehaviour
                 _instance = this;
                 //Here any additional initialization should occur:
                 State = 0;
+                _windSoundInstance = FMODUnity.RuntimeManager.CreateInstance(_WindSoundEventName);
             }
         }
         //DontDestroyOnLoad(this.gameObject);
     }
 
+    private void Start()
+    {
+        _windSoundInstance.setParameterValue("Wind Level", 0);
+        _windSoundInstance.start();
+    }
 
     public void ChangeState(int amount)
     {
@@ -54,9 +76,31 @@ public class WindController : MonoBehaviour
 
         //Wind changed direction
         if (newWind * State < 0){
-            SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.WindChange);
+            SoundManager.Instance.PlayOneshotound("Flag");
         }
 
         State = newWind;
+        
+        float soundState = Mathf.Abs(State);
+        switch (soundState)
+        {
+            //case 0:
+            //    _windSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            //    break;
+            case 0:
+            case 1:
+                _windSoundInstance.setParameterValue("Wind Level", 0);
+                break;
+            case 2:
+                _windSoundInstance.setParameterValue("Wind Level", 0.5f);
+                break;
+            case 3:
+                _windSoundInstance.setParameterValue("Wind Level", 1f);
+                break;
+            default:
+                break;
+        }
+
+        OnWindChange();
     }
 }

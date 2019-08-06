@@ -22,6 +22,20 @@ public class GlobalGameplayVariables : MonoBehaviour
     [Tooltip("In Liters")]
     public float FuelCapacity = 500f; //in liters
 
+    [Header("Fuel Drops")]
+    [Tooltip("In Liters")]
+    public float FuelDropEngineShutDown = 30f;
+    [Tooltip("In Percentage")]
+    public float FuelDropEngineShutDownHeatLoss = 30f;
+    [Tooltip("In Liters")]
+    public float FuelDropCoolingWhenCooledDown = 30f;
+    [Tooltip("In Percentage")]
+    public float FuelDropCoolingWhenCooledDownHeatLoss = 30f;
+    [Tooltip("In Liters")]
+    public float FuelDropOpenSails = 30f;
+    [Tooltip("In Percentage")]
+    public float FuelDropOpenSailsHeatLoss = 30f;
+
     [Header("Sails")]
     [Tooltip("In PERCENTAGE per second")]
     public float DurabilityLossPerSecond = 2f; // in percentages!
@@ -37,10 +51,14 @@ public class GlobalGameplayVariables : MonoBehaviour
     public float OverheatLossPerSecond = 0.5f; // in percentages
     [Tooltip("In PERCENTAGE per second")]
     public float ActiveCoolingPerSecond = 12f; // in percentages
+    [Tooltip("In PERCENTAGE per second")]
+    public float ActiveOverCoolingTimer = 2f; // in percentages
     [Tooltip("In Percentage per second")]
     public float ActiveCoolingCostPerSecond = 1f; // in percentages
     [Tooltip("In PERCENTAGE per second")]
     public float PassiveCoolingPerSecond = 2.5f; // in percentages
+    [Tooltip("In PERCENTAGE per second")]
+    public float PassiveCoolingPerSecondFrontWind = 5f; // in percentages
     [Tooltip("In Percentage per second")]
     public float PassiveCoolingCostPerSecondWhenNotHot = 10f; // in percentages
     [Tooltip("In PERCENTAGE per press")]

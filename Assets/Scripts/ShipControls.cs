@@ -9,7 +9,7 @@ public class ShipControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.TouchEnabled)
+        if (GameManager.Instance.TouchEnabled && !EngineController.Instance.EngineInShutdown)
         {
             // pump engine:
 
@@ -27,10 +27,10 @@ public class ShipControls : MonoBehaviour
             // coooool
 
             //if (controller.SwipeDown && controller.TouchInZone(TouchZone.Engine) && TutorialController.Instance.EnableCooling)
-            if (controller.SwipeDown && TutorialController.Instance.EnableCooling)
+            if (controller.SwipeDown && TutorialController.Instance.EnableCooling && !controller.TouchInZone(TouchZone.Boost) && FuelController.Instance.AmountOfFuel > 0)
             {
                 EngineController.Instance.EngineCooling = true;
-                SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Cooler, true);
+                SoundManager.Instance.PlayOneshotound("Cooling");
             }
             else
             {
@@ -49,12 +49,10 @@ public class ShipControls : MonoBehaviour
                 {
                     SailsController.Instance.SetState(SailsState.SailsUp);
                     SailsController.Instance.Locked = true;
-                    SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Sails, true);
                 }
             }
 
             // swipe sails off:
-
             //if (controller.SwipeRight && controller.TouchInZone(TouchZone.Sails) && TutorialController.Instance.EnableSailsDown)
             if (controller.SwipeRight && TutorialController.Instance.EnableSailsDown)
             {
@@ -66,7 +64,6 @@ public class ShipControls : MonoBehaviour
             }
 
             // boost handle
-
             if (controller.SwipeDown && controller.TouchInZone(TouchZone.Boost) && TutorialController.Instance.EnableBoost)
             {
                 BoostController.Instance.BoostHandlePulled();

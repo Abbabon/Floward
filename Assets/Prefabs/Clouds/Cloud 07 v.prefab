@@ -32,7 +32,7 @@ Transform:
   - {fileID: 2675904170929982999}
   - {fileID: 2675904169260879496}
   m_Father: {fileID: 2502522327786096103}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &140405639075864595
 BoxCollider:
@@ -357,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 6036586528080062916, guid: ed3666399c72d044d8b2a31e1061cacd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 87448767445767812, guid: ed3666399c72d044d8b2a31e1061cacd,
         type: 3}
@@ -392,7 +392,7 @@ PrefabInstance:
     - target: {fileID: 205004158956250673, guid: ed3666399c72d044d8b2a31e1061cacd,
         type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 1.6750001
+      value: 22.969873
       objectReference: {fileID: 0}
     - target: {fileID: 205004158956250673, guid: ed3666399c72d044d8b2a31e1061cacd,
         type: 3}
@@ -403,6 +403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ShapeModule.m_Position.y
       value: -0.00000012566747
+      objectReference: {fileID: 0}
+    - target: {fileID: 205004158956250673, guid: ed3666399c72d044d8b2a31e1061cacd,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 4.781495
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed3666399c72d044d8b2a31e1061cacd, type: 3}

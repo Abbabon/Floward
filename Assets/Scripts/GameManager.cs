@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
                 _instance = this;
                 //Here any additional initialization should occur:
                 faderCanvas.SetActive(true);
+                
             }
         }
         //DontDestroyOnLoad(this.gameObject);
@@ -51,7 +52,8 @@ public class GameManager : MonoBehaviour
         TouchEnabled = false;
         IsRunning = true;
         PauseCanvas.gameObject.SetActive(false);
-        TutorialCanvas.gameObject.SetActive(false);
+
+        
     }
 
     //TODO: enable, somehow, to get here from restart and have the fact we pressed 'start' persist.
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour
         TouchEnabled = true;
         StartCoroutine(FadeTo(0f, 1f));
         SoundManager.Instance.DisableRadioMuffle();
+        SoundManager.Instance.PlayOneshotound("Menu Buttons Click");
 
         //TODO: persist tutorial done / not done!
         //TutorialController.Instance.StartTutorial();
@@ -81,6 +84,7 @@ public class GameManager : MonoBehaviour
     {
         if (IsRunning)
         {
+            SoundManager.Instance.PlayOneshotound("Pause Button");
             IsRunning = TouchEnabled = false;
             shipAnimator.speed = 0;
 
@@ -88,6 +92,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            SoundManager.Instance.PlayOneshotound("Menu Buttons Click");
             touchController.Reset();
             IsRunning = TouchEnabled = true;
             shipAnimator.speed = 1;
