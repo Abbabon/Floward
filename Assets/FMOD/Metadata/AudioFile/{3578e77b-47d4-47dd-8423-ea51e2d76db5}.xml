@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{8cbdb2e7-7242-455a-8b3b-988163d3d8c0}">
+    <object class="AudioFile" id="{3578e77b-47d4-47dd-8423-ea51e2d76db5}">
         <property name="assetPath">
             <value>Radio_Station.ogg</value>
         </property>
