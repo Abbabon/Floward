@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.10.00">
-    <object class="MixerGroup" id="{cb1b0bb3-cf3e-42af-8370-d9b7436e3e08}">
-        <property name="name">
-            <value>Radio</value>
-        </property>
-        <relationship name="effectChain">
-            <destination>{666fe40a-2594-408d-ab53-6bf83fd4e9d1}</destination>
-        </relationship>
-        <relationship name="panner">
-            <destination>{0021abf9-b027-4d74-b344-f421809527d6}</destination>
-        </relationship>
-        <relationship name="output">
-            <destination>{15545871-ede4-4e10-ab98-0ba4643fa57c}</destination>
-        </relationship>
-    </object>
-    <object class="MixerBusEffectChain" id="{666fe40a-2594-408d-ab53-6bf83fd4e9d1}">
-        <relationship name="effects">
-            <destination>{6ad1d3b4-83df-4f3c-922c-0a2ede4cb795}</destination>
-        </relationship>
-    </object>
-    <object class="MixerBusPanner" id="{0021abf9-b027-4d74-b344-f421809527d6}"/>
-    <object class="MixerBusFader" id="{6ad1d3b4-83df-4f3c-922c-0a2ede4cb795}"/>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{cb1b0bb3-cf3e-42af-8370-d9b7436e3e08}">
+		<property name="name">
+			<value>Radio</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{666fe40a-2594-408d-ab53-6bf83fd4e9d1}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{0021abf9-b027-4d74-b344-f421809527d6}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{15545871-ede4-4e10-ab98-0ba4643fa57c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{666fe40a-2594-408d-ab53-6bf83fd4e9d1}">
+		<relationship name="effects">
+			<destination>{6ad1d3b4-83df-4f3c-922c-0a2ede4cb795}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{0021abf9-b027-4d74-b344-f421809527d6}" />
+	<object class="MixerBusFader" id="{6ad1d3b4-83df-4f3c-922c-0a2ede4cb795}" />
 </objects>

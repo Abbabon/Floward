@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.10.00">
-    <object class="MixerGroup" id="{72821502-bf48-40cc-960f-670525112a1d}">
-        <property name="name">
-            <value>SFX</value>
-        </property>
-        <relationship name="effectChain">
-            <destination>{f7291885-90c4-48de-afd6-c15c5299626d}</destination>
-        </relationship>
-        <relationship name="panner">
-            <destination>{5bdcd852-1c94-4404-ad73-fce4fade5e8f}</destination>
-        </relationship>
-        <relationship name="output">
-            <destination>{15545871-ede4-4e10-ab98-0ba4643fa57c}</destination>
-        </relationship>
-    </object>
-    <object class="MixerBusEffectChain" id="{f7291885-90c4-48de-afd6-c15c5299626d}">
-        <relationship name="effects">
-            <destination>{be7e3ca0-e585-4fd9-af6a-a2975e12f409}</destination>
-        </relationship>
-    </object>
-    <object class="MixerBusPanner" id="{5bdcd852-1c94-4404-ad73-fce4fade5e8f}"/>
-    <object class="MixerBusFader" id="{be7e3ca0-e585-4fd9-af6a-a2975e12f409}"/>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{72821502-bf48-40cc-960f-670525112a1d}">
+		<property name="name">
+			<value>SFX</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{f7291885-90c4-48de-afd6-c15c5299626d}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{5bdcd852-1c94-4404-ad73-fce4fade5e8f}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{15545871-ede4-4e10-ab98-0ba4643fa57c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{f7291885-90c4-48de-afd6-c15c5299626d}">
+		<relationship name="effects">
+			<destination>{be7e3ca0-e585-4fd9-af6a-a2975e12f409}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{5bdcd852-1c94-4404-ad73-fce4fade5e8f}" />
+	<object class="MixerBusFader" id="{be7e3ca0-e585-4fd9-af6a-a2975e12f409}" />
 </objects>
