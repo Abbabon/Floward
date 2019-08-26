@@ -8,9 +8,8 @@ public class Destroyer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(TagToDestroy)){
+        if (other.gameObject.GetComponent<MovingObject>() != null){
             Destroy(other.gameObject);
         }
     }
-
 }

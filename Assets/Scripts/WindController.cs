@@ -17,7 +17,7 @@ public class WindController : MonoBehaviour
 
     private static readonly object padlock = new object();
 
-    public int State; // runs between -3 and 3
+    public int State; // runs between -2 and 2
 
     public delegate void WindChange();
     public event WindChange OnWindChange;
@@ -72,35 +72,28 @@ public class WindController : MonoBehaviour
     public void ChangeState(int amount)
     {
         int newWind = State + amount;
-        newWind = Math.Min(Math.Max(newWind, -3), 3);
-
-        //Wind changed direction
-        if (newWind * State < 0){
-            SoundManager.Instance.PlayOneshotound("Flag");
-        }
+        newWind = Math.Min(Math.Max(newWind, -2), 2);
 
         State = newWind;
         
-        float soundState = Mathf.Abs(State);
-        switch (soundState)
-        {
-            //case 0:
-            //    _windSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            //    break;
-            case 0:
-            case 1:
-                _windSoundInstance.setParameterValue("Wind Level", 0);
-                break;
-            case 2:
-                _windSoundInstance.setParameterValue("Wind Level", 0.5f);
-                break;
-            case 3:
-                _windSoundInstance.setParameterValue("Wind Level", 1f);
-                break;
-            default:
-                break;
+        //Wind changed direction
+        if (newWind * State <= 0){
+            SoundManager.Instance.PlayOneshotound("Flag");
+
+            if (SailsController.Instance.State == SailsState.SailsUp)
+            {
+                if (Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.PlayOneshotound("Sails Catch Back Wind");
+                }
+                if (Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.PlayOneshotound("Sails Confront Front Wind");
+                }
+            }
         }
 
+        _windSoundInstance.setParameterValue("Wind Level", Strength()/2f);
         OnWindChange();
     }
 }

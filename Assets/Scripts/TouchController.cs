@@ -19,8 +19,6 @@ public class TouchController : MonoBehaviour
 
     [SerializeField] private Camera mainCamera;
 
-    [SerializeField] private float swipeMagnitude = 75f;
-
     [SerializeField] private RectTransform SailsArea;
     [SerializeField] private RectTransform EngineArea;
     [SerializeField] private RectTransform BoostArea;
@@ -91,7 +89,7 @@ public class TouchController : MonoBehaviour
                     swipeDelta = (Vector2)Input.mousePosition - startTouch;
             }
 
-            if (swipeDelta.magnitude > swipeMagnitude)
+            if (swipeDelta.magnitude > GlobalGameplayVariables.Instance.SwipeMagnitude)
             {
                 float x = swipeDelta.x;
                 float y = swipeDelta.y;

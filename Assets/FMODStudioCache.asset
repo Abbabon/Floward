@@ -40,6 +40,25 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-8872793785296379971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
+  lastModified: 637007099380000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4858848
+  Exists: 0
 --- !u!114 &-8832377022496706521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,16 +74,33 @@ MonoBehaviour:
   Path: event:/Wind Level 1-3
   guid: 7115405539bf4441a6394b34ece32522
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3925818048106552314}
+  - {fileID: 1934163103432633836}
   MinDistance: 0
   MaxDistance: 0
   Length: 9000
 --- !u!114 &-8498125760642365580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-8178152085608094954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +132,7 @@ MonoBehaviour:
   Path: event:/Engine Overdrive
   guid: 7f25aa27b750274182f7e376dec103b9
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -142,7 +178,7 @@ MonoBehaviour:
   Path: event:/Fuel Drop
   guid: 8a0e8d3b3665c44898f042ee85811b4e
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -165,7 +201,7 @@ MonoBehaviour:
   Path: event:/Handle Pull + Boost
   guid: 7fd3ebc58da50440952201de155e4735
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -226,12 +262,12 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007098660000000
+  lastModified: 637007099380000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2050
-  Exists: 1
+    Value: 2130
+  Exists: 0
 --- !u!114 &-6168422202748332969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +292,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 9000
+--- !u!114 &-6031476771024157647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-6017832868936902189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +324,7 @@ MonoBehaviour:
   Path: event:/Light Bulb 4
   guid: 8a620760214dcc4e9fec1c4a2c0b0f00
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -294,7 +347,7 @@ MonoBehaviour:
   Path: event:/Sails Open + Confront Front Wind
   guid: 88d33c34ce13bb4e99cde202d5dcbafa
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -342,6 +395,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1500
+--- !u!114 &-4993848128142958063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
+  lastModified: 637007099380000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2130
+  Exists: 1
 --- !u!114 &-4924854158268068924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +499,7 @@ MonoBehaviour:
   Path: event:/Light Bulb 3
   guid: badf5b2066bb734780f9764fcad6394e
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -504,6 +576,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 150
+--- !u!114 &-3667375864915963384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-3146184250574573878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +648,7 @@ MonoBehaviour:
   Path: event:/Pause Button
   guid: 99bb5ef43675954c9ceebf449cf2f52e
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -567,6 +656,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 700
+--- !u!114 &-2530741515720932376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\FMOD\Build\Desktop\Master Bank.strings.bank
+  lastModified: 637007207536816430
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2130
+  Exists: 0
 --- !u!114 &-2264780075795427654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,7 +713,7 @@ MonoBehaviour:
   Path: event:/Flag
   guid: e5d6bb2af0eb614db12f65e8aae413b8
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -628,7 +736,7 @@ MonoBehaviour:
   Path: event:/Light Bulb 1
   guid: f6b48b970d970c4587b4790617a63283
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -670,7 +778,7 @@ MonoBehaviour:
   Path: event:/Boost Avilable
   guid: 0feb991e6dda4a47b74e13cdb05855c6
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -693,7 +801,7 @@ MonoBehaviour:
   Path: event:/Engine Shut Down
   guid: 502971166e8fa54899a3c85220cab455
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -716,7 +824,7 @@ MonoBehaviour:
   Path: event:/Engine Tap
   guid: 5bbe345835dd3345b3e29529d5932e30
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -804,7 +912,7 @@ MonoBehaviour:
   Path: event:/Light Bulb 2
   guid: 0b7cf9d037c266439fac1d4505e0a0fd
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -848,8 +956,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6209247689722460106}
-  - {fileID: 1685041301370788944}
+  - {fileID: -4993848128142958063}
+  - {fileID: 4754524738058758525}
   EditorEvents:
   - {fileID: -248504281310663604}
   - {fileID: 7666562801378932246}
@@ -882,10 +990,10 @@ MonoBehaviour:
   - {fileID: 2326453764666252044}
   - {fileID: 934435742500390933}
   MasterBanks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   StringsBanks:
-  - {fileID: -6209247689722460106}
-  stringsBankWriteTime: 637007098660000000
+  - {fileID: -4993848128142958063}
+  stringsBankWriteTime: 637007099380000000
   cacheVersion: 3
 --- !u!114 &17706894591620252
 MonoBehaviour:
@@ -942,7 +1050,7 @@ MonoBehaviour:
   Path: event:/Sail Closes
   guid: 1d34be737d62c64fbcdab3bb08ce02ff
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -965,7 +1073,7 @@ MonoBehaviour:
   Path: event:/Engine Power Goes Up
   guid: 973765b553e9a84ebf7509946d6e8c9e
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1005,7 +1113,7 @@ MonoBehaviour:
   Path: event:/Radio Station
   guid: 6577c5c8551f5d42a0517c4714f29ddb
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1059,6 +1167,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2480
+--- !u!114 &1425876164915858575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\Mentor\finel project\Floward\Assets\FMOD\Build\Desktop\Master Bank.bank
+  lastModified: 637007207546890668
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4858848
+  Exists: 0
 --- !u!114 &1452089553002623920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,12 +1285,12 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.bank
   m_EditorClassIdentifier: 
   Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007098660000000
+  lastModified: 637007099380000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 4858592
-  Exists: 1
+    Value: 4858848
+  Exists: 0
 --- !u!114 &1735930305008491959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,6 +1314,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 784
+--- !u!114 &1934163103432633836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &2142712102546099779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1380,7 @@ MonoBehaviour:
   Path: event:/Tutorial Message Appears
   guid: d39333aba862aa4ba00b169d7d0ee16a
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1244,6 +1388,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 500
+--- !u!114 &2208789547108207328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &2326453764666252044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,7 +1420,7 @@ MonoBehaviour:
   Path: event:/Sails Confront Front Wind
   guid: 9e46713fb4f9aa448ff6426b560d9a98
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1282,7 +1443,7 @@ MonoBehaviour:
   Path: event:/Cooling
   guid: 1d8e91e18503ca4495094bec4d6d7a01
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1313,6 +1474,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 642
+--- !u!114 &2830146235144821898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &3049574311818117213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,7 +1506,7 @@ MonoBehaviour:
   Path: event:/Light Bulb 5
   guid: 2c109ded35b9f042b631e0c12b908148
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1374,7 +1552,7 @@ MonoBehaviour:
   Path: event:/Sails Catch Back Wind
   guid: 59c276115af72d498b5df1e6ae38ae37
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1432,7 +1610,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3997930739363675083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,7 +1626,7 @@ MonoBehaviour:
   Path: event:/Tutorial Message Disappears
   guid: fe66a011d445104e99f2fdd29b02c065
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1472,7 +1650,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4246900980540054217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,7 +1666,7 @@ MonoBehaviour:
   Path: event:/Handle Appears
   guid: 2f6e5b0f6ada7b4aa91932f50a5e2120
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1496,6 +1674,97 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1167
+--- !u!114 &4327090878585822238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &4707966565004062464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &4754524738058758525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
+  lastModified: 637007099380000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4858848
+  Exists: 1
+--- !u!114 &4760353903329251171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\FMOD\Build\Desktop\Master Bank.strings.bank
+  lastModified: 637007207536816430
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2130
+  Exists: 0
+--- !u!114 &6018171329435728688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
+  lastModified: 637007099380000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2130
+  Exists: 0
 --- !u!114 &6311128577547909269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,15 +1780,34 @@ MonoBehaviour:
   Path: event:/Engine Power (Levels 1-5)
   guid: 1d2ebe0e8d0d3148bf68481456b34238
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 4037870364651773869}
+  - {fileID: -3667375864915963384}
   MinDistance: 0
   MaxDistance: 0
   Length: 15131
+--- !u!114 &7266102194227085490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\Mentor\finel project\Floward\Assets\FMOD\Build\Desktop\Master Bank.bank
+  lastModified: 637007207546890668
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4858848
+  Exists: 0
 --- !u!114 &7322897841221017329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,7 +1846,7 @@ MonoBehaviour:
   Path: event:/Menu Buttons Click
   guid: 3edf5e033a6ddd4fb91ab47ec404eb07
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1581,7 +1869,7 @@ MonoBehaviour:
   Path: event:/Light Bulb 6
   guid: 0befa8bf7de751429d0bf2a1db042ccf
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1604,7 +1892,7 @@ MonoBehaviour:
   Path: event:/Light Bulb 7
   guid: d349fdfcd178be409127afeb42dee1a1
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1612,6 +1900,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 617
+--- !u!114 &8172721948059779135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &8498757809270032556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,7 +1955,7 @@ MonoBehaviour:
   Path: event:/Kilometrag
   guid: 46f42d08f7d8c748a92e1926012d6cab
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1658,6 +1963,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 128
+--- !u!114 &8683599611729124867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &8762972785784342036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,7 +1995,7 @@ MonoBehaviour:
   Path: event:/Sail Opens
   guid: 345c3130d88dc7489115b4f47f53fc84
   Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 4754524738058758525}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

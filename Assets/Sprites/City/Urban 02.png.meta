@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 423dc703e88d6a1409b2fc958d3872a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4058178758820859723
+    second: city top 01
+  - first:
+      213: 2932319490406235578
+    second: city top 02
+  - first:
+      213: 5483046788752847469
+    second: building 01
+  - first:
+      213: -5716530336629620706
+    second: building side 01
+  - first:
+      213: -6507765001189826423
+    second: building side 02
+  - first:
+      213: 2765494121025191836
+    second: FG dock
+  - first:
+      213: -3688114454019544510
+    second: FG junk
+  - first:
+      213: 7154113912562090109
+    second: building gap 01
+  - first:
+      213: 3768955371211926464
+    second: city top part 01
+  - first:
+      213: -4522355681494949715
+    second: city top part 02
+  - first:
+      213: 2084138139593962923
+    second: city top part 03
+  - first:
+      213: -5738468012443150204
+    second: city top part 04
+  - first:
+      213: 8937985753623867886
+    second: city top part 05
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: city top 01
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1247
+        width: 689
+        height: 791
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88143c2d96770ce4996306c32486a103
+      internalID: -4058178758820859723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city top 02
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1536
+        width: 569
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f24c0fb02e6ecb4084f6b9ff86c3545
+      internalID: 2932319490406235578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building 01
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1426
+        width: 284
+        height: 581
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff1b7e770ef8f544911ebda07c0cc9b
+      internalID: 5483046788752847469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building side 01
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 1350
+        width: 165
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c896abfbafdd584a85aa765e83f75da
+      internalID: -5716530336629620706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building side 02
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1325
+        width: 212
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba50a722f9c8e8f4480140005485c8b8
+      internalID: -6507765001189826423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG dock
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 394
+        width: 880
+        height: 849
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce0a49fd652a5747bdb9ee665538c65
+      internalID: 2765494121025191836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG junk
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 739
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b609158e693ab9a449ff1f3634bceb72
+      internalID: -3688114454019544510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building gap 01
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 1322
+        width: 413
+        height: 711
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546a78ca325d6b24aa989a653316f8f7
+      internalID: 7154113912562090109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city top part 01
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1301
+        width: 155
+        height: 747
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4ec0f0844cdd34983f93fcd1bbb721
+      internalID: 3768955371211926464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city top part 02
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1253
+        width: 114
+        height: 795
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb45a61370b69a642ac33deeb1d17cd5
+      internalID: -4522355681494949715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city top part 03
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1367
+        width: 108
+        height: 681
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014a673383136754ea34f256d04a856a
+      internalID: 2084138139593962923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city top part 04
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1292
+        width: 147
+        height: 546
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9aa454310b8fb4b956d96cd2dde108
+      internalID: -5738468012443150204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city top part 05
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1559
+        width: 282
+        height: 489
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf073147e6996149baf5e2715518d9f
+      internalID: 8937985753623867886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a6fef9bfe4b7ddb4e9179448ce84162c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

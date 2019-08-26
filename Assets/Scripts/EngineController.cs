@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using CodeMonkey.Utils;
 using UnityEngine;
 
@@ -9,9 +10,7 @@ public enum Gear
     zero=0,
     first=1,
     second=2,
-    third=3,
-    fourth=4,
-    fifth=5
+    third=3
 }
 
 //this controller gets pumping from the user, adds to the engine, and 
@@ -31,11 +30,17 @@ public class EngineController : MonoBehaviour
 
     public bool EngineInShutdown = false;
 
+    //engine flicker:
+    private float firstFlickerRange;
+    private float secondFlickerRange;
+    private float thirdFlickerRange;
+
+    public delegate void OnEngineTap();
+    public event OnEngineTap OnTap;
+
     [FMODUnity.EventRef]
     public string _EngineSoundEventName;
     FMOD.Studio.EventInstance _engineSoundInstance;
-
-    public DashboardEngineOverheatLevelMock overheatLevelIndicator;
 
     public Ship_ctrl ship_Ctrl;
 
@@ -63,6 +68,12 @@ public class EngineController : MonoBehaviour
         EngineCooling = false;
         _engineSoundInstance.setParameterValue("Engine Level", 0);
         _engineSoundInstance.start();
+
+        float[] keys = GlobalGameplayVariables.Instance.OverheatLampFrequency.Keys.ToArray<float>();
+        firstFlickerRange = keys[0];
+        secondFlickerRange = keys[1];
+        thirdFlickerRange = keys[2];
+
     }
 
     //engine heat loss, adjust overheat level if necessary, add boost if necessary
@@ -72,7 +83,7 @@ public class EngineController : MonoBehaviour
     {
         if (GameManager.Instance.IsRunning)
         {
-            if (!(ShipSpeedController.Instance.IsBoosting))
+            if (!(ShipSpeedController.Instance.IsBoosting) && !(ShipSpeedController.Instance.InStation))
             {
                 float newHeatLevel = HeatLevel - GlobalGameplayVariables.Instance.HeatLossPerSecond * Time.deltaTime;
                 HeatLevel = Mathf.Clamp(newHeatLevel, 0f, 100f);
@@ -81,7 +92,7 @@ public class EngineController : MonoBehaviour
                 {
                     float newOverheatLevel = OverheatLevel - GlobalGameplayVariables.Instance.OverheatLossPerSecond * Time.deltaTime;
                     OverheatLevel = Mathf.Clamp(newOverheatLevel, 0f, 100f);
-
+                    
                     if (HeatLevel > 1){
                         BoostController.Instance.AddBoost();
                     }
@@ -123,30 +134,24 @@ public class EngineController : MonoBehaviour
                 }
             }
 
-            if (HeatLevel <= 20)
+            if (HeatLevel <= GlobalGameplayVariables.Instance.GearOneHeatThreshold)
             {
                 ChangeGear(Gear.zero);
             }
-            else if (HeatLevel <= 30)
+            else if (HeatLevel <= GlobalGameplayVariables.Instance.GearTwoHeatThreshold)
             {
                 ChangeGear(Gear.first);
             }
-            else if (HeatLevel <= 50)
+            else if (HeatLevel <= GlobalGameplayVariables.Instance.GearThreeHeatThreshold)
             {
                 ChangeGear(Gear.second);
             }
-            else if (HeatLevel <= 70)
+            else
             {
                 ChangeGear(Gear.third);
             }
-            else if (HeatLevel <= 90)
-            {
-                ChangeGear(Gear.fourth);
-            }
-            else
-            {
-                ChangeGear(Gear.fifth);
-            }
+
+            //ship_Ctrl.gearS = ((int)CurrentGear);
 
             // consider wind passive cooling:
             if (HeatLevel <= 0f)
@@ -162,9 +167,8 @@ public class EngineController : MonoBehaviour
                                                                                      * Time.deltaTime;
                 OverheatLevel = Mathf.Clamp(newOverheatLevel, 0f, GlobalGameplayVariables.Instance.MaxOverheat);
             }
-
-            RepresentEngineChanges();
         }
+        RepresentEngineChanges();
     }
 
     private void ChangeGear(Gear newGear)
@@ -188,28 +192,26 @@ public class EngineController : MonoBehaviour
         return HeatLevel > 0;
     }
 
-
-
     bool flickerTurnOn = true;
     bool overOverheat = false;
     private void RepresentEngineChanges()
     {
-        overheatLevelIndicator.Set(OverheatLevel);
-        ship_Ctrl.overHeat = (100 - (OverheatLevel / GlobalGameplayVariables.Instance.MaxOverheat) * 100);
+        ship_Ctrl.overHeat = (100f - (OverheatLevel / GlobalGameplayVariables.Instance.MaxOverheat) * 100f);
 
         if (HeatLevel > OverheatLevel){
-            float OverHeatPercentage = 1 - (OverheatLevel / GlobalGameplayVariables.Instance.MaxOverheat);
+            float OverHeatPercentage = ((1 - OverheatLevel / GlobalGameplayVariables.Instance.MaxOverheat) * 100f);
+            float frequency = GetOverheatFlickerFrequency(OverHeatPercentage);
 
             if (flickerTurnOn)
             {
-                ship_Ctrl.alertLight = Mathf.Lerp(ship_Ctrl.alertLight, 1f, 0.4f * OverHeatPercentage);
+                ship_Ctrl.alertLight += (frequency * Time.deltaTime) / 2;
                 if (ship_Ctrl.alertLight >= 0.99f){
                     flickerTurnOn = false;
                 }
             }
             else
             {
-                ship_Ctrl.alertLight = Mathf.Lerp(ship_Ctrl.alertLight, 0f, 0.4f * OverHeatPercentage);
+                ship_Ctrl.alertLight -= (frequency * Time.deltaTime) / 2; 
                 if (ship_Ctrl.alertLight <= 0.01f)
                 {
                     flickerTurnOn = true;
@@ -235,16 +237,31 @@ public class EngineController : MonoBehaviour
         }
 
         //Cooler opening:
-        //TODO: consider adding a factor, so opening will not always take 1 second
         ship_Ctrl.compressS = (Mathf.Clamp(CompressorOpeningTimer, 0f, 1f) * CompressionTimeFactor);
         _engineSoundInstance.setParameterValue("Engine Level", HeatLevel / 100f);
+    }
+
+    private float GetOverheatFlickerFrequency(float overHeatPercentage)
+    {
+        if (overHeatPercentage < firstFlickerRange){
+            return GlobalGameplayVariables.Instance.OverheatLampFrequency[firstFlickerRange];
+        }
+        else if (overHeatPercentage < secondFlickerRange){
+            return GlobalGameplayVariables.Instance.OverheatLampFrequency[secondFlickerRange];
+        }
+        else {
+            return GlobalGameplayVariables.Instance.OverheatLampFrequency[thirdFlickerRange];
+        }
     }
 
     public void PumpEngine(){
         if (!EngineInShutdown)
         {
+            OnTap?.Invoke();
+
             if (FuelController.Instance.AmountOfFuel == 0f){
-                GameManager.Instance.StartGameOverSequence();
+                ship_Ctrl.end = true;
+                GameManager.Instance.TouchEnabled = false;
             }
             else
             {
@@ -260,17 +277,20 @@ public class EngineController : MonoBehaviour
 
     private void ShutDownEngine()
     {
-        EngineInShutdown = true;
-        ship_Ctrl.shutDown = true;
-        HeatLevel = 0f;
-        SoundManager.Instance.PlayOneshotound("Engine Shut Down");
-        FuelController.Instance.FuelDrop(GlobalGameplayVariables.Instance.FuelDropEngineShutDown,
-                                         GlobalGameplayVariables.Instance.FuelDropEngineShutDownHeatLoss);
+        if (TutorialController.Instance.EnableEngineCrash)
+        {
+            EngineInShutdown = true;
+            ship_Ctrl.shutDown = true;
+            HeatLevel = 0f;
+            SoundManager.Instance.PlayOneshotound("Engine Shut Down");
+            FuelController.Instance.FuelDrop(GlobalGameplayVariables.Instance.FuelDropEngineShutDown,
+                                             GlobalGameplayVariables.Instance.FuelDropEngineShutDownHeatLoss);
 
 
-        //TIMER?
-        FunctionTimer.Create(() => ship_Ctrl.shutDown = false, 2f);
-        FunctionTimer.Create(() => EngineInShutdown = false, GlobalGameplayVariables.Instance.MaxOverheat / GlobalGameplayVariables.Instance.PassiveCoolingCostPerSecondWhenNotHot);
+            //TIMER?
+            FunctionTimer.Create(() => ship_Ctrl.shutDown = false, 2f);
+            FunctionTimer.Create(() => EngineInShutdown = false, GlobalGameplayVariables.Instance.MaxOverheat / GlobalGameplayVariables.Instance.PassiveCoolingCostPerSecondWhenNotHot);
+        }
     }
 
 }

@@ -51,3 +51,6 @@ TagManager:
   - name: Forground
     uniqueID: 681353891
     locked: 0
+  - name: dock FG
+    uniqueID: 2275901763
+    locked: 0

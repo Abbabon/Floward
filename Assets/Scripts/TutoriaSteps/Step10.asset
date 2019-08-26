@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2525bf8d17f9545cdbd78c9fa3a6538d, type: 3}
+  m_Name: Step10
+  m_EditorClassIdentifier: 
+  PhaseID: 9
+  UpperText: Wind has started to blow.$The flag will help you read the wind direction
+  LowerText: Got it
+  SecondsToAppear: 3

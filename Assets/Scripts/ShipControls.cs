@@ -9,24 +9,15 @@ public class ShipControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.TouchEnabled && !EngineController.Instance.EngineInShutdown)
+        if (GameManager.Instance.TouchEnabled && !EngineController.Instance.EngineInShutdown && !ShipSpeedController.Instance.InStation)
         {
-            // pump engine:
 
-            if (Input.GetMouseButtonDown(0))
-            {
-
-            }
-
-            //if (controller.Tap && controller.TouchInZone(TouchZone.Engine) && TutorialController.Instance.EnableEnginePump)
             if (controller.Tap && TutorialController.Instance.EnableEnginePump)
             {
                 EngineController.Instance.PumpEngine();
             }
 
             // coooool
-
-            //if (controller.SwipeDown && controller.TouchInZone(TouchZone.Engine) && TutorialController.Instance.EnableCooling)
             if (controller.SwipeDown && TutorialController.Instance.EnableCooling && !controller.TouchInZone(TouchZone.Boost) && FuelController.Instance.AmountOfFuel > 0)
             {
                 EngineController.Instance.EngineCooling = true;
@@ -41,8 +32,6 @@ public class ShipControls : MonoBehaviour
             }
 
             // swipe sails on:
-
-            //if (controller.SwipeLeft && controller.TouchInZone(TouchZone.Sails) && TutorialController.Instance.EnableSailsUp)
             if (controller.SwipeLeft && TutorialController.Instance.EnableSailsUp)
             {
                 if (SailsController.Instance.State == SailsState.SailsDown)
@@ -53,7 +42,6 @@ public class ShipControls : MonoBehaviour
             }
 
             // swipe sails off:
-            //if (controller.SwipeRight && controller.TouchInZone(TouchZone.Sails) && TutorialController.Instance.EnableSailsDown)
             if (controller.SwipeRight && TutorialController.Instance.EnableSailsDown)
             {
                 if (SailsController.Instance.State == SailsState.SailsUp)
@@ -64,14 +52,10 @@ public class ShipControls : MonoBehaviour
             }
 
             // boost handle
-            if (controller.SwipeDown && controller.TouchInZone(TouchZone.Boost) && TutorialController.Instance.EnableBoost)
+            if (controller.SwipeDown && controller.TouchInZone(TouchZone.Boost) && TutorialController.Instance.EnableBoostHandlePull)
             {
                 BoostController.Instance.BoostHandlePulled();
             }
         }
-
-
-
-
     }
 }

@@ -2,36 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnedCloud : MonoBehaviour
+public class SpawnedCloud : MovingObject
 {
-    private Transform myTransform;
-    public Vector2 direction = (Vector2.right * -1);
-
-    [SerializeField] private Animator _animator;
-
-    private float myCoreSpeed;
-
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        myTransform = GetComponent<Transform>();
-        myCoreSpeed = RandomizeSpeed();
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-		if (GameManager.Instance.IsRunning)
-		{
-		    myTransform.Translate(direction * Time.deltaTime * myCoreSpeed * ShipSpeedController.Instance.GetSpeedFactor());
+        base.Update();
+
+        if (GameManager.Instance.IsRunning)
+        {
             if (_animator){
                 _animator.SetFloat("Wind", WindController.Instance.State);
             }
-		}
+        }
     }
 
-    float RandomizeSpeed()
-    {
-        return Random.Range(GlobalGameplayVariables.Instance.MinimumCloudSpeed, GlobalGameplayVariables.Instance.MaxCloudSpeed);
-    }
 }

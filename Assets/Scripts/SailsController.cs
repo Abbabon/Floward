@@ -59,8 +59,18 @@ public class SailsController : MonoBehaviour
             state = newState;
             if (state == SailsState.SailsUp)
             {
-                //TODO: sound?
-                SoundManager.Instance.PlayOneshotound("Sails Up");
+                if (WindController.Instance.Strength() > 0 && WindController.Instance.Direction() == WindDirection.FrontWind)
+                {
+                    SoundManager.Instance.PlayOneshotound("Sails Open + Confront Front Wind");
+                }
+                if (WindController.Instance.Strength() > 0 && WindController.Instance.Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.PlayOneshotound("Sails Catch Back Wind");
+                }
+                else if (WindController.Instance.Strength() == 0)
+                {
+                    SoundManager.Instance.PlayOneshotound("Sail Opens");
+                }
 
                 if (WindController.Instance.Direction() == WindDirection.FrontWind && EngineController.Instance.IsWorking())
                 {
@@ -70,11 +80,11 @@ public class SailsController : MonoBehaviour
             }
             else if (state == SailsState.SailsDown)
             {
-                //TODO: sound?
+                SoundManager.Instance.PlayOneshotound("Sail Closes");
 
                 //too hard:
                 //if (WindManager.Instance.State == WindState.BackWind)
-                    //PressureController.Instance.ReleaseRandomValve();
+                //PressureController.Instance.ReleaseRandomValve();
             }
             sailsAnimator.SetBool("SailOpen", state == SailsState.SailsUp);
             OnSailsChange();

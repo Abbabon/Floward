@@ -34,13 +34,27 @@ public class Ship_ctrl : MonoBehaviour
 
     public bool fuelDrop = false;
 
+    public bool lowFuel = false;
+
     public bool boost = false;
 
     public bool shutDown = false;
 
     public bool overDrive = false;
 
+    public bool hlFlag = false;
+
+    public bool hlEngine = false;
+
+    public bool hlFire = false;
+
+    public bool hlBoost = false;
+
+    public bool hlTank = false;
+
     public bool tutorial;
+
+    public bool end = false;
 
     void Awake()
     {
@@ -62,6 +76,15 @@ public class Ship_ctrl : MonoBehaviour
         shipAnim.SetBool("OverDrive", overDrive);
         shipAnim.SetFloat("OverHeat", overHeat);
         shipAnim.SetBool("Tutorial", tutorial);
+        shipAnim.SetBool("LowFuel", lowFuel);
+
+        //Tutorial highlights
+
+        shipAnim.SetBool("HLflag", hlFlag);
+        shipAnim.SetBool("HLtank", hlTank);
+        shipAnim.SetBool("HLfire", hlFire);
+        shipAnim.SetBool("HLengine", hlEngine);
+        shipAnim.SetBool("HLboost", hlBoost);
 
         if (fuelDrop)
         {
@@ -71,28 +94,41 @@ public class Ship_ctrl : MonoBehaviour
 
         if (tap)
         {
-            shipAnim.SetBool("Tap", tap);
+            shipAnim.SetTrigger("Tap");
             tap = false;
+        }
+
+        if (end)
+        {
+            shipAnim.SetTrigger("End");
+            end = false;
         }
 
        
     }
 
     // Animation events
+    public void BoostStartTime()
+    {
+        shipAnim.SetTrigger("BoostStartTime");
+        ShipSpeedController.Instance.IsBoostingAnimation = true;
+    }
 
     public void Endboost() 
     {
         boost = false;
         shipAnim.ResetTrigger("BoostStartTime");
+        ShipSpeedController.Instance.IsBoostingAnimation = false;
     }
 
-    public void BoostStartTime()
-    {
-        shipAnim.SetTrigger("BoostStartTime");
-    }
 
     private void SetWeight(string name, float value)
     {
         shipAnim.SetLayerWeight(shipAnim.GetLayerIndex(name), value);
     }
+
+    public void EndGame()
+    {
+		GameManager.Instance.StartGameOverSequence();
+	}
 }

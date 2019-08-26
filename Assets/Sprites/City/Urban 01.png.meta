@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: 0bb838aa68b0de64fad07e0e5da28f49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2281400756464097987
+    second: indostrial block
+  - first:
+      213: 6014869408404002800
+    second: plank
+  - first:
+      213: 9015858123272410207
+    second: Urban 01_2
+  - first:
+      213: -4990101139277626618
+    second: lifter
+  - first:
+      213: -1721516987629189179
+    second: ship stern
+  - first:
+      213: -3167876050207285927
+    second: ladder frame
+  - first:
+      213: -4008989014025041652
+    second: cunstract piller
+  - first:
+      213: -5229705821892947284
+    second: antena
+  - first:
+      213: 3399681295244143222
+    second: pillars
+  - first:
+      213: 1420526710325681605
+    second: mold small
+  - first:
+      213: -1124747716128746028
+    second: handle
+  - first:
+      213: -4610739858333956061
+    second: angel constract part
+  - first:
+      213: -137458781839600093
+    second: strait constract part
+  - first:
+      213: 261920760540996969
+    second: Urban 01_13
+  - first:
+      213: 1945051893732391514
+    second: junk
+  - first:
+      213: 1378520219675062662
+    second: mold big
+  - first:
+      213: 8767932837409100147
+    second: pipe full
+  - first:
+      213: 3151911031169880271
+    second: round roof
+  - first:
+      213: 5882756341111792189
+    second: bridge part
+  - first:
+      213: -462218935947630794
+    second: roof 01
+  - first:
+      213: 5617089092752247483
+    second: lifted block
+  - first:
+      213: 1822932489054378194
+    second: closed balcony
+  - first:
+      213: 6989902190293722727
+    second: rusted pillar
+  - first:
+      213: 2103040950857092349
+    second: scrap balcony
+  - first:
+      213: 5505433392634212674
+    second: roof 02
+  - first:
+      213: -3249792811727860159
+    second: broken box
+  - first:
+      213: 8112941811855074091
+    second: roof 04
+  - first:
+      213: 1809048332588453177
+    second: roof 03
+  - first:
+      213: -1081666589136444202
+    second: box 01
+  - first:
+      213: -8041208010698922816
+    second: box 02
+  - first:
+      213: 6030551744094010435
+    second: fench
+  - first:
+      213: -5565708668161845910
+    second: box 03
+  - first:
+      213: 2613131882787316589
+    second: dock
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: indostrial block
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1479
+        width: 343
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ebbe937d7aa8f4695a6e3087fe7fe7
+      internalID: -2281400756464097987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plank
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1494
+        width: 81
+        height: 544
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb1b41d22266794f88c8dbfaf4315dd
+      internalID: 6014869408404002800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Urban 01_2
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1715
+        width: 275
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c491a70394412b4c9249d3cc6e91a5c
+      internalID: 9015858123272410207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lifter
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1790
+        width: 94
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23214ce914fe42544b2fe6ddc774e64b
+      internalID: -4990101139277626618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship stern
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1679
+        width: 417
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba789f0e4eb679648af36b592454eabe
+      internalID: -1721516987629189179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladder frame
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 1524
+        width: 101
+        height: 514
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c4420c7e1357f48ac4977cdfcb81d0
+      internalID: -3167876050207285927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cunstract piller
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1329
+        width: 144
+        height: 711
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ed1cc11ad6e2e4abc90fb3c003dc6d
+      internalID: -4008989014025041652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antena
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1717
+        width: 139
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0b29c55fe21e245a1524f9c1b50e03
+      internalID: -5229705821892947284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillars
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1738
+        width: 202
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117f42e3386ed3c48a2ccc9552df69b4
+      internalID: 3399681295244143222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mold small
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1657
+        width: 36
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915cb8f27f0abe84c831d859de46a25a
+      internalID: 1420526710325681605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handle
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1697
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e102f73268724041bfb72b2052ae228
+      internalID: -1124747716128746028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel constract part
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 1363
+        width: 128
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3b33c4c925ed94abfbbd6829273864
+      internalID: -4610739858333956061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strait constract part
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1480
+        width: 269
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547376c99fa0d3945a1a4e8ca4e28b43
+      internalID: -137458781839600093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Urban 01_13
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1401
+        width: 516
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead381a865d6878468af36d1270b4e9b
+      internalID: 261920760540996969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: junk
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1434
+        width: 109
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c97cc237dea4bf4fa5847e853ff6caf
+      internalID: 1945051893732391514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mold big
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1351
+        width: 52
+        height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af89bfd5655ff86498a62d335eabde8e
+      internalID: 1378520219675062662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipe full
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 860
+        width: 114
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43404e4a543fd74ea91665d265971e6
+      internalID: 8767932837409100147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round roof
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1108
+        width: 219
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d279f19a490ec43a07d525f27903ea
+      internalID: 3151911031169880271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge part
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1144
+        width: 299
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2256440080cfc418c27672138e4ca6
+      internalID: 5882756341111792189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof 01
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1228
+        width: 440
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc28bc574fcb828408ecb3beb2167c09
+      internalID: -462218935947630794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lifted block
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 873
+        width: 284
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045b8c0d49b85004296d9f63702da487
+      internalID: 5617089092752247483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: closed balcony
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 618
+        width: 362
+        height: 674
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32238f74dcbf55d40a2cdacb6cd2e90c
+      internalID: 1822932489054378194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rusted pillar
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 597
+        width: 133
+        height: 739
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca427abb32d116418e87652f234ad4a
+      internalID: 6989902190293722727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scrap balcony
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 738
+        width: 457
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361040f5f9185544aac6c64ae106fa23
+      internalID: 2103040950857092349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof 02
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 872
+        width: 281
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f917184c643094643b01c1a8d05f6ebe
+      internalID: 5505433392634212674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken box
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 743
+        width: 257
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0147de3c1caeca444a1d2e160de61a90
+      internalID: -3249792811727860159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof 04
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 611
+        width: 473
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4659311055acca34cb98a4ea2eae8027
+      internalID: 8112941811855074091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof 03
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 719
+        width: 340
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ae05ee51f948f46b8b32403d557c7b
+      internalID: 1809048332588453177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: box 01
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 254
+        width: 244
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bcc7c81e618b14fab21984d7f428f4
+      internalID: -1081666589136444202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: box 02
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 255
+        width: 303
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176618c62a89f0649ac77610271c5302
+      internalID: -8041208010698922816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fench
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 556
+        width: 393
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61829d5dacb4cdd4996b64b8dea3022f
+      internalID: 6030551744094010435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: box 03
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12
+        width: 438
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8a81d7767636b48a2d8bbfc9f32343
+      internalID: -5565708668161845910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dock
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 1278
+        height: 542
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8debc53a57c174f4b92c237f21156e6a
+      internalID: 2613131882787316589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ba9808b66cce4d4459a2516396bb377d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

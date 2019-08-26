@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using CodeMonkey.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CanvasGroup PauseCanvas;
     [SerializeField] private CanvasGroup TutorialCanvas;
 
-    [SerializeField] private Animator shipAnimator;
+    [SerializeField] public Animator ShipAnimator;
     [SerializeField] private Animator faderAnimator;
     [SerializeField] private GameObject faderCanvas;
 
@@ -49,18 +50,15 @@ public class GameManager : MonoBehaviour
     {
         Screen.SetResolution(750, 1334, false);
 
-        TouchEnabled = false;
-        IsRunning = true;
+        IsRunning = TouchEnabled = false;
         PauseCanvas.gameObject.SetActive(false);
-
-        
     }
 
     //TODO: enable, somehow, to get here from restart and have the fact we pressed 'start' persist.
     public void StartGame()
     {
         DashboardManager.Instance.TurnOnDashboard();
-        TouchEnabled = true;
+        IsRunning = TouchEnabled = true;
         StartCoroutine(FadeTo(0f, 1f));
         SoundManager.Instance.DisableRadioMuffle();
         SoundManager.Instance.PlayOneshotound("Menu Buttons Click");
@@ -86,7 +84,7 @@ public class GameManager : MonoBehaviour
         {
             SoundManager.Instance.PlayOneshotound("Pause Button");
             IsRunning = TouchEnabled = false;
-            shipAnimator.speed = 0;
+            ShipAnimator.speed = 0;
 
             PauseCanvas.gameObject.SetActive(true);
         }
@@ -95,10 +93,16 @@ public class GameManager : MonoBehaviour
             SoundManager.Instance.PlayOneshotound("Menu Buttons Click");
             touchController.Reset();
             IsRunning = TouchEnabled = true;
-            shipAnimator.speed = 1;
+            ShipAnimator.speed = 1;
 
             PauseCanvas.gameObject.SetActive(false);
         }
+    }
+
+    public void SkipButton()
+    {
+        //TODO: implement skip
+        TutorialController.Instance.SkipTutorial();
     }
 
     public void Restart()
@@ -116,7 +120,12 @@ public class GameManager : MonoBehaviour
     internal void ResetAllParameters()
     {
         ShipSpeedController.Instance.TargetSpeed = 0;
+        ShipSpeedController.Instance.CurrentSpeed = 0;
         ShipSpeedController.Instance.miles = 0;
+        ShipSpeedController.Instance.milesThisStation = 0f;
+        ShipSpeedController.Instance.nextFuelingStation = GlobalGameplayVariables.Instance.FuelStationsLocations.First();
+        ShipSpeedController.Instance.fuelStationIndex = 0;
+        ShipSpeedController.Instance._petrolLocationUI.localPosition = ShipSpeedController.Instance._petrolLocationStartUI.localPosition;
         EngineController.Instance.EngineCooling = false;
         EngineController.Instance.HeatLevel = 0;
         EngineController.Instance.OverheatLevel = GlobalGameplayVariables.Instance.MaxOverheat;
@@ -126,7 +135,7 @@ public class GameManager : MonoBehaviour
         FuelController.Instance.Restart();
         WindController.Instance.State = 0;
 
-        //TODO: reset day/night cycle as well.
+        //TODO: reset post processing as well.
     }
 
     public void StartGameOverSequence()
