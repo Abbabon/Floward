@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,10 +33,20 @@ public class MaterialsController : MonoBehaviour
     public void SetMaterialsBaseMapColor(Color color)
     {
         foreach (var material in _controlledMaterials){
-            material.S‎etColor("Base Color", color);
+            material.S‎etColor("_BaseColor", color);
+            material.S‎etColor("_Color", color);
         }
     }
 
-    
-
+    internal void TweenMaterialsBaseMapColor(Color color, float duration)
+    {
+        foreach (var material in _controlledMaterials)
+        {
+            LeanTween.value(gameObject, material.color, color, duration).setOnUpdate((Color val) =>
+            {
+                material.S‎etColor("_BaseColor", val);
+                material.S‎etColor("_Color", val);
+            });
+        }
+    }
 }

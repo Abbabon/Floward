@@ -1,17 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using CodeMonkey.Utils;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EndingSceneScript : MonoBehaviour
+public class EndingSceneScript : SerializedMonoBehaviour
 {
     public TextMeshProUGUI milesDisplay;
     public CanvasGroup retryPanel;
     public GameObject faderCanvas;
     public Animator faderAnimator;
-
+    public List<PlantSpot> plantsSpots;
 
     void Awake()
     {
@@ -25,6 +27,11 @@ public class EndingSceneScript : MonoBehaviour
     {
         milesDisplay.text = PlayerPrefs.GetInt("current_score").ToString().PadLeft(7,'0');
         FunctionTimer.Create(() => retryPanel.GetComponent<FadeInOut>().FadeIn(), 3f);
+
+        //handle plants:
+        foreach (var plantSpot in plantsSpots){
+            plantSpot.gameObject.SetActive(PlayerPrefs.GetInt(String.Format("Plant{0}", plantSpot.GetComponent<Plant>().PlantId)) == 1);
+        }
     }
 
     public void Restart()

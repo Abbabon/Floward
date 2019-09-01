@@ -96,7 +96,11 @@ public class ShipSpeedController : MonoBehaviour
         float windEffect = (SailsController.Instance.SailsAttached ? (int)(SailsController.Instance.State) * (int)(WindController.Instance.Direction()) *  GlobalGameplayVariables.Instance.WindStrengthToSpeed[WindController.Instance.Strength()] : 0);
         float newSpeedValue = GlobalGameplayVariables.Instance.EngineGearToSpeedWeight[EngineController.Instance.CurrentGear] + windEffect;
 
-        TargetSpeed = InStation ? 0 : IsBoostingAnimation ? GlobalGameplayVariables.Instance.MaxSpeed : Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost);
+        TargetSpeed = IsFueling ? 15f :
+                        (InStation ? 0 :
+                            (IsBoostingAnimation ? GlobalGameplayVariables.Instance.MaxSpeed :
+                                Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost)));
+
         CurrentSpeed = Mathf.Lerp(CurrentSpeed, TargetSpeed, ShipAcceleration);
 
         //TODO: add boosting animation to speedometer or something like that
@@ -151,6 +155,13 @@ public class ShipSpeedController : MonoBehaviour
                                                                         _shipLocationUI.localPosition.x, _petrolLocationStartUI.localPosition.x),
                                                             _petrolLocationUI.localPosition.y);
         }
+
+        if (!TutorialController.Instance.InTutorial)
+        {
+            if (miles >= GlobalGameplayVariables.Instance.DistanceToOpenSky){
+                GameManager.Instance.OpenSky();
+            }
+        }
     }
 
     internal void StartBoosting(){
@@ -165,7 +176,7 @@ public class ShipSpeedController : MonoBehaviour
 
     internal void EnterFuelingMode(){
         IsFueling = true;
-        EngineController.Instance.HeatLevel = Mathf.Min(20f, EngineController.Instance.HeatLevel);
+        EngineController.Instance.HeatLevel = Mathf.Min(30f, EngineController.Instance.HeatLevel);
     }
 
     internal void EnteringStation()
@@ -207,9 +218,13 @@ public class ShipSpeedController : MonoBehaviour
 
     private void ManageFuelStations()
     {
-        if (TutorialController.Instance.EnableFuelStations && !IsFueling && !EngineController.Instance.EngineInShutdown && miles >= nextFuelingStation){
-            FuelingStationController.Instance.StartFuelingProcess();
-            //the next station's location is deterimined when exiting the station
+        if (TutorialController.Instance.EnableFuelStations &&
+            !IsFueling &&
+            !EngineController.Instance.EngineInShutdown &&
+            !ShipSpeedController.Instance.IsBoosting &&
+            miles >= nextFuelingStation){
+                Debug.Log("Starting Fueling Process");
+                FuelingStationController.Instance.StartFuelingProcess();
          
         }   
     }

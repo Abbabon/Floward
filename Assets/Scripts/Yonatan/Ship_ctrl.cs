@@ -6,7 +6,7 @@ public class Ship_ctrl : MonoBehaviour
 {
     private Animator shipAnim;
 
-    [Range(0, 1)]
+    [Range(0, 3)]
     public float gearS;
 
     [Range(0, 1)]
@@ -18,7 +18,7 @@ public class Ship_ctrl : MonoBehaviour
     [Range(0, 6)]
     public float fuelUsage;
 
-    [Range(-3, 3)]
+    [Range(-2, 2)]
     public float wind;
 
     [Range(0, 1)]

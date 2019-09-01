@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class DashboardManager : MonoBehaviour
 {
@@ -13,6 +13,8 @@ public class DashboardManager : MonoBehaviour
     [SerializeField] private Animator dashboardAnimator;
     [SerializeField] private Animator pullieAnimator;
     [SerializeField] private Animator pullieAnimatorGlow;
+
+    [SerializeField] private Image fuelStationIndicator;
 
     private void Awake()
     {
@@ -32,14 +34,23 @@ public class DashboardManager : MonoBehaviour
         //DontDestroyOnLoad(this.gameObject);
     }
 
+    private bool _dashboardOn = false;
     public void TurnOnDashboard()
     {
-        dashboardAnimator.SetBool("DashboardOn", true);
+        if (!_dashboardOn)
+        {
+            _dashboardOn = true;
+            dashboardAnimator.SetBool("DashboardOn", true);
+        }
     }
 
     public void TurnOffDashboard()
     {
-        dashboardAnimator.SetBool("DashboardOn", false);
+        if (_dashboardOn)
+        {
+            _dashboardOn = false;
+            dashboardAnimator.SetBool("DashboardOn", false);
+        }
     }
 
     private bool PullieOn = false;
@@ -61,6 +72,32 @@ public class DashboardManager : MonoBehaviour
             pullieAnimator.SetBool("BoostAvailable", false);
             pullieAnimatorGlow.SetBool("BoostAvailable", false);
             PullieOn = false;
+        }
+    }
+
+
+    private bool _fuelIndicatorOn = true;
+    public void TurnOnFuelStationIndicator()
+    {
+        if (!_fuelIndicatorOn)
+        {
+            _fuelIndicatorOn = true;
+            fuelStationIndicator.color = new Color(fuelStationIndicator.color.r,
+                                                    fuelStationIndicator.color.g,
+                                                    fuelStationIndicator.color.b,
+                                                    1);
+        }
+    }
+
+    public void TurnOffFuelStationIndicator()
+    {
+        if (_fuelIndicatorOn)
+        {
+            _fuelIndicatorOn = false;
+            fuelStationIndicator.color = new Color(fuelStationIndicator.color.r,
+                                                    fuelStationIndicator.color.g,
+                                                    fuelStationIndicator.color.b,
+                                                    0);
         }
     }
 }

@@ -51,6 +51,7 @@ public class FuelingStationController : MonoBehaviour
         if (_currentStation != null)
         {
             _currentStation.FuelingDone();
+            PlantsController.Instance.CollectPlant();
             ShipSpeedController.Instance.ExitFuelingMode();
         }
     }

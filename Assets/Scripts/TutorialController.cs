@@ -30,7 +30,7 @@ public class TutorialController : MonoBehaviour
     [SerializeField] private bool OnBoostFullTutorialPassed;
     [SerializeField] private bool OnStrongWindTutorialPassed;
 
-    [SerializeField] private Ship_ctrl _ship_ctrl;
+	[SerializeField] private Ship_ctrl _ship_ctrl;
     public string RadioMessage1EventName;
     public string RadioMessage2EventName;
 
@@ -105,12 +105,12 @@ public class TutorialController : MonoBehaviour
     #endregion
 
 
-    public void StartTutorial()
+    public void StartTutorial(bool firstTime = false)
     {
         currentTutorialPhase = 0;
         inTutorial = true;
         pauseButton.gameObject.SetActive(false);
-        skipButton.gameObject.SetActive(true);
+        skipButton.gameObject.SetActive(!firstTime);
 
         PlayerPrefs.SetInt("BoostTutorialPassed", 0);
         OnBoostFullTutorialPassed = false;
@@ -120,6 +120,9 @@ public class TutorialController : MonoBehaviour
         WindStateManager.Instance.SetTutorialMode();
         GameManager.Instance.ResetAllParameters();
 
+        DashboardManager.Instance.TurnOffDashboard();
+        DashboardManager.Instance.TurnOffFuelStationIndicator();
+
         SetAllFeatures(false);
         ExecuteTutorialPhase(currentTutorialPhase);
     }
@@ -128,6 +131,8 @@ public class TutorialController : MonoBehaviour
     {
         TurnOffTextBoxAndMarker();
         currentTutorialPhase++;
+        Debug.Log(String.Format("Tutorial Phase: {0}", currentTutorialPhase));
+
         FunctionTimer.StopAllTimersWithName(currentTutorialPhase.ToString());
         StepCondition1Met = false;
         StepCondition2Met = false;
@@ -145,10 +150,8 @@ public class TutorialController : MonoBehaviour
 
         if (currentTutorialPhase >= numberOfTutorialPhases)
         { //ending tutorial
-            SetAllFeatures(true);
-            inTutorial = false;
-            pauseButton.gameObject.SetActive(true);
-            skipButton.gameObject.SetActive(false);
+            EndTutorial();
+            PlayerPrefs.SetInt("TutorialCompleted", 1);
         }
         else
         {
@@ -156,9 +159,17 @@ public class TutorialController : MonoBehaviour
         }
     }
 
+    private void EndTutorial()
+    {
+        SetAllFeatures(true);
+        inTutorial = false;
+        pauseButton.gameObject.SetActive(true);
+        skipButton.gameObject.SetActive(false);
+    }
+
     public void SkipTutorial()
     {
-
+        EndTutorial();
     }
 
     public void ExecuteTutorialPhase(int phaseID)
@@ -300,6 +311,7 @@ public class TutorialController : MonoBehaviour
     {
         stepTwoTimer = 0f;
         heatWatch = EngineController.Instance.HeatLevel;
+        DashboardManager.Instance.TurnOnDashboard();
     }
 
     private void StepTwoUpdate()
@@ -516,7 +528,7 @@ public class TutorialController : MonoBehaviour
         {
             StepCondition2Met = true;
             tutorialTextBox.GetComponent<FadeInOut>().FadeOut();
-            //TODO: coroutine swap between the two post-processing layers.
+            FunctionTimer.Create(GameManager.Instance.OpenSky, 5f, currentTutorialPhase.ToString());
             FunctionTimer.Create(AdvanceTutorialPhase, GlobalGameplayVariables.Instance.NormalBoostTime + 5f, currentTutorialPhase.ToString());
         }
     }
@@ -672,8 +684,8 @@ public class TutorialController : MonoBehaviour
 
     private void StepThirteenStart()
     {
-        StepCondition1Met = true;
         EnableFuelStations = true;
+        DashboardManager.Instance.TurnOnFuelStationIndicator();
         ShipSpeedController.Instance.milesThisStation = 0;
         ShipSpeedController.Instance.nextFuelingStation = ShipSpeedController.Instance.miles + GlobalGameplayVariables.Instance.FuelStationsLocations.First();
     }
@@ -688,7 +700,8 @@ public class TutorialController : MonoBehaviour
                 ShowTutorialTextBox();
                 FreezeSceneTap();
             }
-        }else if (!StepCondition2Met && !IsFreezingTap)
+        }
+        else if (!StepCondition2Met && !IsFreezingTap)
         {
             StepCondition2Met = true;
             AdvanceTutorialPhase();

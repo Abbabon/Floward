@@ -12,6 +12,8 @@ public class WindStateManager : MonoBehaviour
     [SerializeField] private float windDirectionChangeTimer = 0f;
     [SerializeField] private float windDirectionWatcherTimer = 0f;
     [SerializeField] private float nextWindDirectionChange = 0f;
+
+
     private bool forceChange = false;
 
     private void Awake()

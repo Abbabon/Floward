@@ -124,6 +124,10 @@ public class GlobalGameplayVariables : SerializedMonoBehaviour
     [Tooltip("In seconds fraction")]
     public float AccelerationRate = 0.1f; //parameter used for Math.Lerp of the CurrentSpeed to TargetSpeed;
 
+    [Header("Mileage")]
+    [Tooltip("distance units")]
+    public float DistanceToOpenSky = 800f;
+
     [Header("Touch")]
     [Tooltip("In pixels")]
     public float SwipeMagnitude = 75f;

@@ -16,8 +16,7 @@ public class FadeInOut  : MonoBehaviour
 
     public void FadeIn()
     {
-        if (!turnedOn)
-        {
+        if (!turnedOn){
             turnedOn = true;
             StartCoroutine(FadeTo(1f, 0.5f));
         }
@@ -25,8 +24,7 @@ public class FadeInOut  : MonoBehaviour
 
     public void FadeOut()
     {
-        if (turnedOn)
-        {
+        if (turnedOn){
             turnedOn = false;
             StartCoroutine(FadeTo(-0.5f, 0.5f));
         }
