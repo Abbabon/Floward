@@ -34,4 +34,9 @@ public class WorldManager : MonoBehaviour
     {
         _animator.SetTrigger("OpenSky");
     }
+
+    public void Skip()
+    {
+        _animator.Play("Open_Sequence", 0, 0.9f);
+    }
 }

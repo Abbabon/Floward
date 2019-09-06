@@ -8,9 +8,29 @@ public class WorldMenagerAnimationEvents : MonoBehaviour
     [Range(0, 0.1f)]
     public float fogDensitySlider = 0.023f;
 
+
+    //for hilights fix
+    [ColorUsageAttribute(true, true)]
+    public Color highlight01;
+
+    [ColorUsageAttribute(true, true)]
+    public Color highlight02; 
+
+    public Renderer highlight;
+    public Renderer flagHighlight;
+
+    
     void Update()
     {
         RenderSettings.fogDensity = fogDensitySlider;
+    }
+
+    private void Awake()
+    {
+        //set highlights to first color for start scene
+        highlight.sharedMaterial.SetColor("_EMISSION", highlight01);
+
+        flagHighlight.sharedMaterial.SetColor("_EMISSION", highlight01);
     }
 
     private void Start(){
@@ -34,5 +54,12 @@ public class WorldMenagerAnimationEvents : MonoBehaviour
 
     void ShowShip(){
         MaterialsController.Instance.TweenMaterialsBaseMapColor(Color.white, 1f);
+    }
+
+    void ChangeHighlights() // fix highlights in post process change
+    {
+        highlight.sharedMaterial.SetColor("_EMISSION", highlight02);
+
+        flagHighlight.sharedMaterial.SetColor("_EMISSION", highlight02);
     }
 }

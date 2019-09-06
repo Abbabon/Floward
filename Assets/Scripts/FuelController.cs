@@ -83,16 +83,20 @@ public class FuelController : MonoBehaviour
     }
 
     public void AddFuel(){
-        StartCoroutine(AddFuelCoroutine(AmountOfFuel, AmountOfFuel + GlobalGameplayVariables.Instance.FuelAddedInFuelStation));
+        StartCoroutine(AddFuelCoroutine(
+                        (GlobalGameplayVariables.Instance.FuelAddedInFuelStation / (GlobalGameplayVariables.Instance.FuelingDuration) * Time.deltaTime),
+                        Mathf.Clamp(AmountOfFuel + GlobalGameplayVariables.Instance.FuelAddedInFuelStation, 0f, GlobalGameplayVariables.Instance.FuelCapacity)));
     }
 
-    private IEnumerator AddFuelCoroutine(float startingAmount, float endAmount)
+    private IEnumerator AddFuelCoroutine(float addedPerFrame, float endAmount)
     {
-        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / GlobalGameplayVariables.Instance.FuelingDuration)
+        for (float f = AmountOfFuel; f < endAmount; f += addedPerFrame)
         {
-            AmountOfFuel = Mathf.Lerp(startingAmount, endAmount, t);
+            float newValue = AmountOfFuel + addedPerFrame;
+            AmountOfFuel = Mathf.Clamp(newValue, 0f, GlobalGameplayVariables.Instance.FuelCapacity);
             yield return null;
         }
+
         FuelingStationController.Instance.FuelingDone();
     }
 }

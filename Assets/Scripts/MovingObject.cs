@@ -19,7 +19,7 @@ public class MovingObject : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (GameManager.Instance.IsRunning && _isMoving) {
+        if (GameManager.Instance != null && GameManager.Instance.IsRunning && _isMoving) {
             _transform.Translate(_direction * Time.deltaTime * (VisualSpeedController.BGVisualSpeed + _baseSpeed));
         }
     }

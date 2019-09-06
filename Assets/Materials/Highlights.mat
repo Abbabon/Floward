@@ -104,7 +104,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 0}
-    - _EmissionColor: {r: 9.734288, g: 9.734288, b: 9.734288, a: 1}
+    - _EmissionColor: {r: 1.9877404, g: 1.9877404, b: 1.9877404, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.282}

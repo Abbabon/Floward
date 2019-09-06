@@ -31,8 +31,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator faderAnimator;
     [SerializeField] private GameObject faderCanvas;
 
+    [SerializeField] private GameObject headphonesObject;
+    [SerializeField] private GameObject splashObject;
 
-	[SerializeField] private WorldManager _worldManager;
+    [SerializeField] private WorldManager _worldManager;
 	
 	private void Awake()
     {
@@ -55,7 +57,17 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Started!");
+
+        //TODO: REMOVE! when not for phones anyway
         Screen.SetResolution(750, 1334, false);
+
+        if (SessionManager.Instance.FinishedOneRun)
+        {
+            splashObject.SetActive(false);
+            headphonesObject.SetActive(false);
+            _worldManager.Skip();
+        }
 
         IsRunning = TouchEnabled = false;
         PauseCanvas.gameObject.SetActive(false);
@@ -167,6 +179,8 @@ public class GameManager : MonoBehaviour
         //TODO: OR - use https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html to encrypt it so its unexploitable
 
         PlayerPrefs.SetInt("current_score", (int)ShipSpeedController.Instance.miles);
+        SessionManager.Instance.FinishedOneRun = true;
+
         PlantsController.Instance.Serialize();
 
         faderAnimator.SetBool("Fade", true);
@@ -176,6 +190,21 @@ public class GameManager : MonoBehaviour
     [Button]
     private void ClearPlayerPrefs(){
         PlayerPrefs.DeleteAll();
+    }
+
+    [Button]
+    private void PassedTutorial(){
+        PlayerPrefs.SetInt("TutorialCompleted", 1);
+    }
+
+    [Button]
+    private void FillBoost(){
+        BoostController.Instance.boostPercentage = 100f;
+    }
+
+    [Button]
+    private void EndRun(){
+        GameManager.Instance.StartGameOverSequence();
     }
 
     public void Credits()

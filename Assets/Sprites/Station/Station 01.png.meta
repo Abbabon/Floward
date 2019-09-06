@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: f518c580cb34dd44a957de268d2e72ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1382423899455955832
+    second: Station 01_0
+  - first:
+      213: -4120045163708220130
+    second: Station 01_2
+  - first:
+      213: 298005135570782321
+    second: Station 01_3
+  - first:
+      213: -2250518351272341424
+    second: Station 01_5
+  - first:
+      213: 6629973561133421394
+    second: Station 01_6
+  - first:
+      213: -5051798882193067024
+    second: Station 01_1
+  - first:
+      213: 6789443863311529588
+    second: Station 01_4
+  - first:
+      213: 2896246152971762697
+    second: Station 01_10
+  - first:
+      213: -4922089045429224207
+    second: Station 01_11
+  - first:
+      213: -1118868468005108808
+    second: Station 01_12
+  - first:
+      213: -7145938920891350137
+    second: Station 01_13
+  - first:
+      213: -2950475141118030646
+    second: Station 01_14
+  - first:
+      213: -3746946925382008430
+    second: Station 01_15
+  - first:
+      213: -259363126528090417
+    second: Station 01_16
+  - first:
+      213: 2186600349518017322
+    second: Station 01_7
+  - first:
+      213: -5388874918249761086
+    second: Station 01_8
+  - first:
+      213: -1526627273981234364
+    second: Station 01_9
+  - first:
+      213: -2019441776510088848
+    second: Station 01_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 310
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Station 01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 584
+        width: 1070
+        height: 848
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e9b035ba105864e8650eac08811913
+      internalID: -1382423899455955832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_2
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 1160
+        width: 359
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3263a22798abbe64e97851c75f768b99
+      internalID: -4120045163708220130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_3
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 1272
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4aea8111f0ec44f9e33feb7e8ee6b0
+      internalID: 298005135570782321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_5
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 594
+        width: 88
+        height: 534
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1052f7ecf36a4499e6e432e7222af7
+      internalID: -2250518351272341424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 2000
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acf39d98d89a9342b12a938e70d6eeb
+      internalID: 6629973561133421394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1476
+        width: 1386
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a2abd43f2c0cf4cb0d06c402b0abbc
+      internalID: -5051798882193067024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_4
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1424
+        width: 616
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e92e402bf58d449b37c1cacdc5e94c
+      internalID: 6789443863311529588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_10
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 559
+        width: 235
+        height: 857
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d1dfefa578d3545b19d11d4817dca0
+      internalID: 2896246152971762697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_11
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 952
+        width: 222
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aee7f3657d2aba4ba2a597901422275
+      internalID: -4922089045429224207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_12
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 764
+        width: 221
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e46fb4e7ed93d548bfbe35817a5d947
+      internalID: -1118868468005108808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_13
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 551
+        width: 227
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b1d72caa6c68f419d7124ae986ae2c
+      internalID: -7145938920891350137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_14
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 557
+        width: 144
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad831bff2fa6fd044b74bd24c79055e1
+      internalID: -2950475141118030646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_15
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 556
+        width: 81
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd7757719316444b9fefb6c92b6691f
+      internalID: -3746946925382008430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_16
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 581
+        width: 291
+        height: 573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaf7ca1ca8976d429a6c8324d8b339d
+      internalID: -259363126528090417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 361
+        width: 2048
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05068069fed584748824ddb6eb355ab6
+      internalID: 2186600349518017322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_8
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1428
+        width: 152
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fcb2f95dece164cacb6a649640d6e4
+      internalID: -5388874918249761086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 369
+        width: 804
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb64ed31accc4bd4da1953f555e41774
+      internalID: -1526627273981234364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station 01_17
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 501
+        width: 1953
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48856e72baa483a48b9335e560eac977
+      internalID: -2019441776510088848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5f5b30ccb66aef240aad92e18dcb13da
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

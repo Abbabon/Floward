@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Step1
   m_EditorClassIdentifier: 
   PhaseID: 0
-  UpperText: Start you journey
+  UpperText: Start your journey
   LowerText: Tap to start the engine
   SecondsToAppear: 3

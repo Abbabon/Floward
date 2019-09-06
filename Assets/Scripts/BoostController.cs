@@ -40,7 +40,7 @@ public class BoostController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.IsRunning)
+        if (GameManager.Instance.IsRunning && !ShipSpeedController.Instance.IsFueling)
         {
             //Manage boost bar color:   
             if (boostPercentage >= GlobalGameplayVariables.Instance.BoostThreshold)

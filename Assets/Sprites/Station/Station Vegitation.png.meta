@@ -1,0 +1,869 @@
+fileFormatVersion: 2
+guid: 08e9569d16098084a9b29926588a5772
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4738146609286327822
+    second: Station Vegitation_0
+  - first:
+      213: 5983146127603109429
+    second: Station Vegitation_1
+  - first:
+      213: -2387069081177428056
+    second: Station Vegitation_2
+  - first:
+      213: 8404187088359671015
+    second: Station Vegitation_3
+  - first:
+      213: -4225138872499700853
+    second: Station Vegitation_4
+  - first:
+      213: 2710737349506921918
+    second: Station Vegitation_5
+  - first:
+      213: -9050210449258076385
+    second: Station Vegitation_6
+  - first:
+      213: 3001492434034299569
+    second: Station Vegitation_7
+  - first:
+      213: -3298736273907815317
+    second: Station Vegitation_8
+  - first:
+      213: -5659245864230555673
+    second: Station Vegitation_9
+  - first:
+      213: 8408363153800007704
+    second: Station Vegitation_10
+  - first:
+      213: 3194903285370037233
+    second: Station Vegitation_11
+  - first:
+      213: 7039832986295874801
+    second: Station Vegitation_12
+  - first:
+      213: 235141272140427976
+    second: Station Vegitation_13
+  - first:
+      213: -4913144665635876255
+    second: Station Vegitation_14
+  - first:
+      213: 1333733943433033417
+    second: Station Vegitation_15
+  - first:
+      213: 4548446441124326850
+    second: Station Vegitation_16
+  - first:
+      213: -5804489504324982594
+    second: Station Vegitation_17
+  - first:
+      213: 6786929010434269945
+    second: Station Vegitation_18
+  - first:
+      213: -4881385261699044457
+    second: Station Vegitation_19
+  - first:
+      213: 1201419663749884416
+    second: Station Vegitation_20
+  - first:
+      213: -1024962433950953657
+    second: Station Vegitation_21
+  - first:
+      213: 4022031613301432513
+    second: Station Vegitation_22
+  - first:
+      213: 4546582840130846602
+    second: Station Vegitation_23
+  - first:
+      213: -2515905657008516213
+    second: Station Vegitation_24
+  - first:
+      213: 930608841134055477
+    second: Station Vegitation_25
+  - first:
+      213: 4182743982095899387
+    second: Station Vegitation_26
+  - first:
+      213: 7188837404600532305
+    second: Station Vegitation_27
+  - first:
+      213: -4516414517422738685
+    second: Station Vegitation_28
+  - first:
+      213: 2401646835950021645
+    second: Station Vegitation_29
+  - first:
+      213: 6235005280807078327
+    second: Station Vegitation_30
+  - first:
+      213: -3237984134371911281
+    second: Station Vegitation_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 310
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Station Vegitation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1688
+        width: 272
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a1b11e1b62faf4184c80de7de64772
+      internalID: -4738146609286327822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1651
+        width: 290
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd7016d0b3786f42a68dcdd7bc7c5c1
+      internalID: 5983146127603109429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_2
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1796
+        width: 268
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02350fe7ff3e30c4abf2289d997b03a0
+      internalID: -2387069081177428056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_3
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1788
+        width: 284
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0518252e1ece65c4c8d36687a2b57515
+      internalID: 8404187088359671015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_4
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1673
+        width: 636
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ad8dc4975ba5448abb91bc3436480c
+      internalID: -4225138872499700853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_5
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1563
+        width: 430
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc91e8dbdabf2c439adbf2cd5af8d81
+      internalID: 2710737349506921918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 406
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e658132ef7a0b5845a79486e37091c0e
+      internalID: -9050210449258076385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_7
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1330
+        width: 403
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ac90d13ff1b3747be8bd546a87ffcd
+      internalID: 3001492434034299569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_8
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1361
+        width: 227
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ab64a55570f9b4892e5a9ca60b5452
+      internalID: -3298736273907815317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1210
+        width: 409
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cf9b05a1ab3524c93efb51489f4fa9
+      internalID: -5659245864230555673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1063
+        width: 222
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2639a6e01428449a7267f89473ecee
+      internalID: 8408363153800007704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_11
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1012
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146be08334ec4104ebc1ae08edce81eb
+      internalID: 3194903285370037233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_12
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 954
+        width: 243
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f151e2975613b17449e4d88c1df7752c
+      internalID: 7039832986295874801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_13
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 908
+        width: 270
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155976b562fc8214baa5b59dad4cc6b6
+      internalID: 235141272140427976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_14
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1030
+        width: 746
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda8329aaeb511646b8610be78d6c437
+      internalID: -4913144665635876255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_15
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 0
+        width: 278
+        height: 984
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e32674a5c6a0a4cbf57105b66f49f4
+      internalID: 1333733943433033417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_16
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 1029
+        width: 201
+        height: 1019
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03b2548b01aa464ea0b343947842da8
+      internalID: 4548446441124326850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_17
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1175
+        width: 199
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3884b00de86579c4d933874c4cef50e5
+      internalID: -5804489504324982594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_18
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 982
+        width: 220
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a1295da83a5534b9b436eff571bb27
+      internalID: 6786929010434269945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_19
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 1399
+        width: 701
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2d5a5098c37164090c70adb911f726
+      internalID: -4881385261699044457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_20
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 762
+        width: 242
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34080561c5992df4caeec552ed45e742
+      internalID: 1201419663749884416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_21
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 801
+        width: 265
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef43f7a8155133d458e579361a529380
+      internalID: -1024962433950953657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_22
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 6
+        width: 300
+        height: 658
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efba806608fbb04da70f07089abd7c5
+      internalID: 4022031613301432513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_23
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 0
+        width: 365
+        height: 536
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5077a576475dd34cbad62ac56dfc165
+      internalID: 4546582840130846602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 556
+        height: 514
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3bf7b3e0e7e3a4197039914546315f
+      internalID: -2515905657008516213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 703
+        width: 593
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5f4cc625b903d4280c986f5950d268
+      internalID: 930608841134055477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_26
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1445
+        width: 234
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457a636f78c984d4e9ae4595c1f83a1b
+      internalID: 4182743982095899387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_27
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 812
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b028588204bfc4f8afff890b23c383
+      internalID: 7188837404600532305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_28
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 817
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebe1bff4431128468fa4b8ad539dad5
+      internalID: -4516414517422738685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_29
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 811
+        width: 404
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a58a4d79fe96646977b77ac66a9dd4
+      internalID: 2401646835950021645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_30
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 637
+        width: 269
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d5870f967ba824dbfbf33c841cf971
+      internalID: 6235005280807078327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station Vegitation_31
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 631
+        width: 308
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632e5bb2fd382cc4a99d9f0e0b1ca1e9
+      internalID: -3237984134371911281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ba421c3425088da448bdd58d6eb1128d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

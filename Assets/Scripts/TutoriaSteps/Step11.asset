@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Step11
   m_EditorClassIdentifier: 
   PhaseID: 10
-  UpperText: Have you noticed the flag? Lower sail when front wind is blowing
+  UpperText: Have you noticed the flag?$Lower sail when front wind is blowing
   LowerText: Swipe right
   SecondsToAppear: 3

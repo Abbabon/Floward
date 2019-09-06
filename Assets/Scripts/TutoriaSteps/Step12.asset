@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Step12
   m_EditorClassIdentifier: 
   PhaseID: 11
-  UpperText: Front wind can slow you down, keep the fire low to save fuel
+  UpperText: Front wind can slow you down$keep the fire low to save fuel
   LowerText: I will slow down
   SecondsToAppear: 3

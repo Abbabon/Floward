@@ -14,6 +14,7 @@ public class EndingSceneScript : SerializedMonoBehaviour
     public GameObject faderCanvas;
     public Animator faderAnimator;
     public List<PlantSpot> plantsSpots;
+    public TextMeshProUGUI[] milesDisplayDigits;
 
     void Awake()
     {
@@ -25,7 +26,15 @@ public class EndingSceneScript : SerializedMonoBehaviour
     // Fade in 'Try Again' button
     void Start()
     {
-        milesDisplay.text = PlayerPrefs.GetInt("current_score").ToString().PadLeft(7,'0');
+        int todisplay = PlayerPrefs.GetInt("current_score");
+
+        for (int i = 0; i < milesDisplayDigits.Length; i++)
+        {
+            int digit = todisplay % 10;
+            milesDisplayDigits[i].text = $"{digit}";
+            todisplay /= 10;
+        }
+
         FunctionTimer.Create(() => retryPanel.GetComponent<FadeInOut>().FadeIn(), 3f);
 
         //handle plants:

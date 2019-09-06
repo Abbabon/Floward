@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 
-public class ShipSpeedController : MonoBehaviour
+public class ShipSpeedController : SerializedMonoBehaviour
 {
     private static ShipSpeedController _instance;
     public static ShipSpeedController Instance { get { return _instance; } }
@@ -23,7 +24,7 @@ public class ShipSpeedController : MonoBehaviour
     public float CurrentSpeed = 0f; // in KMph, between 0 and 100
     public float ShipAcceleration = 0f;
 
-    public CinemachineVirtualCamera virtualCamera;
+    public Camera _camera;
 
     public AudioSource audioSource;
 
@@ -31,10 +32,11 @@ public class ShipSpeedController : MonoBehaviour
 
     public float miles;
     public float milesThisStation;
-    public TextMeshProUGUI milesDisplay;
+    public TextMeshProUGUI[] milesDisplayDigits;
 
     public float nextFuelingStation;
     public int fuelStationIndex;
+    private bool thereAreMoreFuelingStations = false;
 
     public Transform ShipTransform;
 
@@ -63,13 +65,13 @@ public class ShipSpeedController : MonoBehaviour
 
     private void InitializeCachedVariables()
     {
-        CameraUnit = MaxCameraDistance - MinCameraDistance;
         SpeedMultiplier = 1f;
         miles = 0;
         milesThisStation = 0f;
         ShipAcceleration = GlobalGameplayVariables.Instance.AccelerationRate;
         nextFuelingStation = GlobalGameplayVariables.Instance.FuelStationsLocations.First();
         fuelStationIndex = 0;
+        thereAreMoreFuelingStations = true;
         _petrolLocationDistances = Math.Abs(_shipLocationUI.localPosition.x) + Math.Abs(_petrolLocationStartUI.localPosition.x);
     }
 
@@ -79,7 +81,6 @@ public class ShipSpeedController : MonoBehaviour
 		if (GameManager.Instance.IsRunning)
 		{
 		    ManageSpeed();
-            ManageClouds();
             ManageCamera();
             ManageAnimations();
             ManageMileage();
@@ -96,8 +97,8 @@ public class ShipSpeedController : MonoBehaviour
         float windEffect = (SailsController.Instance.SailsAttached ? (int)(SailsController.Instance.State) * (int)(WindController.Instance.Direction()) *  GlobalGameplayVariables.Instance.WindStrengthToSpeed[WindController.Instance.Strength()] : 0);
         float newSpeedValue = GlobalGameplayVariables.Instance.EngineGearToSpeedWeight[EngineController.Instance.CurrentGear] + windEffect;
 
-        TargetSpeed = IsFueling ? 15f :
-                        (InStation ? 0 :
+        TargetSpeed = InStation ? 0f :
+                        (IsFueling ? 15f :
                             (IsBoostingAnimation ? GlobalGameplayVariables.Instance.MaxSpeed :
                                 Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost)));
 
@@ -109,20 +110,39 @@ public class ShipSpeedController : MonoBehaviour
         ship_Ctrl.speed = CurrentSpeed;
     }
 
-    //set background scrolling speed (if needed - the clouds query it on their own)
-    private void ManageClouds()
-    {
+    private Tween currentCameraTween;
+    //the default distance:
+    private float TargetDistance = 21f;
 
-    }
-
-    [SerializeField] private float MaxCameraDistance = 8.5f;
-    [SerializeField] private float MinCameraDistance = 6.6f;
-    private float CameraUnit;
+    [Header("Camera Distances")]
+    [SerializeField] private float CameraDistanceFueling;
+    [SerializeField] private float CameraDistanceBoosting;
+    private Dictionary<Gear, float> GearToCameraDistance = new Dictionary<Gear, float> { { Gear.zero, 21 }, { Gear.first, 23 }, { Gear.second, 24 }, { Gear.third, 25 } };
 
     private void ManageCamera()
     {
         //used when we had the ortho camera
-        //DOTween.To(() => virtualCamera.m_Lens.OrthographicSize, x => virtualCamera.m_Lens.OrthographicSize = x, MinCameraDistance + (CurrentSpeed / GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost) * CameraUnit, 0.5f);
+
+        float newDistance = 21;
+
+        if (IsFueling){
+            newDistance = CameraDistanceFueling;
+        }
+        else if (IsBoosting){
+            newDistance = CameraDistanceBoosting;
+        }
+        else{
+            newDistance = GearToCameraDistance[EngineController.Instance.CurrentGear];
+        }
+
+        if (newDistance != TargetDistance)
+        {
+            TargetDistance = newDistance;
+            if (currentCameraTween != null && currentCameraTween.IsPlaying()){
+                currentCameraTween.Kill();
+            }
+            currentCameraTween = DOTween.To(() => _camera.fieldOfView, x => _camera.fieldOfView = x, newDistance, 1.5f);
+        }
     }
 
     //TODO: change to Km, according to the specs>?
@@ -136,24 +156,28 @@ public class ShipSpeedController : MonoBehaviour
         { 
             targetMileageDelta = CurrentSpeed + (GlobalGameplayVariables.Instance.BoostAddedDistance / GlobalGameplayVariables.Instance.NormalBoostTime);
         }
-        else if (WindController.Instance.Direction() == WindDirection.FrontWind && CurrentSpeed == 0){
-            targetMileageDelta = GlobalGameplayVariables.Instance.BackMovementPerSecond * WindController.Instance.Strength() * -1;
+        else if (WindController.Instance.Direction() == WindDirection.FrontWind && CurrentSpeed < 1 && !IsFueling){
+            targetMileageDelta = GlobalGameplayVariables.Instance.WindStrengthToSpeed[WindController.Instance.Strength()] * -1;
         }
         else{
             targetMileageDelta = CurrentSpeed;
         }
 
-        float newMileage = miles + targetMileageDelta * Time.deltaTime;
+        float newMileage = miles + targetMileageDelta * Time.deltaTime * GlobalGameplayVariables.Instance.MilesModifier;
         miles = Mathf.Max(newMileage, 0f);
         milesThisStation = milesThisStation + targetMileageDelta * Time.deltaTime;
-        milesDisplay.text = ((int)miles).ToString().PadLeft(5, '0');
+
+        UpdateDigits();
 
         if (TutorialController.Instance.EnableFuelStations)
         {
             //manage next fueling station indicator:
-            _petrolLocationUI.localPosition = new Vector2(Mathf.Clamp(_petrolLocationStartUI.localPosition.x - (milesThisStation / GlobalGameplayVariables.Instance.FuelStationsLocations[fuelStationIndex]) * _petrolLocationDistances,
+            if (thereAreMoreFuelingStations)
+            {
+                _petrolLocationUI.localPosition = new Vector2(Mathf.Clamp(_petrolLocationStartUI.localPosition.x - (milesThisStation / GlobalGameplayVariables.Instance.FuelStationsLocations[fuelStationIndex] / (TutorialController.Instance.InTutorial ? 5 : 1)) * _petrolLocationDistances,
                                                                         _shipLocationUI.localPosition.x, _petrolLocationStartUI.localPosition.x),
                                                             _petrolLocationUI.localPosition.y);
+            }
         }
 
         if (!TutorialController.Instance.InTutorial)
@@ -161,6 +185,18 @@ public class ShipSpeedController : MonoBehaviour
             if (miles >= GlobalGameplayVariables.Instance.DistanceToOpenSky){
                 GameManager.Instance.OpenSky();
             }
+        }
+    }
+
+    private void UpdateDigits()
+    {
+        int todisplay = (int)miles;
+        
+        for (int i = 0; i < milesDisplayDigits.Length; i++)
+        {
+            int digit = todisplay % 10;
+            milesDisplayDigits[i].text = $"{digit}";
+            todisplay /= 10;
         }
     }
 
@@ -177,6 +213,7 @@ public class ShipSpeedController : MonoBehaviour
     internal void EnterFuelingMode(){
         IsFueling = true;
         EngineController.Instance.HeatLevel = Mathf.Min(30f, EngineController.Instance.HeatLevel);
+        DashboardManager.Instance.TurnOffBoostPullie();
     }
 
     internal void EnteringStation()
@@ -191,30 +228,39 @@ public class ShipSpeedController : MonoBehaviour
     internal void ExitFuelingMode(){
         IsFueling = false;
         InStation = false;
-        nextFuelingStation = miles + GlobalGameplayVariables.Instance.FuelStationsLocations[fuelStationIndex+1];
-        milesThisStation = 0;
+
         fuelStationIndex++;
+        if (fuelStationIndex >= GlobalGameplayVariables.Instance.FuelStationsLocations.Count){
+            thereAreMoreFuelingStations = false;
+            _petrolLocationUI.gameObject.SetActive(false);
+        }
+        else
+        {
+            nextFuelingStation = miles + GlobalGameplayVariables.Instance.FuelStationsLocations[fuelStationIndex];
+            milesThisStation = 0;
+        }
     }
 
     //TODO: consider moving ot its own script
     private void ManageAnimations()
     {
-        float gear = 0f;
-        if (EngineController.Instance.HeatLevel > 0f)
-        {
-            if (EngineController.Instance.HeatLevel > EngineController.Instance.OverheatLevel)//in overheat
-            {
-                gear = Mathf.Clamp(EngineController.Instance.HeatLevel / 100f, 0.26f, 1f);
-            }
-            else
-            {
-                gear = Mathf.Clamp(EngineController.Instance.HeatLevel / 100f, 0.26f, 0.79f);
-            }
-        }
+        //float gear = 0f;
+        //if (EngineController.Instance.HeatLevel > 0f)
+        //{
+        //    if (EngineController.Instance.HeatLevel > EngineController.Instance.OverheatLevel)//in overheat
+        //    {
+        //        gear = Mathf.Clamp(EngineController.Instance.HeatLevel / 100f, 0.26f, 1f);
+        //    }
+        //    else
+        //    {
+        //        gear = Mathf.Clamp(EngineController.Instance.HeatLevel / 100f, 0.26f, 0.79f);
+        //    }
+        //}
 
-        ship_Ctrl.gearS = gear;
+        ship_Ctrl.gearS = (int)EngineController.Instance.CurrentGear;
         ship_Ctrl.boost = IsBoosting;
     }
+
 
     private void ManageFuelStations()
     {
@@ -224,7 +270,7 @@ public class ShipSpeedController : MonoBehaviour
             !ShipSpeedController.Instance.IsBoosting &&
             miles >= nextFuelingStation){
                 Debug.Log("Starting Fueling Process");
-                FuelingStationController.Instance.StartFuelingProcess();
+                FuelingStationController.Instance.StartFuelingProcess(fuelStationIndex);
          
         }   
     }

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class FuelingStationController : MonoBehaviour
+public class FuelingStationController : SerializedMonoBehaviour
 {
     [SerializeField] private Transform _entryPosition;
-    [SerializeField] private FuelingStation _fuelingStationPrefab;
+    [SerializeField] private List<FuelingStation> _fuelingStationPrefabs;
     private FuelingStation _currentStation;
-
-    public bool Fueled;
 
     #region Singleton Implementation
 
@@ -36,18 +35,20 @@ public class FuelingStationController : MonoBehaviour
 
     #endregion 
 
-    public void StartFuelingProcess(){
+    public void StartFuelingProcess(int fuelStationIndex){
         ShipSpeedController.Instance.EnterFuelingMode();
-        InstantiateFuelStation();
+        InstantiateFuelStation(fuelStationIndex);
     }
 
-    private void InstantiateFuelStation(){
-        _currentStation = Instantiate(_fuelingStationPrefab, _entryPosition.position, Quaternion.identity);
+    private void InstantiateFuelStation(int fuelStationIndex)
+    {
+        _currentStation = Instantiate(_fuelingStationPrefabs[fuelStationIndex], _entryPosition.position, Quaternion.identity);
     }
 
     //called from the FuelController when fueling is done; call the animation
     public void FuelingDone()
     {
+        Debug.Log("Fueling Done!");
         if (_currentStation != null)
         {
             _currentStation.FuelingDone();

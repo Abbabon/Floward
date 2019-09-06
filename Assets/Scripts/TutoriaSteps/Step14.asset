@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Step14
   m_EditorClassIdentifier: 
   PhaseID: 13
-  UpperText: 'Attending the wind and using fuel wisely  will take you further. You
+  UpperText: 'Attending the wind and using fuel wisely will take you further. You
     are good to go '
   LowerText: Sail away
   SecondsToAppear: 3

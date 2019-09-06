@@ -23,7 +23,7 @@ public class TouchController : MonoBehaviour
     [SerializeField] private RectTransform EngineArea;
     [SerializeField] private RectTransform BoostArea;
 
-    [SerializeField] private float _boostZoneHeight = 0.8f;
+    [SerializeField] private float _boostZoneHeight = 0.65f;
     [SerializeField] private float _boostZoneWidth = 0.5f;
 
     void Update()

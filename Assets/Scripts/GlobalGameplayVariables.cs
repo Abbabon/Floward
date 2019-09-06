@@ -127,6 +127,8 @@ public class GlobalGameplayVariables : SerializedMonoBehaviour
     [Header("Mileage")]
     [Tooltip("distance units")]
     public float DistanceToOpenSky = 800f;
+    [Tooltip("distance units")]
+    public float MilesModifier = 1f;
 
     [Header("Touch")]
     [Tooltip("In pixels")]

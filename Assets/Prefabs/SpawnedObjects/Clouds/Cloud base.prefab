@@ -4820,8 +4820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eb536782240459eacc46d395629fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: -1, y: -0}
+  _baseSpeed: 0.1
   _animator: {fileID: 8737577548676042721}
+  _isMoving: 1
 --- !u!65 &-4588308635629565098
 BoxCollider:
   m_ObjectHideFlags: 0

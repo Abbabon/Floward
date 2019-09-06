@@ -43,10 +43,10 @@ public class TutorialController : MonoBehaviour
     public bool InTutorial { get { return inTutorial; } }
 
     //freezes
-    [SerializeField] private bool IsFreezingTap;
-    [SerializeField] private bool IsFreezingSail;
-    [SerializeField] private bool IsFreezingCooling;
-    [SerializeField] private bool IsFreezingBoost;
+    [SerializeField] public bool IsFreezingTap;
+    [SerializeField] public bool IsFreezingSail;
+    [SerializeField] public bool IsFreezingCooling;
+    [SerializeField] public bool IsFreezingBoost;
 
     private void Awake()
     {
@@ -305,6 +305,11 @@ public class TutorialController : MonoBehaviour
         }
     }
 
+    internal bool Froezen()
+    {
+        return IsFreezingTap || IsFreezingSail || IsFreezingCooling || IsFreezingBoost;
+    }
+
     float stepTwoTimer;
     float heatWatch;
     private void StepTwoStart()
@@ -430,7 +435,7 @@ public class TutorialController : MonoBehaviour
                 if (!IsFreezingCooling) //dont count while frozen
                     fifthStepTimer += Time.deltaTime;
 
-                if (fifthStepTimer > 1.2f) {
+                if (fifthStepTimer > 2.5f) {
                     //change text
                     ShowTutorialTextBox(97);
                     FreezeSceneCooling();
@@ -574,10 +579,10 @@ public class TutorialController : MonoBehaviour
     //this step is just a message!
     private void StepTenStart()
     {
-        ShowTutorialTextBox();
         WindController.Instance.ChangeState(2);
         HighlightShipPart(Highlightables.Flag, true);
-        FunctionTimer.Create(FreezeSceneTap, 4f, currentTutorialPhase.ToString());
+        FunctionTimer.Create(ShowTutorialTextBox, 5f, currentTutorialPhase.ToString());
+        FunctionTimer.Create(FreezeSceneTap, 5f, currentTutorialPhase.ToString());
     }
 
     private void StepTenUpdate()
@@ -646,13 +651,13 @@ public class TutorialController : MonoBehaviour
     {
         EnablePassiveCooling = true;
         EnableWindChanges = true;
-        FunctionTimer.Create(ShowTutorialTextBox, 0.5f, currentTutorialPhase.ToString());
-        FunctionTimer.Create(FreezeSceneTap, 0.5f, currentTutorialPhase.ToString());
+        FunctionTimer.Create(ShowTutorialTextBox, 4f, currentTutorialPhase.ToString());
+        FunctionTimer.Create(FreezeSceneTap, 4f, currentTutorialPhase.ToString());
         stepTweleveTimer = 0f;
     }
 
     float stepTweleveTimer;
-    float stepTweleveTimeout = 4f;
+    float stepTweleveTimeout = 7f;
     private void StepTwelveUpdate()
     {
         if (!StepCondition1Met)
@@ -687,14 +692,14 @@ public class TutorialController : MonoBehaviour
         EnableFuelStations = true;
         DashboardManager.Instance.TurnOnFuelStationIndicator();
         ShipSpeedController.Instance.milesThisStation = 0;
-        ShipSpeedController.Instance.nextFuelingStation = ShipSpeedController.Instance.miles + GlobalGameplayVariables.Instance.FuelStationsLocations.First();
+        ShipSpeedController.Instance.nextFuelingStation = ShipSpeedController.Instance.miles + (GlobalGameplayVariables.Instance.FuelStationsLocations.First() / 5);
     }
 
     private void StepThirteenUpdate()
     {
         if (!StepCondition1Met)
         {
-            if (FuelController.Instance.AmountOfFuel >= GlobalGameplayVariables.Instance.FuelCapacity)
+            if (FuelController.Instance.AmountOfFuel >= GlobalGameplayVariables.Instance.FuelCapacity - 10f)
             {
                 StepCondition1Met = true;
                 ShowTutorialTextBox();
@@ -710,21 +715,15 @@ public class TutorialController : MonoBehaviour
 
     private void StepFourteenStart()
     {
-        FunctionTimer.Create(ShowTutorialTextBox, 1f, currentTutorialPhase.ToString());
-        FunctionTimer.Create(FreezeSceneTap, 1f, currentTutorialPhase.ToString());
+        ShowTutorialTextBox();
+        FreezeSceneTap();
     }
 
     private void StepFourteenUpdate()
     {
-        if (!StepCondition1Met)
+        if (!StepCondition1Met && !IsFreezingTap)
         {
-            if (IsFreezingTap) //waiting for freeze
-            {
-                StepCondition1Met = true;
-            }
-        }
-        else if (!StepCondition2Met && !IsFreezingTap)
-        {
+            StepCondition1Met = true;
             AdvanceTutorialPhase();
         }
     }

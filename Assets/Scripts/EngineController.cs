@@ -259,6 +259,8 @@ public class EngineController : MonoBehaviour
         {
             OnTap?.Invoke();
 
+            if (!ShipSpeedController.Instance.IsFueling && !TutorialController.Instance.Froezen())
+
             if (FuelController.Instance.AmountOfFuel == 0f){
                 ship_Ctrl.end = true;
                 GameManager.Instance.TouchEnabled = false;

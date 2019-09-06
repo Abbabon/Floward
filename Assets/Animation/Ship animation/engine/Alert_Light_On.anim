@@ -22,158 +22,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.r
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.g
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.b
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.a
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.r
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.g
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.b
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.a
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
         value: 0.1
         inSlope: 0
         outSlope: 0
@@ -189,6 +37,158 @@ AnimationClip:
       Light
     classID: 108
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -198,67 +198,67 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2287268296
-      attribute: 1136458424
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2287268296
-      attribute: 1404893880
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2287268296
-      attribute: 1673329336
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2287268296
-      attribute: 1941764792
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3288633638
-      attribute: 1136458424
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3288633638
-      attribute: 1404893880
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3288633638
-      attribute: 1673329336
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3288633638
-      attribute: 1941764792
-      script: {fileID: 0}
-      typeID: 212
-      customType: 22
-      isPPtrCurve: 0
-    - serializedVersion: 2
       path: 1235967522
       attribute: 898800009
       script: {fileID: 0}
       typeID: 108
       customType: 25
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2287268296
+      attribute: 1303350129
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2287268296
+      attribute: 1571785585
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2287268296
+      attribute: 1840221041
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2287268296
+      attribute: 2108656497
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3288633638
+      attribute: 1303350129
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3288633638
+      attribute: 1571785585
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3288633638
+      attribute: 1840221041
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3288633638
+      attribute: 2108656497
+      script: {fileID: 0}
+      typeID: 212
+      customType: 22
       isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
@@ -287,158 +287,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.r
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.g
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.b
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.a
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.r
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.g
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.b
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: material._BaseColor.a
-    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
         value: 0.1
         inSlope: 0
         outSlope: 0
@@ -453,6 +301,158 @@ AnimationClip:
     path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light/Alert Point
       Light
     classID: 108
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Engine ctrl/Alert_light
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.r
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.g
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: Ship pivot/Ship hull ctrl/Stern ctrl/Frame ctrl/Alert_light_Falloff
+    classID: 212
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
