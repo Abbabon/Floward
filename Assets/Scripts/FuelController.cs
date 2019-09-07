@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -78,7 +79,8 @@ public class FuelController : MonoBehaviour
         AmountOfFuel = Mathf.Clamp(newValue, 0f, GlobalGameplayVariables.Instance.FuelCapacity);
         _ship_ctrl.fuelDrop = true;
 
-        SoundManager.Instance.PlayOneshotound("Fuel Drop");
+        SoundManager.Instance.ChangeParameter("Fuel Drop", 1f);
+        SoundManager.Instance.ChangeParameter("Fuel Drop", 0f);
         EngineController.Instance.HeatLoss(heatLoss);
     }
 
@@ -86,6 +88,8 @@ public class FuelController : MonoBehaviour
         StartCoroutine(AddFuelCoroutine(
                         (GlobalGameplayVariables.Instance.FuelAddedInFuelStation / (GlobalGameplayVariables.Instance.FuelingDuration) * Time.deltaTime),
                         Mathf.Clamp(AmountOfFuel + GlobalGameplayVariables.Instance.FuelAddedInFuelStation, 0f, GlobalGameplayVariables.Instance.FuelCapacity)));
+        SoundManager.Instance.ChangeParameter("Fuel Pump In", 1f);
+        FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Fuel Tank Is Filling", 1f), 0.5f);
     }
 
     private IEnumerator AddFuelCoroutine(float addedPerFrame, float endAmount)

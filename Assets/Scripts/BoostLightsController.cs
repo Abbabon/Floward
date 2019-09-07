@@ -11,10 +11,6 @@ public class BoostLightsController : MonoBehaviour
 
     private float _boostPerLight;
 
-    [FMODUnity.EventRef]
-    public string _HummingSound;
-    FMOD.Studio.EventInstance _hummingEvent;
-
     [SerializeField] private Ship_ctrl _ship_ctrl;
     private int _numberOfLights = 7;
     private int _numberOfLightsOn = 0;
@@ -30,7 +26,6 @@ public class BoostLightsController : MonoBehaviour
             else
             {
                 _instance = this;
-                _hummingEvent = FMODUnity.RuntimeManager.CreateInstance(_HummingSound);
             }
         }
         //DontDestroyOnLoad(this.gameObject);
@@ -57,12 +52,10 @@ public class BoostLightsController : MonoBehaviour
         _ship_ctrl.boostLightsOn = (BoostController.Instance.boostPercentage / _boostPerLight);
         if (Mathf.FloorToInt(_ship_ctrl.boostLightsOn) > _numberOfLightsOn){
             _numberOfLightsOn++;
-            SoundManager.Instance.PlayOneshotound(String.Format("Light Bulb {0}", _numberOfLightsOn));
+            SoundManager.Instance.ChangeParameter("Light Bulbs", 0.1f * _numberOfLightsOn);
 
-            if (_numberOfLightsOn == _numberOfLights)
-            {
-                _numberOfLightsOn++;
-                _hummingEvent.start();
+            if (_numberOfLightsOn == _numberOfLights){
+                SoundManager.Instance.ChangeParameter("Light Bulbs", 1f);
             }
         }
     }
@@ -70,6 +63,6 @@ public class BoostLightsController : MonoBehaviour
     internal void Restart()
     {
         _numberOfLightsOn = 0;
-        _hummingEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        SoundManager.Instance.ChangeParameter("Light Bulbs", 0f);
     }
 }

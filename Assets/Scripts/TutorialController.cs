@@ -31,8 +31,6 @@ public class TutorialController : MonoBehaviour
     [SerializeField] private bool OnStrongWindTutorialPassed;
 
 	[SerializeField] private Ship_ctrl _ship_ctrl;
-    public string RadioMessage1EventName;
-    public string RadioMessage2EventName;
 
     private bool StepCondition1Met;
     private bool StepCondition2Met;
@@ -112,6 +110,8 @@ public class TutorialController : MonoBehaviour
         pauseButton.gameObject.SetActive(false);
         skipButton.gameObject.SetActive(!firstTime);
 
+        SoundManager.Instance.ChangeParameter("Timeline Control", 0.1f);
+
         PlayerPrefs.SetInt("BoostTutorialPassed", 0);
         OnBoostFullTutorialPassed = false;
         PlayerPrefs.SetInt("StrongWindTutorialPassed", 0);
@@ -162,6 +162,15 @@ public class TutorialController : MonoBehaviour
     private void EndTutorial()
     {
         SetAllFeatures(true);
+
+        TurnOffTextBoxAndMarker();
+        UnFreezeSceneBoost();
+        UnFreezeSceneSails();
+        UnFreezeSceneTap();
+        UnFreezeSceneCooling();
+
+        SoundManager.Instance.ChangeParameter("Timeline Control", 1f);
+
         inTutorial = false;
         pauseButton.gameObject.SetActive(true);
         skipButton.gameObject.SetActive(false);
@@ -534,16 +543,14 @@ public class TutorialController : MonoBehaviour
             StepCondition2Met = true;
             tutorialTextBox.GetComponent<FadeInOut>().FadeOut();
             FunctionTimer.Create(GameManager.Instance.OpenSky, 5f, currentTutorialPhase.ToString());
+            FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Timeline Control", 1f), 5f, currentTutorialPhase.ToString());
             FunctionTimer.Create(AdvanceTutorialPhase, GlobalGameplayVariables.Instance.NormalBoostTime + 5f, currentTutorialPhase.ToString());
         }
     }
 
     private void EighthStepStart()
     {
-        //TODO: swap narration FMOD event name here
-        Debug.Log("Pausing for 2 seconds; some narration will play now");
-        SoundManager.Instance.PlayOneshotound("Sail Opens");
-        FunctionTimer.Create(AdvanceTutorialPhase, 2f, currentTutorialPhase.ToString());
+        FunctionTimer.Create(AdvanceTutorialPhase, 8f, currentTutorialPhase.ToString());
     }
 
     private void EigthStepUpdate()
@@ -823,7 +830,7 @@ public class TutorialController : MonoBehaviour
 
     private void ShowTutorialTextBox()
     {
-        SoundManager.Instance.PlayOneshotound("Tutorial Message Appears");
+        SoundManager.Instance.ChangeParameter("Tutorial Message", 0.5f);
         tutorialTextBox.SetTutorialMessage(tutorialPhases.First(x => x.PhaseID == currentTutorialPhase));
         tutorialTextBox.GetComponent<FadeInOut>().FadeIn();
     }
@@ -843,7 +850,7 @@ public class TutorialController : MonoBehaviour
 
     private void TurnOffTextBoxAndMarker()
     {
-        SoundManager.Instance.PlayOneshotound("Tutorial Message Disappears");
+        SoundManager.Instance.ChangeParameter("Tutorial Message", 1f);
         tutorialTextBox.GetComponent<FadeInOut>().FadeOut();
         tutorialMarker.GetComponent<FadeInOut>().FadeOut();
     }

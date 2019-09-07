@@ -55,12 +55,15 @@ public class GameManager : MonoBehaviour
         //DontDestroyOnLoad(this.gameObject);
     }
 
+    private List<float> timelineValues = new List<float>() { 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f };
     private void Start()
     {
-        Debug.Log("Started!");
-
         //TODO: REMOVE! when not for phones anyway
         Screen.SetResolution(750, 1334, false);
+
+        Debug.Log("Started!");
+        ResetAllParameters();
+        SoundManager.Instance.Play();
 
         if (SessionManager.Instance.FinishedOneRun)
         {
@@ -79,17 +82,26 @@ public class GameManager : MonoBehaviour
         IsRunning = TouchEnabled = true;
         StartCoroutine(FadeTo(0f, 1f));
         MenuCanvas.interactable = false;
-        SoundManager.Instance.DisableRadioMuffle();
 
-        _worldManager.MoveIn();
-
-        //TODO: persist tutorial done / not done!
-        if (PlayerPrefs.GetInt("TutorialCompleted") == 0){
-            TutorialController.Instance.StartTutorial(true);
-        }
-        else{
+        if (SessionManager.Instance.FinishedOneRun){
+            float timeline = timelineValues[UnityEngine.Random.Range(0, timelineValues.Count)];
+            Debug.Log(timeline);
+            SoundManager.Instance.ChangeParameter("Timeline Control", timeline);
             DashboardManager.Instance.TurnOnDashboard();
         }
+        else{
+            //TODO: persist tutorial done / not done!
+            if (PlayerPrefs.GetInt("TutorialCompleted") == 0){
+                TutorialController.Instance.StartTutorial(true);
+            }
+            else{
+                DashboardManager.Instance.TurnOnDashboard();
+                SoundManager.Instance.ChangeParameter("Timeline Control", 0.1f);
+                FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Timeline Control", 1f), 1f);
+            }
+        }
+
+        _worldManager.MoveIn();
     }
 
     private bool _openedSky = false;
@@ -115,7 +127,7 @@ public class GameManager : MonoBehaviour
     {
         if (IsRunning)
         {
-            SoundManager.Instance.PlayOneshotound("Pause Button");
+            SoundManager.Instance.ChangeParameter("Pause", 1f);
             IsRunning = TouchEnabled = false;
             ShipAnimator.speed = 0;
             CreditsFrame.SetActive(false);
@@ -123,7 +135,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SoundManager.Instance.PlayOneshotound("Menu Buttons Click");
+            SoundManager.Instance.ChangeParameter("Pause", 0f);
             touchController.Reset();
             IsRunning = TouchEnabled = true;
             ShipAnimator.speed = 1;
@@ -181,10 +193,11 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("current_score", (int)ShipSpeedController.Instance.miles);
         SessionManager.Instance.FinishedOneRun = true;
 
+
         PlantsController.Instance.Serialize();
 
         faderAnimator.SetBool("Fade", true);
-        FunctionTimer.Create(() => FlowardSceneManager.Instance.LoadFloawardScene(FlowardScene.Score), 1f);
+        FunctionTimer.Create(() => FlowardSceneManager.Instance.LoadFloawardScene(FlowardScene.Score), 5f);
     }
 
     [Button]
@@ -211,14 +224,16 @@ public class GameManager : MonoBehaviour
     {
         PauseFrame.SetActive(false);
         CreditsFrame.SetActive(true);
-        SoundManager.Instance.PlayOneshotound("Menu Buttons Click");
+        SoundManager.Instance.ChangeParameter("Menu Buttons Click", 1f);
+        SoundManager.Instance.ChangeParameter("Menu Buttons Click", 0f);
     }
 
     public void CreditsBack()
     {
         PauseFrame.SetActive(true);
         CreditsFrame.SetActive(false);
-        SoundManager.Instance.PlayOneshotound("Menu Buttons Click");
+        SoundManager.Instance.ChangeParameter("Menu Buttons Click", 1f);
+        SoundManager.Instance.ChangeParameter("Menu Buttons Click", 0f);
     }
 
     //reuse and reuse to infinity and beyond

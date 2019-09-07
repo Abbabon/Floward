@@ -38,10 +38,6 @@ public class EngineController : MonoBehaviour
     public delegate void OnEngineTap();
     public event OnEngineTap OnTap;
 
-    [FMODUnity.EventRef]
-    public string _EngineSoundEventName;
-    FMOD.Studio.EventInstance _engineSoundInstance;
-
     public Ship_ctrl ship_Ctrl;
 
     private void Awake()
@@ -55,7 +51,6 @@ public class EngineController : MonoBehaviour
             else
             {
                 _instance = this;
-                _engineSoundInstance = FMODUnity.RuntimeManager.CreateInstance(_EngineSoundEventName);
                 //Here any additional initialization should occur:
             }
         }
@@ -66,8 +61,6 @@ public class EngineController : MonoBehaviour
         HeatLevel = 0;
         OverheatLevel = GlobalGameplayVariables.Instance.MaxOverheat;
         EngineCooling = false;
-        _engineSoundInstance.setParameterValue("Engine Level", 0);
-        _engineSoundInstance.start();
 
         float[] keys = GlobalGameplayVariables.Instance.OverheatLampFrequency.Keys.ToArray<float>();
         firstFlickerRange = keys[0];
@@ -175,7 +168,7 @@ public class EngineController : MonoBehaviour
     {
         if (newGear > CurrentGear)
         {
-            SoundManager.Instance.PlayOneshotound("Engine Power Goes Up");
+            SoundManager.Instance.ChangeParameter("Engine Power Goes Up", 1f);
         }
         CurrentGear = newGear;
     }
@@ -202,6 +195,8 @@ public class EngineController : MonoBehaviour
             float OverHeatPercentage = ((1 - OverheatLevel / GlobalGameplayVariables.Instance.MaxOverheat) * 100f);
             float frequency = GetOverheatFlickerFrequency(OverHeatPercentage);
 
+            SoundManager.Instance.ChangeParameter("Engine Overdrive", 1f);
+
             if (flickerTurnOn)
             {
                 ship_Ctrl.alertLight += (frequency * Time.deltaTime) / 2;
@@ -222,13 +217,14 @@ public class EngineController : MonoBehaviour
                 ship_Ctrl.overDrive = true;
             if (!overOverheat)
             {
-                SoundManager.Instance.PlayOneshotound("Engine Overdrive");
                 overOverheat = true;
             }
         }
         else{
             ship_Ctrl.alertLight = Mathf.Lerp(ship_Ctrl.alertLight, 0f, 0.1f);
             flickerTurnOn = true;
+
+            SoundManager.Instance.ChangeParameter("Engine Overdrive", 0f);
 
             if (ship_Ctrl.overDrive)
                 ship_Ctrl.overDrive = false;
@@ -238,7 +234,7 @@ public class EngineController : MonoBehaviour
 
         //Cooler opening:
         ship_Ctrl.compressS = (Mathf.Clamp(CompressorOpeningTimer, 0f, 1f) * CompressionTimeFactor);
-        _engineSoundInstance.setParameterValue("Engine Level", HeatLevel / 100f);
+        SoundManager.Instance.ChangeParameter("Engine Power Levels", HeatLevel / 100f);
     }
 
     private float GetOverheatFlickerFrequency(float overHeatPercentage)
@@ -262,14 +258,19 @@ public class EngineController : MonoBehaviour
             if (!ShipSpeedController.Instance.IsFueling && !TutorialController.Instance.Froezen())
 
             if (FuelController.Instance.AmountOfFuel == 0f){
-                ship_Ctrl.end = true;
-                GameManager.Instance.TouchEnabled = false;
+                if (!TutorialController.Instance.InTutorial)
+                {
+                    ship_Ctrl.end = true;
+                    SoundManager.Instance.ChangeParameter("Timeline Control", 0.9f);
+                    GameManager.Instance.TouchEnabled = false;
+                }
             }
             else
             {
                 //if engine rises from 0 to anything more, add consume a bit more fuel:
                 float newHeatLevel = HeatLevel + GlobalGameplayVariables.Instance.HeatPerPress;
-                SoundManager.Instance.PlayOneshotound("Engine Tap");
+                SoundManager.Instance.ChangeParameter("Engine Tap", 1f);
+                SoundManager.Instance.ChangeParameter("Engine Tap", 0f);
                 ship_Ctrl.tap = true;
                 HeatLevel = Mathf.Clamp(newHeatLevel, 0f, 100f);
             }
@@ -284,7 +285,7 @@ public class EngineController : MonoBehaviour
             EngineInShutdown = true;
             ship_Ctrl.shutDown = true;
             HeatLevel = 0f;
-            SoundManager.Instance.PlayOneshotound("Engine Shut Down");
+            SoundManager.Instance.ChangeParameter("Engine Shut Down", 1f);
             FuelController.Instance.FuelDrop(GlobalGameplayVariables.Instance.FuelDropEngineShutDown,
                                              GlobalGameplayVariables.Instance.FuelDropEngineShutDownHeatLoss);
 

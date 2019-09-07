@@ -22,10 +22,6 @@ public class WindController : MonoBehaviour
     public delegate void WindChange();
     public event WindChange OnWindChange;
 
-    [FMODUnity.EventRef]
-    public string _WindSoundEventName;
-    FMOD.Studio.EventInstance _windSoundInstance;
-
     public int Strength()
     {
         return Math.Abs(State);
@@ -57,16 +53,9 @@ public class WindController : MonoBehaviour
                 _instance = this;
                 //Here any additional initialization should occur:
                 State = 0;
-                _windSoundInstance = FMODUnity.RuntimeManager.CreateInstance(_WindSoundEventName);
             }
         }
         //DontDestroyOnLoad(this.gameObject);
-    }
-
-    private void Start()
-    {
-        _windSoundInstance.setParameterValue("Wind Level", 0);
-        _windSoundInstance.start();
     }
 
     public void ChangeState(int amount)
@@ -75,25 +64,37 @@ public class WindController : MonoBehaviour
         newWind = Math.Min(Math.Max(newWind, -2), 2);
 
         State = newWind;
-        
+        SoundManager.Instance.ChangeParameter("Sails + Flag", 0.1f);
+
         //Wind changed direction
         if (newWind * State <= 0){
-            SoundManager.Instance.PlayOneshotound("Flag");
-
             if (SailsController.Instance.State == SailsState.SailsUp)
             {
                 if (Direction() == WindDirection.BackWind)
                 {
-                    SoundManager.Instance.PlayOneshotound("Sails Catch Back Wind");
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.4f);
                 }
                 if (Direction() == WindDirection.BackWind)
                 {
-                    SoundManager.Instance.PlayOneshotound("Sails Confront Front Wind");
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.6f);
                 }
             }
         }
 
-        _windSoundInstance.setParameterValue("Wind Level", Strength()/2f);
+        switch (Strength())
+        {
+            case 0:
+                SoundManager.Instance.ChangeParameter("Wind Level", 0);
+                break;
+            case 1:
+                SoundManager.Instance.ChangeParameter("Wind Level", 0.5f);
+                break;
+            case 2:
+                SoundManager.Instance.ChangeParameter("Wind Level", 1);
+                break;
+            default:
+                break;
+        }
         OnWindChange();
     }
 }

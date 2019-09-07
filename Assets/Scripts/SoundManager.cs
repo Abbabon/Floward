@@ -13,21 +13,18 @@ public class SoundManager : MonoBehaviour
     private static readonly object padlock = new object();
 
     [SerializeField] private float MusicVolume = 1f;
-    [SerializeField] private float MuffledMusicVolume = 0.2f;
-
     [SerializeField] private float SFXVolume = 1f;
 
     [SerializeField] private Slider MusicVolumeSlider;
     [SerializeField] private Slider EffectsVolumeSlider;
 
+    [SerializeField] private List<string> parameters;
+
     private Transform _emittingLocation;
 
     [FMODUnity.EventRef]
-    public string _RadioMockEventName;
-    FMOD.Studio.EventInstance _radioMockEventInstance;
-
-    private FMOD.Studio.Bus SFXBus;
-    private FMOD.Studio.Bus RadioBus;
+    public string _RadioEventName;
+    FMOD.Studio.EventInstance _radioEventInstance;
 
     // Start is called before the first frame update
     void Awake()
@@ -42,16 +39,21 @@ public class SoundManager : MonoBehaviour
             {
                 _instance = this;
                 _emittingLocation = GetComponent<Transform>();
-                //LoadSoundEffects();
                 LoadSoundPrefs();
-                _radioMockEventInstance = FMODUnity.RuntimeManager.CreateInstance(_RadioMockEventName);
-
-                SFXBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
-                RadioBus = FMODUnity.RuntimeManager.GetBus("bus:/Radio");
+                _radioEventInstance = FMODUnity.RuntimeManager.CreateInstance(_RadioEventName);
             }
         }
 
-        //ontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void Play()
+    {
+        FMOD.Studio.PLAYBACK_STATE playbackState;
+        _radioEventInstance.getPlaybackState(out playbackState);
+        bool isPlaying = playbackState != FMOD.Studio.PLAYBACK_STATE.STOPPED;
+        if (!isPlaying)
+            _radioEventInstance.start();
     }
 
     private void LoadSoundPrefs()
@@ -64,34 +66,20 @@ public class SoundManager : MonoBehaviour
     {
         EffectsVolumeSlider.value = SFXVolume;
         MusicVolumeSlider.value = MusicVolume;
-        SFXBus.setVolume(SFXVolume);
-        RadioBus.setVolume(Mathf.Min(MusicVolume, MuffledMusicVolume));
-
-        PlayRadioMusic();
     }
 
     #region SoundEffects
 
-    public void PlayOneshotound(string EventName)
+    public void ChangeParameter(string name, float value){
+        _radioEventInstance.setParameterValue(name, value);
+    }
+
+    public void SetAllParameters(float value)
     {
-        FMODUnity.RuntimeManager.PlayOneShot(String.Format("event:/{0}", EventName), _emittingLocation.position);
+        parameters.ForEach(p => _radioEventInstance.setParameterValue(p, value));
     }
 
     #endregion
-
-    #region Radio
-
-    private void PlayRadioMusic()
-    {
-        _radioMockEventInstance.start();
-    }
-
-    public void DisableRadioMuffle()
-    {
-        RadioBus.setVolume(MusicVolume);
-    }
-
-    #endregion Radio
 
     #region Menu 
     //handle value change from UI
@@ -99,14 +87,16 @@ public class SoundManager : MonoBehaviour
     public void SetMusicVolume(float value)
     {
         MusicVolume = value;
-        RadioBus.setVolume(MusicVolume);
+        Debug.Log(value);
+        ChangeParameter("Music Volume", 1 - value);
         PlayerPrefs.SetFloat("MusicVolume", value);
     }
 
     public void SetEffectsVolume(float value)
     {
         SFXVolume = value;
-        SFXBus.setVolume(SFXVolume);
+        Debug.Log(value);
+        ChangeParameter("SFX Volume", 1 - value);
         PlayerPrefs.SetFloat("SoundEffectsVolume", value);
     }
 

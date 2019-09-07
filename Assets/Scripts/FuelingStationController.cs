@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -38,6 +39,7 @@ public class FuelingStationController : SerializedMonoBehaviour
     public void StartFuelingProcess(int fuelStationIndex){
         ShipSpeedController.Instance.EnterFuelingMode();
         InstantiateFuelStation(fuelStationIndex);
+        FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Petrol Station", 3f), 0.3f);
     }
 
     private void InstantiateFuelStation(int fuelStationIndex)
@@ -49,11 +51,17 @@ public class FuelingStationController : SerializedMonoBehaviour
     public void FuelingDone()
     {
         Debug.Log("Fueling Done!");
+        SoundManager.Instance.ChangeParameter("Fuel Tank Is Full", 1f);
+
+        SoundManager.Instance.ChangeParameter("Fuel Pump In", 0f);
+        SoundManager.Instance.ChangeParameter("Fuel Tank Is Filling", 0f);
+        FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Fuel Tank Is Full", 0f), 0.3f);
         if (_currentStation != null)
         {
             _currentStation.FuelingDone();
             PlantsController.Instance.CollectPlant();
             ShipSpeedController.Instance.ExitFuelingMode();
+            SoundManager.Instance.ChangeParameter("Petrol Station", 0f);
         }
     }
 

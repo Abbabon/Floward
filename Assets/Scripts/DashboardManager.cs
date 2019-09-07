@@ -60,8 +60,7 @@ public class DashboardManager : MonoBehaviour
         {
             pullieAnimator.SetBool("BoostAvailable", true);
             pullieAnimatorGlow.SetBool("BoostAvailable", true);
-            SoundManager.Instance.PlayOneshotound("Handle Appears");
-            PullieOn = true;
+			PullieOn = true;
         }
     }
 
@@ -98,6 +97,44 @@ public class DashboardManager : MonoBehaviour
                                                     fuelStationIndicator.color.g,
                                                     fuelStationIndicator.color.b,
                                                     0);
+        }
+    }
+
+    private bool shaking;
+    public void TurnOffShaking()
+    {
+        if (shaking)
+        {
+            dashboardAnimator.SetBool("SpeedCapping", false);
+            shaking = false;
+        }
+    }
+
+    public void TurnOnShaking()
+    {
+        if (!shaking)
+        {
+            dashboardAnimator.SetBool("SpeedCapping", true);
+            shaking = true;
+        }
+    }
+
+    private bool arriveAtStation;
+    public void TurnOffArriveAtStation()
+    {
+        if (arriveAtStation)
+        {
+            dashboardAnimator.SetBool("ArriveAtStation", false);
+            arriveAtStation = false;
+        }
+    }
+
+    public void TurnOnArriveAtStation()
+    {
+        if (!arriveAtStation)
+        {
+            dashboardAnimator.SetBool("ArriveAtStation", true);
+            arriveAtStation = true;
         }
     }
 }

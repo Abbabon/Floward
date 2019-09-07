@@ -102,6 +102,13 @@ public class ShipSpeedController : SerializedMonoBehaviour
                             (IsBoostingAnimation ? GlobalGameplayVariables.Instance.MaxSpeed :
                                 Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost)));
 
+        if (newSpeedValue > GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost){
+            DashboardManager.Instance.TurnOnShaking();
+        }
+        else{
+            DashboardManager.Instance.TurnOffShaking();
+        }
+
         CurrentSpeed = Mathf.Lerp(CurrentSpeed, TargetSpeed, ShipAcceleration);
 
         //TODO: add boosting animation to speedometer or something like that
@@ -214,6 +221,7 @@ public class ShipSpeedController : SerializedMonoBehaviour
         IsFueling = true;
         EngineController.Instance.HeatLevel = Mathf.Min(30f, EngineController.Instance.HeatLevel);
         DashboardManager.Instance.TurnOffBoostPullie();
+        DashboardManager.Instance.TurnOnArriveAtStation();
     }
 
     internal void EnteringStation()
@@ -239,6 +247,8 @@ public class ShipSpeedController : SerializedMonoBehaviour
             nextFuelingStation = miles + GlobalGameplayVariables.Instance.FuelStationsLocations[fuelStationIndex];
             milesThisStation = 0;
         }
+
+        DashboardManager.Instance.TurnOffArriveAtStation();
     }
 
     //TODO: consider moving ot its own script

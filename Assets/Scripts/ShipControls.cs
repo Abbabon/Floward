@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
 using UnityEngine;
 
 public class ShipControls : MonoBehaviour
@@ -21,13 +22,16 @@ public class ShipControls : MonoBehaviour
             if (controller.SwipeDown && TutorialController.Instance.EnableCooling && !controller.TouchInZone(TouchZone.Boost) && FuelController.Instance.AmountOfFuel > 0)
             {
                 EngineController.Instance.EngineCooling = true;
-                SoundManager.Instance.PlayOneshotound("Cooling");
+                SoundManager.Instance.ChangeParameter("Cooling", 1f);
             }
             else
             {
                 if (EngineController.Instance.EngineCooling && !controller.CurrentlyHeld)
                 {
                     EngineController.Instance.EngineCooling = false;
+                    SoundManager.Instance.ChangeParameter("Cooling Stops", 1f);
+                    FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Cooling Stops", 0f), 0.3f);
+                    FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Cooling", 0f), 0.3f);
                 }
             }
 

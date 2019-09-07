@@ -53,7 +53,7 @@
             <destination>{497af1b4-d7e8-477a-ac67-2a8da48ca170}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{574dd577-8380-4b25-a938-6b95fde106ca}</destination>
+            <destination>{15545871-ede4-4e10-ab98-0ba4643fa57c}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{90588176-d135-4a18-9fac-1732938539ab}"/>
@@ -123,9 +123,18 @@
     <object class="MixerBusEffectChain" id="{5495dc1a-6cd3-4428-8755-e35d50348d56}">
         <relationship name="effects">
             <destination>{d4078827-ea23-431c-ae4a-8765ab7609e3}</destination>
+            <destination>{b7b6ee5c-d797-4376-b225-2f40a86599b3}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{b56bf7f3-dd83-4d11-ac6b-9b37fe946220}"/>
     <object class="MixerBusFader" id="{037ea035-3eba-4269-bec2-d5b1233c82d9}"/>
     <object class="MixerBusFader" id="{d4078827-ea23-431c-ae4a-8765ab7609e3}"/>
+    <object class="SFXReverbEffect" id="{b7b6ee5c-d797-4376-b225-2f40a86599b3}">
+        <property name="decayTime">
+            <value>1400</value>
+        </property>
+        <property name="wetLevel">
+            <value>-15.5</value>
+        </property>
+    </object>
 </objects>

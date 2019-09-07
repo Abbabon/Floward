@@ -13,7 +13,8 @@ public class VisualSpeedController : MonoBehaviour
 	public float ShipAccelerationAdditive = 0f;
 
     void Update(){
-        BGVisualSpeed = GameManager.Instance.IsRunning ? ((ShipSpeedController.Instance.CurrentSpeed * BGSpeedMultiplier) + BGSpeedAdditive) : 0;
+        //BGVisualSpeed = GameManager.Instance.IsRunning ? ((ShipSpeedController.Instance.CurrentSpeed * BGSpeedMultiplier) + BGSpeedAdditive) : 0;
+        BGVisualSpeed = GameManager.Instance.IsRunning ? ((ShipSpeedController.Instance.CurrentSpeed * BGSpeedMultiplier) ) : 0; // without addative untill bug fixed
         ShipSpeedController.Instance.ShipAcceleration = GlobalGameplayVariables.Instance.AccelerationRate + ShipAccelerationAdditive;
     }
 }

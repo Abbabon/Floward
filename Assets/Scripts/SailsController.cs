@@ -61,15 +61,15 @@ public class SailsController : MonoBehaviour
             {
                 if (WindController.Instance.Strength() > 0 && WindController.Instance.Direction() == WindDirection.FrontWind)
                 {
-                    SoundManager.Instance.PlayOneshotound("Sails Open + Confront Front Wind");
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.6f);
                 }
                 if (WindController.Instance.Strength() > 0 && WindController.Instance.Direction() == WindDirection.BackWind)
                 {
-                    SoundManager.Instance.PlayOneshotound("Sails Catch Back Wind");
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.4f);
                 }
                 else if (WindController.Instance.Strength() == 0)
                 {
-                    SoundManager.Instance.PlayOneshotound("Sail Opens");
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.3f);
                 }
 
                 if (WindController.Instance.Direction() == WindDirection.FrontWind && EngineController.Instance.IsWorking())
@@ -80,7 +80,7 @@ public class SailsController : MonoBehaviour
             }
             else if (state == SailsState.SailsDown)
             {
-                SoundManager.Instance.PlayOneshotound("Sail Closes");
+                SoundManager.Instance.ChangeParameter("Sails + Flag", 0.2f);
 
                 //too hard:
                 //if (WindManager.Instance.State == WindState.BackWind)

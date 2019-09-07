@@ -95,17 +95,8 @@ public class BoostController : MonoBehaviour
             boostPercentage >= GlobalGameplayVariables.Instance.BoostThreshold)
         {
 
-            //TODO: move to the animation shaker:
-            //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1f, 0.02f)), 0f);
-            //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1.6f, 0.4f)), 1f);
-            //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(3.4f, 0.08f)), 2.6f);
-            //FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(5f, 0.04f)), 6f);
-                
-            //Handheld.Vibrate();
-
-            //DashboardManager.Instance.TurnOffDashboard();
             DashboardManager.Instance.TurnOffBoostPullie();
-            SoundManager.Instance.PlayOneshotound("Handle Pull + Boost");
+            SoundManager.Instance.ChangeParameter("Activate Boost", 1f);
             ShipSpeedController.Instance.StartBoosting();
             OnBoostUsed?.Invoke();
 

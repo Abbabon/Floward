@@ -17,10 +17,10 @@ public class MovingObject : MonoBehaviour
         _transform = GetComponent<Transform>();
     }
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         if (GameManager.Instance != null && GameManager.Instance.IsRunning && _isMoving) {
-            _transform.Translate(_direction * Time.deltaTime * (VisualSpeedController.BGVisualSpeed + _baseSpeed));
+            _transform.Translate(_direction * Time.fixedDeltaTime * (VisualSpeedController.BGVisualSpeed + _baseSpeed));
         }
     }
 }

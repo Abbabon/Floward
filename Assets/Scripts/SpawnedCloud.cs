@@ -9,9 +9,9 @@ public class SpawnedCloud : MovingObject
         base.Start();
     }
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
 
         if (GameManager.Instance.IsRunning)
         {

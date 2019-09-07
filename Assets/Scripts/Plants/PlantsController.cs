@@ -30,17 +30,22 @@ public class PlantsController : SerializedMonoBehaviour
         }
     }
 
+    //TODO: dont randomize, collect the fuel-station-bound plant
+    int collectedPlants = 0;
     public void CollectPlant(){
-        int uncollected = _plants.Count(p => p.Collected);
+        Debug.Log("Collecting plants");
+        int uncollected = _plants.Count(p => !p.Collected);
         if (uncollected > 0){
-            Plant plant = _plants.Where(p => p.Collected).ToArray()[UnityEngine.Random.Range(0, uncollected)];
+            Plant plant = _plants.Where(p => !p.Collected).ToArray()[UnityEngine.Random.Range(0, uncollected)];
             plant.Collected = true;
             plant.gameObject.SetActive(true);
         }
     }
 
     public void ResetState(){
+        Debug.Log("Reset plants state");
         _plants.ForEach(plant => plant.Collected = false);
+        _plants.ForEach(plant => plant.gameObject.SetActive(false));
     }
 
     public void Serialize(){

@@ -1,333 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9161355456870286907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Shut Down
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Shut Down
-  guid: 502971166e8fa54899a3c85220cab455
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3720
---- !u!114 &-9129059907582078436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-8872793785296379971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 0
---- !u!114 &-8832377022496706521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Wind Level 1-3
-  m_EditorClassIdentifier: 
-  Path: event:/Wind Level 1-3
-  guid: 7115405539bf4441a6394b34ece32522
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 9060839597019731179}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 9000
---- !u!114 &-8517738214852640548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-8498125760642365580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-8375852894944112567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-8322672401803499003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: D:\Mentor\finel project\Floward\Assets\FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 637007207546890668
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 0
---- !u!114 &-8183688908479520501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-8178152085608094954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-8037116670343567264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Overdrive
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Overdrive
-  guid: 7f25aa27b750274182f7e376dec103b9
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2680
---- !u!114 &-7883837091064091797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 1
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 1
-  guid: f6b48b970d970c4587b4790617a63283
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 750
---- !u!114 &-7289776565831629797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fuel Drop
-  m_EditorClassIdentifier: 
-  Path: event:/Fuel Drop
-  guid: 8a0e8d3b3665c44898f042ee85811b4e
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3160
---- !u!114 &-7267244818441403524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Handle Pull + Boost
-  m_EditorClassIdentifier: 
-  Path: event:/Handle Pull + Boost
-  guid: 7fd3ebc58da50440952201de155e4735
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 11511
---- !u!114 &-6656748801559493969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-6465936478673214035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 6
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 6
-  guid: 0befa8bf7de751429d0bf2a1db042ccf
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 667
---- !u!114 &-6209247689722460106
+--- !u!114 &-9197164398716366720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,56 +13,13 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007099380000000
+  lastModified: 637034695130000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2130
-  Exists: 0
---- !u!114 &-6168422202748332969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Wind Level 1-3
-  m_EditorClassIdentifier: 
-  Path: event:/Wind Level 1-3
-  guid: 7115405539bf4441a6394b34ece32522
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -9129059907582078436}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 9000
---- !u!114 &-6047503449567251673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets\FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637007207536816430
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 0
---- !u!114 &-6031476771024157647
+    Value: 2602
+  Exists: 1
+--- !u!114 &-9115769102329404331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,81 +29,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_Name: parameter:/Radio Songs/SFX Volume
   m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-6017832868936902189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 4
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 4
-  guid: 8a620760214dcc4e9fec1c4a2c0b0f00
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 642
---- !u!114 &-6006828031512142403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sails Open + Confront Front Wind
-  m_EditorClassIdentifier: 
-  Path: event:/Sails Open + Confront Front Wind
-  guid: 88d33c34ce13bb4e99cde202d5dcbafa
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3125
---- !u!114 &-5904704977903838228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
+  Name: SFX Volume
   Min: 0
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-5758229879905868574
+--- !u!114 &-9061311802060779375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -483,140 +46,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sails Up
+  m_Name: event:/Radio Songs/Radio Songs
   m_EditorClassIdentifier: 
-  Path: event:/Sails Up
-  guid: bfcc7e9764d901429498143aab796bb1
+  Path: event:/Radio Songs/Radio Songs
+  guid: bb3d634e19a0d84097431f46a7fbbbaa
   Banks:
-  - {fileID: 1685041301370788944}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1500
---- !u!114 &-5448640953037604980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-5071770715766326627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 1
---- !u!114 &-4993848128142958063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 1
---- !u!114 &-4950462290158866221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 1
---- !u!114 &-4924854158268068924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Radio Station
-  m_EditorClassIdentifier: 
-  Path: event:/Radio Station
-  guid: 3253c0232be97848869190ec7b908885
-  Banks:
-  - {fileID: 1685041301370788944}
+  - {fileID: 3619665303020496128}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 6966625160741355679}
+  - {fileID: 3197432857577653483}
+  - {fileID: -133354184129686993}
+  - {fileID: 4143866055182307496}
+  - {fileID: -1897877498948810688}
+  - {fileID: -1736222045668487756}
+  - {fileID: 2569366037354056504}
+  - {fileID: 5757984109778393858}
+  - {fileID: 7251113444867710011}
+  - {fileID: 2057307674375584379}
+  - {fileID: 4553102543748014405}
+  - {fileID: -6585083155652619293}
+  - {fileID: -5619306302446153926}
+  - {fileID: -9115769102329404331}
+  - {fileID: -1388151089087657158}
+  - {fileID: -5853565667772114909}
+  - {fileID: 4311539695095773245}
+  - {fileID: -4563005761635338988}
+  - {fileID: -7055625731649083141}
+  - {fileID: 8129331929674640064}
+  - {fileID: -6964117875593914203}
+  - {fileID: 1702248762462564074}
+  - {fileID: -1131568330974211511}
+  - {fileID: 6721148767223928571}
+  - {fileID: 7223847649421897665}
+  - {fileID: -4464429920117473396}
   MinDistance: 0
   MaxDistance: 0
-  Length: 300443
---- !u!114 &-4769136808350469936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Boost Avilable
-  m_EditorClassIdentifier: 
-  Path: event:/Boost Avilable
-  guid: 0feb991e6dda4a47b74e13cdb05855c6
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4671
---- !u!114 &-4547431076084470423
+  Length: 925000
+--- !u!114 &-9056719249140205051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,16 +100,16 @@ MonoBehaviour:
   Path: event:/Engine Power (Levels 1-5)
   guid: 1d2ebe0e8d0d3148bf68481456b34238
   Banks:
-  - {fileID: -1477617862911527730}
+  - {fileID: 3619665303020496128}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2142712102546099779}
+  - {fileID: 1730485702506739504}
   MinDistance: 0
   MaxDistance: 0
   Length: 15131
---- !u!114 &-4533924345532265355
+--- !u!114 &-9055151479389400920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -649,17 +118,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Pause
   m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
+  Name: Pause
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
---- !u!114 &-4381384264198079708
+--- !u!114 &-9053886970185164497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-8916912483182088104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Tap
+  m_EditorClassIdentifier: 
+  Name: Engine Tap
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-8720207516104198666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -669,22 +170,213 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 3
+  m_Name: event:/Menu Buttons Click
   m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 3
-  guid: badf5b2066bb734780f9764fcad6394e
+  Path: event:/Menu Buttons Click
+  guid: 3edf5e033a6ddd4fb91ab47ec404eb07
   Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
+  - {fileID: 3619665303020496128}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 784
---- !u!114 &-4016066051377325795
+  Length: 300
+--- !u!114 &-8663435945452926151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-7811734620511199116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Drop
+  m_EditorClassIdentifier: 
+  Name: Fuel Drop
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-7765448688211593281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-7369366367541277661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Opening Scene
+  m_EditorClassIdentifier: 
+  Path: event:/Opening Scene
+  guid: c2d7751c893be34eae7a74c1a6150f94
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 121666
+--- !u!114 &-7249960848780218606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Overdrive Red Light
+  m_EditorClassIdentifier: 
+  Name: Overdrive Red Light
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-7055625731649083141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6964117875593914203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6911899919374182728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Activate Boost
+  m_EditorClassIdentifier: 
+  Name: Activate Boost
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6703700140924348539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cooling/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6660532287188771108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Menu Buttons click
+  m_EditorClassIdentifier: 
+  Name: Menu Buttons click
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6585083155652619293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6462884876145850714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -699,61 +391,15 @@ MonoBehaviour:
   Path: event:/Engine Overdrive
   guid: 7f25aa27b750274182f7e376dec103b9
   Banks:
-  - {fileID: -1477617862911527730}
+  - {fileID: 3619665303020496128}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
   Length: 2680
---- !u!114 &-3985159454851542684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Handle Appears
-  m_EditorClassIdentifier: 
-  Path: event:/Handle Appears
-  guid: 2f6e5b0f6ada7b4aa91932f50a5e2120
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1167
---- !u!114 &-3956693809594212392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Kilometrag
-  m_EditorClassIdentifier: 
-  Path: event:/Kilometrag
-  guid: 46f42d08f7d8c748a92e1926012d6cab
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 150
---- !u!114 &-3667375864915963384
+--- !u!114 &-6335746759044000084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -763,134 +409,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_Name: parameter:/Radio Songs/Random Play
   m_EditorClassIdentifier: 
-  Name: Engine Power levels
+  Name: Random Play
   Min: 0
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-3274027749795656514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 1
---- !u!114 &-3151373510010301328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-3146184250574573878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 5
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 5
-  guid: 2c109ded35b9f042b631e0c12b908148
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 750
---- !u!114 &-2709581597822753503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-2612273842062945670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Pause Button
-  m_EditorClassIdentifier: 
-  Path: event:/Pause Button
-  guid: 99bb5ef43675954c9ceebf449cf2f52e
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 700
---- !u!114 &-2530741515720932376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets\FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637007207536816430
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 0
---- !u!114 &-2264780075795427654
+--- !u!114 &-6225641448403403001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -905,1320 +431,16 @@ MonoBehaviour:
   Path: event:/Cooling
   guid: 1d8e91e18503ca4495094bec4d6d7a01
   Banks:
-  - {fileID: -1477617862911527730}
+  - {fileID: 3619665303020496128}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3160
---- !u!114 &-2235948827718777340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Flag
-  m_EditorClassIdentifier: 
-  Path: event:/Flag
-  guid: e5d6bb2af0eb614db12f65e8aae413b8
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3308
---- !u!114 &-1702989825769548511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-1653468329422112989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 1
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 1
-  guid: f6b48b970d970c4587b4790617a63283
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 750
---- !u!114 &-1477617862911527730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637002778500000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1511328
-  Exists: 1
---- !u!114 &-1365388392465154973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 1
---- !u!114 &-1199300338582424715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Boost Avilable
-  m_EditorClassIdentifier: 
-  Path: event:/Boost Avilable
-  guid: 0feb991e6dda4a47b74e13cdb05855c6
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4671
---- !u!114 &-1093386814075369999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Shut Down
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Shut Down
-  guid: 502971166e8fa54899a3c85220cab455
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3720
---- !u!114 &-1026744596562774195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: D:\Mentor\finel project\Floward\Assets\FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 637007207546890668
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 0
---- !u!114 &-774752261699436528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Tap
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Tap
-  guid: 5bbe345835dd3345b3e29529d5932e30
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 600
---- !u!114 &-642576980741807358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637002778500000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1764
-  Exists: 1
---- !u!114 &-579186761454433605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-373209774945176363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tutorial Message Disappears
-  m_EditorClassIdentifier: 
-  Path: event:/Tutorial Message Disappears
-  guid: fe66a011d445104e99f2fdd29b02c065
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 500
---- !u!114 &-319282346963590486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Pause Button
-  m_EditorClassIdentifier: 
-  Path: event:/Pause Button
-  guid: 99bb5ef43675954c9ceebf449cf2f52e
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 700
---- !u!114 &-248504281310663604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 2
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 2
-  guid: 0b7cf9d037c266439fac1d4505e0a0fd
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 767
---- !u!114 &-58421416916107887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tutorial Message Appears
-  m_EditorClassIdentifier: 
-  Path: event:/Tutorial Message Appears
-  guid: d39333aba862aa4ba00b169d7d0ee16a
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 500
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 420615140803413471}
-  - {fileID: 8259331668093061452}
-  EditorEvents:
-  - {fileID: -248504281310663604}
-  - {fileID: 7666562801378932246}
-  - {fileID: -1199300338582424715}
-  - {fileID: 6311128577547909269}
-  - {fileID: 2520514179833622977}
-  - {fileID: 3049574311818117213}
-  - {fileID: 4246900980540054217}
-  - {fileID: 7444807874456080328}
-  - {fileID: 8525556633225878111}
-  - {fileID: -1093386814075369999}
-  - {fileID: -774752261699436528}
-  - {fileID: -8832377022496706521}
-  - {fileID: -8037116670343567264}
-  - {fileID: -7267244818441403524}
-  - {fileID: -7289776565831629797}
-  - {fileID: -6017832868936902189}
-  - {fileID: 582689845956249320}
-  - {fileID: -2612273842062945670}
-  - {fileID: -4381384264198079708}
-  - {fileID: 7744942244139802911}
-  - {fileID: 2193447374667140369}
-  - {fileID: -2235948827718777340}
-  - {fileID: -1653468329422112989}
-  - {fileID: 3997930739363675083}
-  - {fileID: 287526503254809161}
-  - {fileID: 8762972785784342036}
-  - {fileID: 3447436093437018413}
-  - {fileID: -6006828031512142403}
-  - {fileID: 2326453764666252044}
-  - {fileID: 934435742500390933}
-  MasterBanks:
-  - {fileID: 8259331668093061452}
-  StringsBanks:
-  - {fileID: 420615140803413471}
-  stringsBankWriteTime: 637007099380000000
-  cacheVersion: 3
---- !u!114 &17706894591620252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &235886781300006184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &280541703002927242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 2
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 2
-  guid: 0b7cf9d037c266439fac1d4505e0a0fd
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 767
---- !u!114 &287526503254809161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sail Closes
-  m_EditorClassIdentifier: 
-  Path: event:/Sail Closes
-  guid: 1d34be737d62c64fbcdab3bb08ce02ff
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 678
---- !u!114 &420615140803413471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 1
---- !u!114 &582689845956249320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Power Goes Up
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Power Goes Up
-  guid: 973765b553e9a84ebf7509946d6e8c9e
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2480
---- !u!114 &854676922215085450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &934435742500390933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Radio Station
-  m_EditorClassIdentifier: 
-  Path: event:/Radio Station
-  guid: 6577c5c8551f5d42a0517c4714f29ddb
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 300443
---- !u!114 &1019932087085964961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 7
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 7
-  guid: d349fdfcd178be409127afeb42dee1a1
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 617
---- !u!114 &1029222476625798754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Power Goes Up
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Power Goes Up
-  guid: 973765b553e9a84ebf7509946d6e8c9e
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2480
---- !u!114 &1425876164915858575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: D:\Mentor\finel project\Floward\Assets\FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 637007207546890668
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 0
---- !u!114 &1452089553002623920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &1544151032471691507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Handle Pull + Boost
-  m_EditorClassIdentifier: 
-  Path: event:/Handle Pull + Boost
-  guid: 7fd3ebc58da50440952201de155e4735
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 11511
---- !u!114 &1601688229064095585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Flag
-  m_EditorClassIdentifier: 
-  Path: event:/Flag
-  guid: e5d6bb2af0eb614db12f65e8aae413b8
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3000
---- !u!114 &1628810789206193543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Tap
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Tap
-  guid: 5bbe345835dd3345b3e29529d5932e30
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 600
---- !u!114 &1685041301370788944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 0
---- !u!114 &1735930305008491959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 3
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 3
-  guid: badf5b2066bb734780f9764fcad6394e
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 784
---- !u!114 &1934163103432633836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &2099957389894585544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &2142712102546099779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &2174814582411846487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &2193447374667140369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tutorial Message Appears
-  m_EditorClassIdentifier: 
-  Path: event:/Tutorial Message Appears
-  guid: d39333aba862aa4ba00b169d7d0ee16a
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 500
---- !u!114 &2208789547108207328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &2326453764666252044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sails Confront Front Wind
-  m_EditorClassIdentifier: 
-  Path: event:/Sails Confront Front Wind
-  guid: 9e46713fb4f9aa448ff6426b560d9a98
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1633
---- !u!114 &2520514179833622977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Cooling
-  m_EditorClassIdentifier: 
-  Path: event:/Cooling
-  guid: 1d8e91e18503ca4495094bec4d6d7a01
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3160
---- !u!114 &2532011205292273305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 4
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 4
-  guid: 8a620760214dcc4e9fec1c4a2c0b0f00
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 642
---- !u!114 &2830146235144821898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3049574311818117213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 5
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 5
-  guid: 2c109ded35b9f042b631e0c12b908148
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 750
---- !u!114 &3137550212507259862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu Buttons Click
-  m_EditorClassIdentifier: 
-  Path: event:/Menu Buttons Click
-  guid: 3edf5e033a6ddd4fb91ab47ec404eb07
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 300
---- !u!114 &3447436093437018413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sails Catch Back Wind
-  m_EditorClassIdentifier: 
-  Path: event:/Sails Catch Back Wind
-  guid: 59c276115af72d498b5df1e6ae38ae37
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3737
---- !u!114 &3493081103156400337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3589812285950454077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &3925818048106552314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3997930739363675083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tutorial Message Disappears
-  m_EditorClassIdentifier: 
-  Path: event:/Tutorial Message Disappears
-  guid: fe66a011d445104e99f2fdd29b02c065
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 500
---- !u!114 &4037870364651773869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4246900980540054217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Handle Appears
-  m_EditorClassIdentifier: 
-  Path: event:/Handle Appears
-  guid: 2f6e5b0f6ada7b4aa91932f50a5e2120
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1167
---- !u!114 &4327090878585822238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4707966565004062464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
-  m_EditorClassIdentifier: 
-  Name: Wind Level
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4754524738058758525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 1
---- !u!114 &4760353903329251171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets\FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637007207536816430
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 0
---- !u!114 &6018171329435728688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/Build/Desktop/Master Bank.strings.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 0
---- !u!114 &6279138829029996028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &6311128577547909269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Engine Power (Levels 1-5)
-  m_EditorClassIdentifier: 
-  Path: event:/Engine Power (Levels 1-5)
-  guid: 1d2ebe0e8d0d3148bf68481456b34238
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1702989825769548511}
+  - {fileID: -6703700140924348539}
   MinDistance: 0
   MaxDistance: 0
-  Length: 15131
---- !u!114 &6507765728023831424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 1
---- !u!114 &7266102194227085490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: D:\Mentor\finel project\Floward\Assets\FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 637007207546890668
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
-  Exists: 0
---- !u!114 &7322897841221017329
+  Length: 6000
+--- !u!114 &-5987691409125407787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2228,20 +450,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fuel Drop
+  m_Name: event:/Light Bulb 5
   m_EditorClassIdentifier: 
-  Path: event:/Fuel Drop
-  guid: 8a0e8d3b3665c44898f042ee85811b4e
+  Path: event:/Light Bulb 5
+  guid: 2c109ded35b9f042b631e0c12b908148
   Banks:
-  - {fileID: -1477617862911527730}
+  - {fileID: 3619665303020496128}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 3160
---- !u!114 &7348731647226548538
+  Length: 750
+--- !u!114 &-5946811141795025640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2251,108 +473,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_Name: parameter:/Radio Songs/Wind Level
   m_EditorClassIdentifier: 
   Name: Wind Level
   Min: 0
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &7444807874456080328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu Buttons Click
-  m_EditorClassIdentifier: 
-  Path: event:/Menu Buttons Click
-  guid: 3edf5e033a6ddd4fb91ab47ec404eb07
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 300
---- !u!114 &7666562801378932246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 6
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 6
-  guid: 0befa8bf7de751429d0bf2a1db042ccf
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 667
---- !u!114 &7744942244139802911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Light Bulb 7
-  m_EditorClassIdentifier: 
-  Path: event:/Light Bulb 7
-  guid: d349fdfcd178be409127afeb42dee1a1
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 617
---- !u!114 &7797493664915760329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets\FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637007207536816430
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 2130
-  Exists: 0
---- !u!114 &8172721948059779135
+--- !u!114 &-5853565667772114909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2362,98 +490,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_Name: parameter:/Radio Songs/Pause
   m_EditorClassIdentifier: 
-  Name: Wind Level
+  Name: Pause
   Min: 0
   Max: 1
   Default: 0
-  Exists: 0
---- !u!114 &8259331668093061452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
-  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
-  lastModified: 637007099380000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4858848
   Exists: 1
---- !u!114 &8498757809270032556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sails Up
-  m_EditorClassIdentifier: 
-  Path: event:/Sails Up
-  guid: bfcc7e9764d901429498143aab796bb1
-  Banks:
-  - {fileID: -1477617862911527730}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1500
---- !u!114 &8525556633225878111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Kilometrag
-  m_EditorClassIdentifier: 
-  Path: event:/Kilometrag
-  guid: 46f42d08f7d8c748a92e1926012d6cab
-  Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 128
---- !u!114 &8683599611729124867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
-  m_EditorClassIdentifier: 
-  Name: Engine Power levels
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &8762972785784342036
+--- !u!114 &-5852946725183445139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2468,9 +512,7 @@ MonoBehaviour:
   Path: event:/Sail Opens
   guid: 345c3130d88dc7489115b4f47f53fc84
   Banks:
-  - {fileID: -4533924345532265355}
-  - {fileID: -3274027749795656514}
-  - {fileID: 8259331668093061452}
+  - {fileID: 3619665303020496128}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2478,7 +520,713 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2600
---- !u!114 &9060839597019731179
+--- !u!114 &-5804562857674231277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/SFX Volume
+  m_EditorClassIdentifier: 
+  Name: SFX Volume
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-5619306302446153926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Kilometrag
+  m_EditorClassIdentifier: 
+  Name: Kilometrag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-5544392640260772771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Light Bulb 7
+  m_EditorClassIdentifier: 
+  Path: event:/Light Bulb 7
+  guid: d349fdfcd178be409127afeb42dee1a1
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 617
+--- !u!114 &-5369267988110044719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Engine Tap
+  m_EditorClassIdentifier: 
+  Path: event:/Engine Tap
+  guid: 5bbe345835dd3345b3e29529d5932e30
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-5225375871642594718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial Message Appears
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial Message Appears
+  guid: d39333aba862aa4ba00b169d7d0ee16a
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
+--- !u!114 &-5155500588286729667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Petrol Station/Plant withrawal
+  m_EditorClassIdentifier: 
+  Name: Plant withrawal
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4737302708348287572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Kilometrag
+  m_EditorClassIdentifier: 
+  Name: Kilometrag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4563005761635338988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4464429920117473396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Pump Out
+  m_EditorClassIdentifier: 
+  Name: Fuel Pump Out
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4366767261248029495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4363209176852436353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Kilometrag
+  m_EditorClassIdentifier: 
+  Name: Kilometrag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4230332562956120972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Light Bulb 4
+  m_EditorClassIdentifier: 
+  Path: event:/Light Bulb 4
+  guid: 8a620760214dcc4e9fec1c4a2c0b0f00
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 642
+--- !u!114 &-4148323202312192169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sails Catch Back Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Sails Catch Back Wind
+  guid: 59c276115af72d498b5df1e6ae38ae37
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3737
+--- !u!114 &-4118731457990511939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Light Bulbs
+  m_EditorClassIdentifier: 
+  Name: Light Bulbs
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4117831710182411125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/Unger Band
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/Unger Band
+  guid: 221d5de3ca22a548a1074605f6d9de10
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 13243
+--- !u!114 &-3814123119287042612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Petrol Station
+  m_EditorClassIdentifier: 
+  Name: Petrol Station
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-3654857840822376376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power Goes Up
+  m_EditorClassIdentifier: 
+  Name: Engine Power Goes Up
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-3629542963713344054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Pause Button
+  m_EditorClassIdentifier: 
+  Path: event:/Pause Button
+  guid: 99bb5ef43675954c9ceebf449cf2f52e
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 690
+--- !u!114 &-3620325646174386139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-3191653157410842130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial Message Disappears
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial Message Disappears
+  guid: fe66a011d445104e99f2fdd29b02c065
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
+--- !u!114 &-2735435979373850530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Petrol Station/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-2672606162489919619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Petrol Station
+  m_EditorClassIdentifier: 
+  Path: event:/Petrol Station
+  guid: 02d708fca368da48af1717f940389da4
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5155500588286729667}
+  - {fileID: 9082673508446640625}
+  - {fileID: 385852946742283256}
+  - {fileID: -979241526652169559}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 11711
+--- !u!114 &-2581487883710302140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling
+  m_EditorClassIdentifier: 
+  Name: Cooling
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-2364508087813983840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind Level 1-3
+  m_EditorClassIdentifier: 
+  Path: event:/Wind Level 1-3
+  guid: 7115405539bf4441a6394b34ece32522
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7765448688211593281}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9000
+--- !u!114 &-1897877498948810688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Overdrive
+  m_EditorClassIdentifier: 
+  Name: Engine Overdrive
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1736222045668487756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Sails + Flag
+  m_EditorClassIdentifier: 
+  Name: Sails + Flag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1732713000873427555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1658034354943359336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/SFX Volume
+  m_EditorClassIdentifier: 
+  Name: SFX Volume
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1609700092273529373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Petrol Station
+  m_EditorClassIdentifier: 
+  Name: Petrol Station
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1388151089087657158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Menu Buttons click
+  m_EditorClassIdentifier: 
+  Name: Menu Buttons click
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1341527095968596639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Engine Shut Down
+  m_EditorClassIdentifier: 
+  Path: event:/Engine Shut Down
+  guid: 502971166e8fa54899a3c85220cab455
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3720
+--- !u!114 &-1328244681410662612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Kilometrag
+  m_EditorClassIdentifier: 
+  Name: Kilometrag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1131568330974211511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Petrol Station
+  m_EditorClassIdentifier: 
+  Name: Petrol Station
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1078846967166577825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Overdrive Red Light
+  m_EditorClassIdentifier: 
+  Name: Overdrive Red Light
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-1012265627490071353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-979241526652169559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Petrol Station/Fuel Pump In
+  m_EditorClassIdentifier: 
+  Name: Fuel Pump In
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-978147757116042533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/Replies
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/Replies
+  guid: d025b40bfc614747984c97ea536deea6
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2327
+--- !u!114 &-960142823411835313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2491,6 +1239,1727 @@ MonoBehaviour:
   m_Name: parameter:/Wind Level 1-3/Wind Level
   m_EditorClassIdentifier: 
   Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-624269991178851774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-600591237022683204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-576023049389547048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sails Confront Front Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Sails Confront Front Wind
+  guid: 9e46713fb4f9aa448ff6426b560d9a98
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1633
+--- !u!114 &-568381015622432516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Boost Avilable
+  m_EditorClassIdentifier: 
+  Path: event:/Boost Avilable
+  guid: 0feb991e6dda4a47b74e13cdb05855c6
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5821
+--- !u!114 &-540070068558375246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Light Bulb 6
+  m_EditorClassIdentifier: 
+  Path: event:/Light Bulb 6
+  guid: 0befa8bf7de751429d0bf2a1db042ccf
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 667
+--- !u!114 &-421084264242381841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/My Hometown
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/My Hometown
+  guid: a236be5e0b956245b303ddfb9c4f66f1
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9500
+--- !u!114 &-377726060422880791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Drop
+  m_EditorClassIdentifier: 
+  Name: Fuel Drop
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-250518251653821760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Toturial Message
+  m_EditorClassIdentifier: 
+  Name: Toturial Message
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-133354184129686993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling
+  m_EditorClassIdentifier: 
+  Name: Cooling
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -9197164398716366720}
+  - {fileID: 3619665303020496128}
+  EditorEvents:
+  - {fileID: -2672606162489919619}
+  - {fileID: 5661220841251990305}
+  - {fileID: 8291245610002731292}
+  - {fileID: -540070068558375246}
+  - {fileID: -568381015622432516}
+  - {fileID: -9056719249140205051}
+  - {fileID: 9053765006582900850}
+  - {fileID: -6225641448403403001}
+  - {fileID: -4117831710182411125}
+  - {fileID: -5987691409125407787}
+  - {fileID: 4111009337374655988}
+  - {fileID: -5852946725183445139}
+  - {fileID: -8720207516104198666}
+  - {fileID: 6358852639718389613}
+  - {fileID: -1341527095968596639}
+  - {fileID: -4148323202312192169}
+  - {fileID: -5369267988110044719}
+  - {fileID: -2364508087813983840}
+  - {fileID: -6462884876145850714}
+  - {fileID: 7758409758222893451}
+  - {fileID: 5233026624247493396}
+  - {fileID: 6862066781780610721}
+  - {fileID: 8585443349843627792}
+  - {fileID: -4230332562956120972}
+  - {fileID: 4293500845428394924}
+  - {fileID: -3629542963713344054}
+  - {fileID: -576023049389547048}
+  - {fileID: 1946538964432151505}
+  - {fileID: -421084264242381841}
+  - {fileID: 2699818346222058647}
+  - {fileID: 5984340532808870413}
+  - {fileID: -9061311802060779375}
+  - {fileID: -7369366367541277661}
+  - {fileID: -978147757116042533}
+  - {fileID: -5544392640260772771}
+  - {fileID: -5225375871642594718}
+  - {fileID: 2484789717528075407}
+  - {fileID: 3327582846827920227}
+  - {fileID: 3061942567344956417}
+  - {fileID: 7107004294104354630}
+  - {fileID: -3191653157410842130}
+  MasterBanks:
+  - {fileID: 3619665303020496128}
+  StringsBanks:
+  - {fileID: -9197164398716366720}
+  stringsBankWriteTime: 637034695130000000
+  cacheVersion: 3
+--- !u!114 &170371834752883353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Toturial Message
+  m_EditorClassIdentifier: 
+  Name: Toturial Message
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &226644371821273145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Overdrive Red Light
+  m_EditorClassIdentifier: 
+  Name: Overdrive Red Light
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &385852946742283256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Petrol Station/Fuel Pump Out
+  m_EditorClassIdentifier: 
+  Name: Fuel Pump Out
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &854805268373885598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Activate Boost
+  m_EditorClassIdentifier: 
+  Name: Activate Boost
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1000789100777301037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1050588484144654539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Radio Noises
+  m_EditorClassIdentifier: 
+  Name: Radio Noises
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1545589720456584039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Sails + Flag
+  m_EditorClassIdentifier: 
+  Name: Sails + Flag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1702248762462564074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Timeline Control
+  m_EditorClassIdentifier: 
+  Name: Timeline Control
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1730485702506739504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1852908803837524133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cooling/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1894032950089332993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Light Bulbs
+  m_EditorClassIdentifier: 
+  Name: Light Bulbs
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1946538964432151505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/AraratFM Introduction
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/AraratFM Introduction
+  guid: 9e9addfde29dff49ade5a68b1076265d
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 18500
+--- !u!114 &2016474342331933226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling
+  m_EditorClassIdentifier: 
+  Name: Cooling
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2057307674375584379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Toturial Message
+  m_EditorClassIdentifier: 
+  Name: Toturial Message
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2075695712831101827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Boost SideChain
+  m_EditorClassIdentifier: 
+  Name: Boost SideChain
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2223668387098702804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Petrol Station/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2293809421214949656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Overdrive
+  m_EditorClassIdentifier: 
+  Name: Engine Overdrive
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2384727969464638765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Petrol Station
+  m_EditorClassIdentifier: 
+  Name: Petrol Station
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2461914532990986451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Pause
+  m_EditorClassIdentifier: 
+  Name: Pause
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2484789717528075407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/Feliz
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/Feliz
+  guid: d6d6ee37b18279408d194cf55b9cff27
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6743
+--- !u!114 &2569366037354056504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Light Bulbs
+  m_EditorClassIdentifier: 
+  Name: Light Bulbs
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2572220052228760182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2576042189580737371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2605071682230297461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Menu Buttons click
+  m_EditorClassIdentifier: 
+  Name: Menu Buttons click
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2606271134158870119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Shut Down
+  m_EditorClassIdentifier: 
+  Name: Engine Shut Down
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2658706209182387103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Drop
+  m_EditorClassIdentifier: 
+  Name: Fuel Drop
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2699818346222058647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/From the Good Old Days
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/From the Good Old Days
+  guid: abd568e509d78e40a892600bd9e3aa2f
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6743
+--- !u!114 &2748154453475929162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Radio Noises
+  m_EditorClassIdentifier: 
+  Name: Radio Noises
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2886687930360669947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Tap
+  m_EditorClassIdentifier: 
+  Name: Engine Tap
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3061942567344956417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flag
+  m_EditorClassIdentifier: 
+  Path: event:/Flag
+  guid: e5d6bb2af0eb614db12f65e8aae413b8
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3308
+--- !u!114 &3108081888323552291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Shut Down
+  m_EditorClassIdentifier: 
+  Name: Engine Shut Down
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3162490186728106810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Light Bulbs
+  m_EditorClassIdentifier: 
+  Name: Light Bulbs
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3197432857577653483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Overdrive Red Light
+  m_EditorClassIdentifier: 
+  Name: Overdrive Red Light
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3327582846827920227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/AraratFM Morning
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/AraratFM Morning
+  guid: e2936c5caa8eac439650ee86a205b352
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5483
+--- !u!114 &3420772550380533512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Pause
+  m_EditorClassIdentifier: 
+  Name: Pause
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3619665303020496128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: /Users/amit/Floward/Assets/FMOD/Build/Desktop/Master Bank.bank
+  lastModified: 637034695130000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 13258656
+  Exists: 1
+--- !u!114 &3765743384123128836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Sails + Flag
+  m_EditorClassIdentifier: 
+  Name: Sails + Flag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3811687739077858236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Timeline Control
+  m_EditorClassIdentifier: 
+  Name: Timeline Control
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3881005517721214809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Overdrive
+  m_EditorClassIdentifier: 
+  Name: Engine Overdrive
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4111009337374655988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Handle Appears
+  m_EditorClassIdentifier: 
+  Path: event:/Handle Appears
+  guid: 2f6e5b0f6ada7b4aa91932f50a5e2120
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1167
+--- !u!114 &4122249958860310968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine Power (Levels 1-5)/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4143866055182307496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Tap
+  m_EditorClassIdentifier: 
+  Name: Engine Tap
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4293500845428394924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Engine Power Goes Up
+  m_EditorClassIdentifier: 
+  Path: event:/Engine Power Goes Up
+  guid: 973765b553e9a84ebf7509946d6e8c9e
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2300
+--- !u!114 &4311539695095773245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Activate Boost
+  m_EditorClassIdentifier: 
+  Name: Activate Boost
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4446018826980079589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Radio Noises
+  m_EditorClassIdentifier: 
+  Name: Radio Noises
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4553102543748014405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Pump In
+  m_EditorClassIdentifier: 
+  Name: Fuel Pump In
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4554657633875421173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power Goes Up
+  m_EditorClassIdentifier: 
+  Name: Engine Power Goes Up
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4723457648772290180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4736132296874879161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Overdrive
+  m_EditorClassIdentifier: 
+  Name: Engine Overdrive
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5137583930725141662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Level 1-3/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5209370396637992701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power levels
+  m_EditorClassIdentifier: 
+  Name: Engine Power levels
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5233026624247493396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sails Open + Confront Front Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Sails Open + Confront Front Wind
+  guid: 88d33c34ce13bb4e99cde202d5dcbafa
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3125
+--- !u!114 &5548779686436995666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5661220841251990305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/Moonshine
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/Moonshine
+  guid: 09fe859f01e67d44b1d4bf4b68d89096
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4731
+--- !u!114 &5757984109778393858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Radio Noises
+  m_EditorClassIdentifier: 
+  Name: Radio Noises
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5923304152715047247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5984340532808870413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Light Bulb 3
+  m_EditorClassIdentifier: 
+  Path: event:/Light Bulb 3
+  guid: badf5b2066bb734780f9764fcad6394e
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 784
+--- !u!114 &6117852477744403002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Toturial Message
+  m_EditorClassIdentifier: 
+  Name: Toturial Message
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6169415079530372596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cooling/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6192621069818415290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cooling/Cooling Stops
+  m_EditorClassIdentifier: 
+  Name: Cooling Stops
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6358852639718389613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Kilometrag
+  m_EditorClassIdentifier: 
+  Path: event:/Kilometrag
+  guid: 46f42d08f7d8c748a92e1926012d6cab
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 128
+--- !u!114 &6532012298195122669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Menu Buttons click
+  m_EditorClassIdentifier: 
+  Name: Menu Buttons click
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6574255170434963478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Timeline Control
+  m_EditorClassIdentifier: 
+  Name: Timeline Control
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6721148767223928571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Shut Down
+  m_EditorClassIdentifier: 
+  Name: Engine Shut Down
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6862066781780610721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Radio Songs/Radio Broadcast/Ines
+  m_EditorClassIdentifier: 
+  Path: event:/Radio Songs/Radio Broadcast/Ines
+  guid: 8948ce91e3c38e4bafb093d83a3f414d
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 10489
+--- !u!114 &6966625160741355679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power Goes Up
+  m_EditorClassIdentifier: 
+  Name: Engine Power Goes Up
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &7042013886119461413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Petrol Station/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &7107004294104354630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Light Bulb 1
+  m_EditorClassIdentifier: 
+  Path: event:/Light Bulb 1
+  guid: f6b48b970d970c4587b4790617a63283
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 750
+--- !u!114 &7134109971164176766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Tap
+  m_EditorClassIdentifier: 
+  Name: Engine Tap
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &7223847649421897665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Fuel Drop
+  m_EditorClassIdentifier: 
+  Name: Fuel Drop
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &7251113444867710011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &7758409758222893451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Handle Pull + Boost
+  m_EditorClassIdentifier: 
+  Path: event:/Handle Pull + Boost
+  guid: 7fd3ebc58da50440952201de155e4735
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 11511
+--- !u!114 &7801661387548773212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Wind Level
+  m_EditorClassIdentifier: 
+  Name: Wind Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &8129331929674640064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Plant withrawal
+  m_EditorClassIdentifier: 
+  Name: Plant withrawal
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &8237404338040820504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Cooling
+  m_EditorClassIdentifier: 
+  Name: Cooling
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &8291245610002731292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Light Bulb 2
+  m_EditorClassIdentifier: 
+  Path: event:/Light Bulb 2
+  guid: 0b7cf9d037c266439fac1d4505e0a0fd
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 767
+--- !u!114 &8576729916286898623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Sails + Flag
+  m_EditorClassIdentifier: 
+  Name: Sails + Flag
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &8585443349843627792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fuel Drop
+  m_EditorClassIdentifier: 
+  Path: event:/Fuel Drop
+  guid: 8a0e8d3b3665c44898f042ee85811b4e
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3160
+--- !u!114 &9027197741720465346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio Songs/Engine Power Goes Up
+  m_EditorClassIdentifier: 
+  Name: Engine Power Goes Up
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &9053765006582900850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sail Closes
+  m_EditorClassIdentifier: 
+  Path: event:/Sail Closes
+  guid: 1d34be737d62c64fbcdab3bb08ce02ff
+  Banks:
+  - {fileID: 3619665303020496128}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 678
+--- !u!114 &9082673508446640625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Petrol Station/Fuel Tank is Full
+  m_EditorClassIdentifier: 
+  Name: Fuel Tank is Full
   Min: 0
   Max: 1
   Default: 0

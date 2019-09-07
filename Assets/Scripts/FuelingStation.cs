@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FuelingStation : MovingObject
 {
-    public float EPSILON = 0.1f;
+    public float EPSILON = 0.2f;
     public bool _fueledOnce;
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
 
         if (!_fueledOnce &&
             !ShipSpeedController.Instance.InStation &&

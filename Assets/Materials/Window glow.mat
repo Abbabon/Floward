@@ -22,8 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Window glow
   m_Shader: {fileID: 4800000, guid: 061c63edf87832d4c81666b396d3042a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _ALPHAPREMULTIPLY_ON _COLORADDSUBDIFF_ON _EMISSION
-    _GLOSSYREFLECTIONS_OFF _RECEIVE_SHADOWS_OFF
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
