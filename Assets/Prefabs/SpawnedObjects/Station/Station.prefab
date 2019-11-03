@@ -2877,7 +2877,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7045042777025323774}
   - component: {fileID: 4996014255885030682}
-  m_Layer: 0
+  - component: {fileID: 6137990265294724339}
+  - component: {fileID: 2584379103986855037}
+  m_Layer: 15
   m_Name: plant 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2950,6 +2952,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &6137990265294724339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041025924016515981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.84193546, y: 0.68387103, z: 0.2}
+  m_Center: {x: -0.00000047683716, y: -0.000000059604645, z: 0}
+--- !u!54 &2584379103986855037
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041025924016515981}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1042582334561627547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,7 +3468,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3899780133474063256}
   - component: {fileID: 2721470276843620743}
-  m_Layer: 0
+  - component: {fileID: 3738316318053625434}
+  - component: {fileID: 6874199526506481704}
+  m_Layer: 15
   m_Name: plant 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3509,6 +3542,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &3738316318053625434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230669177588858103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0709679, y: 0.6967742, z: 0.2}
+  m_Center: {x: 0, y: 0.000000059604645, z: 0}
+--- !u!54 &6874199526506481704
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230669177588858103}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1249316775480913989
 GameObject:
   m_ObjectHideFlags: 0
@@ -9499,7 +9561,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6234722960583885559}
   - component: {fileID: 4136864297949219516}
-  m_Layer: 0
+  - component: {fileID: 8919559353855857124}
+  - component: {fileID: 1127788398824058566}
+  m_Layer: 15
   m_Name: plant 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9572,6 +9636,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &8919559353855857124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664873063126078668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7516129, y: 0.6548387, z: 0.2}
+  m_Center: {x: 0, y: 0.00000011920929, z: -0.00000011920929}
+--- !u!54 &1127788398824058566
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664873063126078668}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3677797467849867871
 GameObject:
   m_ObjectHideFlags: 0
@@ -10462,7 +10555,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7237610651292681508}
   - component: {fileID: 1046441380744804991}
-  m_Layer: 0
+  - component: {fileID: 384206708588947225}
+  - component: {fileID: 12883080296480763}
+  m_Layer: 15
   m_Name: plant 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10534,6 +10629,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &384206708588947225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217641659825757670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.58709675, y: 0.59032255, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &12883080296480763
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217641659825757670}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4227016591732871020
 GameObject:
   m_ObjectHideFlags: 0
@@ -10784,7 +10908,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8184713551937560474}
   - component: {fileID: 1898231206124316330}
-  m_Layer: 0
+  - component: {fileID: 854319260352011833}
+  - component: {fileID: 10138083380828820}
+  m_Layer: 15
   m_Name: plant 06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10857,6 +10983,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &854319260352011833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245042777132884145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.64193565, y: 0.5741936, z: 0.20000008}
+  m_Center: {x: -0.000000059604645, y: 0.00000047683716, z: 0}
+--- !u!54 &10138083380828820
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245042777132884145}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4250671037218078415
 GameObject:
   m_ObjectHideFlags: 0
@@ -13953,7 +14108,9 @@ GameObject:
   m_Component:
   - component: {fileID: 774565855804604901}
   - component: {fileID: 8222857863524075905}
-  m_Layer: 0
+  - component: {fileID: 1302274962958215902}
+  - component: {fileID: 6449344099834204273}
+  m_Layer: 15
   m_Name: plant 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14025,6 +14182,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1302274962958215902
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426662043881919822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.41, z: 0.2}
+  m_Center: {x: 0, y: -0.04, z: 0}
+--- !u!54 &6449344099834204273
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426662043881919822}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5427217850617886575
 GameObject:
   m_ObjectHideFlags: 0
@@ -24655,8 +24841,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8961696034992023027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.19, y: -7.27, z: 3.95}
-  m_LocalScale: {x: 0.3951667, y: 2.2241127, z: 1.1998993}
+  m_LocalPosition: {x: 3.19, y: -8.48, z: 3.95}
+  m_LocalScale: {x: 0.3951667, y: 2.92026, z: 1.1998993}
   m_Children: []
   m_Father: {fileID: 8961696036598192622}
   m_RootOrder: 44
@@ -25532,8 +25718,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8961696035269225361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.78, y: -6.54, z: -4.3}
-  m_LocalScale: {x: 0.43997663, y: 1.4115615, z: 1.1998993}
+  m_LocalPosition: {x: -2.78, y: -6.95, z: -4.3}
+  m_LocalScale: {x: 0.43997663, y: 1.6859337, z: 1.1998993}
   m_Children: []
   m_Father: {fileID: 8961696036598192622}
   m_RootOrder: 40
@@ -26668,8 +26854,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8961696035617920258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -7.68, z: 3.04}
-  m_LocalScale: {x: 0.80207956, y: 1.9322962, z: 1.1998993}
+  m_LocalPosition: {x: 0.19, y: -8.67, z: 3.04}
+  m_LocalScale: {x: 0.80207956, y: 2.7782555, z: 1.1998993}
   m_Children: []
   m_Father: {fileID: 8961696036598192622}
   m_RootOrder: 42
@@ -26748,8 +26934,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8961696035685679097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.46, y: -6.39, z: -9.56}
-  m_LocalScale: {x: 1.1998993, y: 1.4140815, z: 1.1998993}
+  m_LocalPosition: {x: 1.46, y: -6.97, z: -9.56}
+  m_LocalScale: {x: 1.1998993, y: 2.0003595, z: 1.1998993}
   m_Children: []
   m_Father: {fileID: 8961696036598192622}
   m_RootOrder: 38
@@ -27338,7 +27524,6 @@ MonoBehaviour:
   _baseSpeed: 0
   _animator: {fileID: 2650991149605709023}
   _isMoving: 1
-  EPSILON: 0.1
   _fueledOnce: 0
 --- !u!95 &2650991149605709023
 Animator:
@@ -27544,8 +27729,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8961696035861975328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.884, y: -6.67, z: -4.3}
-  m_LocalScale: {x: 0.43997663, y: 1.4558378, z: 1.1998993}
+  m_LocalPosition: {x: 2.884, y: -7.37, z: -4.3}
+  m_LocalScale: {x: 0.43997663, y: 1.8021817, z: 1.1998993}
   m_Children: []
   m_Father: {fileID: 8961696036598192622}
   m_RootOrder: 41
@@ -28351,8 +28536,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8961696036262071938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.66, y: -6.69, z: -7.33}
-  m_LocalScale: {x: 0.8389456, y: 1.4555978, z: 1.1998993}
+  m_LocalPosition: {x: -1.66, y: -7.36, z: -7.33}
+  m_LocalScale: {x: 0.8389456, y: 1.820225, z: 1.1998993}
   m_Children: []
   m_Father: {fileID: 8961696036598192622}
   m_RootOrder: 39
@@ -31387,7 +31572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1207840098063396328
 Transform:
   m_ObjectHideFlags: 0

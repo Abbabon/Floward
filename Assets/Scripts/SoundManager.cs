@@ -87,7 +87,6 @@ public class SoundManager : MonoBehaviour
     public void SetMusicVolume(float value)
     {
         MusicVolume = value;
-        Debug.Log(value);
         ChangeParameter("Music Volume", 1 - value);
         PlayerPrefs.SetFloat("MusicVolume", value);
     }
@@ -95,7 +94,6 @@ public class SoundManager : MonoBehaviour
     public void SetEffectsVolume(float value)
     {
         SFXVolume = value;
-        Debug.Log(value);
         ChangeParameter("SFX Volume", 1 - value);
         PlayerPrefs.SetFloat("SoundEffectsVolume", value);
     }

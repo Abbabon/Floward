@@ -64,7 +64,8 @@ public class FuelController : MonoBehaviour
                 if (newValue > 0){
                     _ship_ctrl.fuelUsage = (int)EngineController.Instance.CurrentGear;
                 }
-                AmountOfFuel = Mathf.Clamp(newValue, 0f, GlobalGameplayVariables.Instance.FuelCapacity);
+                var minFuelAmount = TutorialController.Instance.InTutorial ? GlobalGameplayVariables.Instance.TutorialMinimumFuelAmount : 0f;
+                AmountOfFuel = Mathf.Clamp(newValue, minFuelAmount, GlobalGameplayVariables.Instance.FuelCapacity);
             }
         }
 

@@ -40,6 +40,12 @@ public class EngineController : MonoBehaviour
 
     public Ship_ctrl ship_Ctrl;
 
+    //engine heat loss, adjust overheat level if necessary, add boost if necessary
+    private float CompressorOpeningTimer = 0f;
+    private float CompressorOverOpeningTimer = 0f;
+
+    private bool _isGameEnded = false;
+
     private void Awake()
     {
         lock (padlock)
@@ -62,16 +68,11 @@ public class EngineController : MonoBehaviour
         OverheatLevel = GlobalGameplayVariables.Instance.MaxOverheat;
         EngineCooling = false;
 
-        float[] keys = GlobalGameplayVariables.Instance.OverheatLampFrequency.Keys.ToArray<float>();
+        float[] keys = GlobalGameplayVariables.Instance.OverheatLampFrequency.Keys.ToArray();
         firstFlickerRange = keys[0];
         secondFlickerRange = keys[1];
         thirdFlickerRange = keys[2];
-
     }
-
-    //engine heat loss, adjust overheat level if necessary, add boost if necessary
-    private float CompressorOpeningTimer = 0f;
-    private float CompressorOverOpeningTimer = 0f;
     private void Update()
     {
         if (GameManager.Instance.IsRunning)
@@ -162,6 +163,7 @@ public class EngineController : MonoBehaviour
             }
         }
         RepresentEngineChanges();
+        TryEndGame();
     }
 
     private void ChangeGear(Gear newGear)
@@ -250,32 +252,57 @@ public class EngineController : MonoBehaviour
         }
     }
 
-    public void PumpEngine(){
-        if (!EngineInShutdown)
+    public void TryPumpEngine()
+    {
+
+        if (EngineInShutdown)
         {
-            OnTap?.Invoke();
-
-            if (!ShipSpeedController.Instance.IsFueling && !TutorialController.Instance.Froezen())
-
-            if (FuelController.Instance.AmountOfFuel == 0f){
-                if (!TutorialController.Instance.InTutorial)
-                {
-                    ship_Ctrl.end = true;
-                    SoundManager.Instance.ChangeParameter("Timeline Control", 0.9f);
-                    GameManager.Instance.TouchEnabled = false;
-                }
-            }
-            else
-            {
-                //if engine rises from 0 to anything more, add consume a bit more fuel:
-                float newHeatLevel = HeatLevel + GlobalGameplayVariables.Instance.HeatPerPress;
-                SoundManager.Instance.ChangeParameter("Engine Tap", 1f);
-                SoundManager.Instance.ChangeParameter("Engine Tap", 0f);
-                ship_Ctrl.tap = true;
-                HeatLevel = Mathf.Clamp(newHeatLevel, 0f, 100f);
-            }
+            return;
         }
 
+        OnTap?.Invoke();
+
+        if (ShipSpeedController.Instance.IsFueling || TutorialController.Instance.Froezen())
+        {
+            return;
+        }
+
+        if (FuelController.Instance.AmountOfFuel == 0f)
+        {
+            return;
+        }
+
+        PumpEngine();
+    }
+
+    private void PumpEngine()
+    {
+        //if engine rises from 0 to anything more, add consume a bit more fuel:
+        float newHeatLevel = HeatLevel + GlobalGameplayVariables.Instance.HeatPerPress;
+        SoundManager.Instance.ChangeParameter("Engine Tap", 1f);
+        SoundManager.Instance.ChangeParameter("Engine Tap", 0f);
+        ship_Ctrl.tap = true;
+        HeatLevel = Mathf.Clamp(newHeatLevel, 0f, 100f);
+    }
+
+    private bool TryEndGame()
+    {
+        if(_isGameEnded)
+        {
+            return false;
+        }
+
+        if (TutorialController.Instance.InTutorial ||
+            FuelController.Instance.AmountOfFuel != 0f)
+        {
+            return false;
+        }
+
+        ship_Ctrl.end = true;
+        _isGameEnded = true;
+        SoundManager.Instance.ChangeParameter("Timeline Control", 0.9f);
+        GameManager.Instance.TouchEnabled = false;
+        return true;
     }
 
     private void ShutDownEngine()

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD/Floward.fspro
-  SourceProjectPathUnformatted: Assets/FMOD/Floward.fspro
+  sourceProjectPath: Assets/FMOD/Floward All Programed inside.fspro
+  SourceProjectPathUnformatted: Assets/FMOD/Floward All Programed inside.fspro
   SourceBankPathUnformatted: Assets/FMOD/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0

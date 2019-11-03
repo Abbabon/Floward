@@ -28,7 +28,9 @@ public class GlobalGameplayVariables : SerializedMonoBehaviour
 
     [Header("Fuel")]
     [Tooltip("In Liters")]
-    public float FuelCapacity = 500f; //in liters
+    public float FuelCapacity;
+    [Tooltip("Tutorial Minimum Amount")]
+    public float TutorialMinimumFuelAmount = 5f; //in liters
     [Tooltip("In Percentage")]
     public float BackgroundFuelConsumptionPerSecond = 1f;
     [Tooltip("Gear -> Fuel cost per second (*liters*)")]
@@ -147,7 +149,6 @@ public class GlobalGameplayVariables : SerializedMonoBehaviour
             else
             {
                 _instance = this;
-                //Here any additional initialization should occur:
             }
         }
         DontDestroyOnLoad(this.gameObject);
@@ -156,11 +157,11 @@ public class GlobalGameplayVariables : SerializedMonoBehaviour
 
     private void Update()
     {
-        if (CalculateReadOnlyValues)
-        {
-            GearOneLitersPerMeter = GearToFuelCostPerSecond[Gear.first] / EngineGearToSpeedWeight[Gear.first];
-            GearTwoLitersPerMeter = GearToFuelCostPerSecond[Gear.second] / EngineGearToSpeedWeight[Gear.second];
-            GearThreeLitersPerMeter = GearToFuelCostPerSecond[Gear.third] / EngineGearToSpeedWeight[Gear.third];
-        }   
+//        if (CalculateReadOnlyValues)
+//        {
+//            GearOneLitersPerMeter = GearToFuelCostPerSecond[Gear.first] / EngineGearToSpeedWeight[Gear.first];
+//            GearTwoLitersPerMeter = GearToFuelCostPerSecond[Gear.second] / EngineGearToSpeedWeight[Gear.second];
+//            GearThreeLitersPerMeter = GearToFuelCostPerSecond[Gear.third] / EngineGearToSpeedWeight[Gear.third];
+//        }   
     }
 }

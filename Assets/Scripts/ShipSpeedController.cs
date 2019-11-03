@@ -14,6 +14,8 @@ public class ShipSpeedController : SerializedMonoBehaviour
     public static ShipSpeedController Instance { get { return _instance; } }
     private static readonly object padlock = new object();
 
+    private const int MAX_GEAR = 3;
+
     public float SpeedMultiplier;
 
     public bool IsBoosting = false;
@@ -63,6 +65,11 @@ public class ShipSpeedController : SerializedMonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        InitializeFuelStationIndex();
+    }
+
     private void InitializeCachedVariables()
     {
         SpeedMultiplier = 1f;
@@ -70,9 +77,22 @@ public class ShipSpeedController : SerializedMonoBehaviour
         milesThisStation = 0f;
         ShipAcceleration = GlobalGameplayVariables.Instance.AccelerationRate;
         nextFuelingStation = GlobalGameplayVariables.Instance.FuelStationsLocations.First();
-        fuelStationIndex = 0;
+        
         thereAreMoreFuelingStations = true;
         _petrolLocationDistances = Math.Abs(_shipLocationUI.localPosition.x) + Math.Abs(_petrolLocationStartUI.localPosition.x);
+    }
+
+    private void InitializeFuelStationIndex()
+    {
+        if(TutorialController.Instance == null ||
+            !TutorialController.Instance.InTutorial)
+        {
+            PlantsController.Instance.CollectPlantAtIndex(0);
+            fuelStationIndex = 1;
+            return;
+        }
+
+        fuelStationIndex = 0;
     }
 
     // Update is called once per frame
@@ -94,20 +114,39 @@ public class ShipSpeedController : SerializedMonoBehaviour
     */
     private void ManageSpeed()
     {
-        float windEffect = (SailsController.Instance.SailsAttached ? (int)(SailsController.Instance.State) * (int)(WindController.Instance.Direction()) *  GlobalGameplayVariables.Instance.WindStrengthToSpeed[WindController.Instance.Strength()] : 0);
-        float newSpeedValue = GlobalGameplayVariables.Instance.EngineGearToSpeedWeight[EngineController.Instance.CurrentGear] + windEffect;
+        var sailsState = (int)SailsController.Instance.State;
+        var windDirection = (int)WindController.Instance.Direction();
+
+        var windBasedSpeed = GlobalGameplayVariables.Instance.WindStrengthToSpeed[WindController.Instance.Strength()];
+
+        float windSpeedEffect = sailsState * windDirection * windBasedSpeed;
+
+        var frontWindSize = -Mathf.Min(WindController.Instance.State, 0);
+
+        var windBasedMaxGear = MAX_GEAR - frontWindSize;
+        var windCappedCurrentGear = Mathf.Min((int)EngineController.Instance.CurrentGear, windBasedMaxGear);
+
+        
+        float newSpeedValue = GlobalGameplayVariables.Instance.EngineGearToSpeedWeight[(Gear)windCappedCurrentGear] + windSpeedEffect;
+
+        var isSpeedCapped = ((int)EngineController.Instance.CurrentGear > windCappedCurrentGear);
+
+        if (isSpeedCapped || newSpeedValue > GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost)
+        {
+            DashboardManager.Instance.TurnOnShaking();
+        }
+        else
+        {
+            DashboardManager.Instance.TurnOffShaking();
+        }
+
 
         TargetSpeed = InStation ? 0f :
                         (IsFueling ? 15f :
                             (IsBoostingAnimation ? GlobalGameplayVariables.Instance.MaxSpeed :
                                 Mathf.Clamp(newSpeedValue, 0f, GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost)));
 
-        if (newSpeedValue > GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost){
-            DashboardManager.Instance.TurnOnShaking();
-        }
-        else{
-            DashboardManager.Instance.TurnOffShaking();
-        }
+        
 
         CurrentSpeed = Mathf.Lerp(CurrentSpeed, TargetSpeed, ShipAcceleration);
 
@@ -278,8 +317,8 @@ public class ShipSpeedController : SerializedMonoBehaviour
             !IsFueling &&
             !EngineController.Instance.EngineInShutdown &&
             !ShipSpeedController.Instance.IsBoosting &&
+            (ShipSpeedController.Instance.CurrentSpeed <= GlobalGameplayVariables.Instance.MaxSpeedWithoutBoost) &&
             miles >= nextFuelingStation){
-                Debug.Log("Starting Fueling Process");
                 FuelingStationController.Instance.StartFuelingProcess(fuelStationIndex);
          
         }   

@@ -5,6 +5,6 @@ using UnityEngine;
 public class DashboardPump : MonoBehaviour
 {
     public void StartEngine(){
-        EngineController.Instance.PumpEngine();
+        EngineController.Instance.TryPumpEngine();
     }
 }

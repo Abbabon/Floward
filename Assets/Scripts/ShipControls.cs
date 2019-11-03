@@ -15,7 +15,7 @@ public class ShipControls : MonoBehaviour
 
             if (controller.Tap && TutorialController.Instance.EnableEnginePump)
             {
-                EngineController.Instance.PumpEngine();
+                EngineController.Instance.TryPumpEngine();
             }
 
             // coooool

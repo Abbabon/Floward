@@ -50,7 +50,6 @@ public class FuelingStationController : SerializedMonoBehaviour
     //called from the FuelController when fueling is done; call the animation
     public void FuelingDone()
     {
-        Debug.Log("Fueling Done!");
         SoundManager.Instance.ChangeParameter("Fuel Tank Is Full", 1f);
 
         SoundManager.Instance.ChangeParameter("Fuel Pump In", 0f);
@@ -59,7 +58,6 @@ public class FuelingStationController : SerializedMonoBehaviour
         if (_currentStation != null)
         {
             _currentStation.FuelingDone();
-            PlantsController.Instance.CollectPlant();
             ShipSpeedController.Instance.ExitFuelingMode();
             SoundManager.Instance.ChangeParameter("Petrol Station", 0f);
         }

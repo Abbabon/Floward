@@ -35,8 +35,50 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject splashObject;
 
     [SerializeField] private WorldManager _worldManager;
-	
-	private void Awake()
+
+    private bool _hasUsedEngine;
+    private bool _hasTraveledMinimumDistance;
+
+    private const float MINIMUM_DISTANCE_TO_MOVE_IN = 50f;
+
+    private void Update()
+    {
+        HandleTapToStartMessage();
+        HandleMoveInAnimation();
+    }
+
+    private void HandleMoveInAnimation()
+    {
+        if (_hasTraveledMinimumDistance)
+        {
+            return;
+        }
+        if (ShipSpeedController.Instance.miles > MINIMUM_DISTANCE_TO_MOVE_IN)
+        {
+            _worldManager.MoveIn();
+            _hasTraveledMinimumDistance = true;
+        }
+    }
+
+    private void HandleTapToStartMessage()
+    {
+        if (_hasUsedEngine)
+        {
+            return;
+        }
+
+        var finishedTutorial = PlayerPrefs.GetInt("TutorialCompleted") != 0;
+
+        if (EngineController.Instance.HeatLevel > 12 &&
+            finishedTutorial)
+        {
+            TutorialController.Instance.HideTapToStartMessage();
+            DashboardManager.Instance.TurnOnDashboard();
+            _hasUsedEngine = true;
+        }
+    }
+
+    private void Awake()
     {
         lock (padlock)
         {
@@ -50,6 +92,9 @@ public class GameManager : MonoBehaviour
                 //Here any additional initialization should occur:
                 faderCanvas.SetActive(true);
                 
+                // some game-wide settings:
+                Screen.sleepTimeout = SleepTimeout.NeverSleep;
+                
             }
         }
         //DontDestroyOnLoad(this.gameObject);
@@ -59,9 +104,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         //TODO: REMOVE! when not for phones anyway
-        Screen.SetResolution(750, 1334, false);
 
-        Debug.Log("Started!");
+        //Screen.SetResolution(750, 1334, false);
+
         ResetAllParameters();
         SoundManager.Instance.Play();
 
@@ -76,32 +121,47 @@ public class GameManager : MonoBehaviour
         PauseCanvas.gameObject.SetActive(false);
     }
 
-    //TODO: enable, somehow, to get here from restart and have the fact we pressed 'start' persist.
     public void StartGame()
     {
         IsRunning = TouchEnabled = true;
-        StartCoroutine(FadeTo(0f, 1f));
-        MenuCanvas.interactable = false;
-
-        if (SessionManager.Instance.FinishedOneRun){
-            float timeline = timelineValues[UnityEngine.Random.Range(0, timelineValues.Count)];
-            Debug.Log(timeline);
-            SoundManager.Instance.ChangeParameter("Timeline Control", timeline);
-            DashboardManager.Instance.TurnOnDashboard();
+        //StartCoroutine(FadeTo(0f, 1f));
+        //MenuCanvas.interactable = false;
+        var finishedTutorial = PlayerPrefs.GetInt("TutorialCompleted") != 0;
+        if (finishedTutorial)
+        {
+            TutorialController.Instance.ShowTapToStartMessage();
         }
-        else{
+        else
+        {
+            InitializeGame();
+        }
+    }
+
+    public void OnTappedStart()
+    {
+        InitializeGame();
+    }
+
+    private void InitializeGame()
+    {
+        if (SessionManager.Instance.FinishedOneRun)
+        {
+            float timeline = timelineValues[UnityEngine.Random.Range(0, timelineValues.Count)];
+            SoundManager.Instance.ChangeParameter("Timeline Control", timeline);
+        }
+        else
+        {
             //TODO: persist tutorial done / not done!
-            if (PlayerPrefs.GetInt("TutorialCompleted") == 0){
+            if (PlayerPrefs.GetInt("TutorialCompleted") == 0) // DIDNT FINISH TUTORIAL
+            { 
                 TutorialController.Instance.StartTutorial(true);
             }
-            else{
-                DashboardManager.Instance.TurnOnDashboard();
+            else
+            {                                            // FINISHED TUTORIAL
                 SoundManager.Instance.ChangeParameter("Timeline Control", 0.1f);
                 FunctionTimer.Create(() => SoundManager.Instance.ChangeParameter("Timeline Control", 1f), 1f);
             }
         }
-
-        _worldManager.MoveIn();
     }
 
     private bool _openedSky = false;
@@ -170,7 +230,7 @@ public class GameManager : MonoBehaviour
         ShipSpeedController.Instance.miles = 0;
         ShipSpeedController.Instance.milesThisStation = 0f;
         ShipSpeedController.Instance.nextFuelingStation = GlobalGameplayVariables.Instance.FuelStationsLocations.First();
-        ShipSpeedController.Instance.fuelStationIndex = 0;
+        ShipSpeedController.Instance.fuelStationIndex = TutorialController.Instance.InTutorial ? 0 : 1;
         ShipSpeedController.Instance._petrolLocationUI.localPosition = ShipSpeedController.Instance._petrolLocationStartUI.localPosition;
         PlantsController.Instance.ResetState();
         EngineController.Instance.EngineCooling = false;

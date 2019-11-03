@@ -67,20 +67,13 @@ public class WindController : MonoBehaviour
         SoundManager.Instance.ChangeParameter("Sails + Flag", 0.1f);
 
         //Wind changed direction
-        if (newWind * State <= 0){
-            if (SailsController.Instance.State == SailsState.SailsUp)
-            {
-                if (Direction() == WindDirection.BackWind)
-                {
-                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.4f);
-                }
-                if (Direction() == WindDirection.BackWind)
-                {
-                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.6f);
-                }
-            }
-        }
+        SetFlagSound(newWind);
+        SetWindSound();
+        OnWindChange();
+    }
 
+    private void SetWindSound()
+    {
         switch (Strength())
         {
             case 0:
@@ -95,6 +88,23 @@ public class WindController : MonoBehaviour
             default:
                 break;
         }
-        OnWindChange();
+    }
+
+    private void SetFlagSound(int newWind)
+    {
+        if (newWind * State <= 0)
+        {
+            if (SailsController.Instance.State == SailsState.SailsUp)
+            {
+                if (Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.4f);
+                }
+                if (Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.6f);
+                }
+            }
+        }
     }
 }

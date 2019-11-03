@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FuelingStation : MovingObject
 {
-    public float EPSILON = 0.2f;
+    private float EPSILON = 1f;
     public bool _fueledOnce;
 
     protected override void FixedUpdate()
@@ -15,7 +15,6 @@ public class FuelingStation : MovingObject
             !ShipSpeedController.Instance.InStation &&
             System.Math.Abs(_transform.position.x - ShipSpeedController.Instance.ShipTransform.position.x) < EPSILON)
         {
-            Debug.Log("Fueling!");
             ShipSpeedController.Instance.EnteringStation();
             FuelController.Instance.AddFuel();
             _isMoving = false;

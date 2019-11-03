@@ -100,6 +100,17 @@ public class TutorialController : MonoBehaviour
         EnableFuelStations = EnableBoost = EnableBoostHandle = EnableBoostHandlePull = EnableEngineCrash = EnableEnginePump = EnablePassiveCooling = EnableCooling = EnableSailsUp = EnableSailsDown = EnableWindChanges = setting;
     }
 
+    public void ShowTapToStartMessage()
+    {
+        tutorialTextBox.GetComponent<FadeInOut>().FadeIn();
+        tutorialTextBox.SetTutorialMessage(tutorialPhases.First(x => x.PhaseID == 0));
+    }
+
+    public void HideTapToStartMessage()
+    {
+        tutorialTextBox.GetComponent<FadeInOut>().FadeOut();
+    }
+
     #endregion
 
 
@@ -131,7 +142,7 @@ public class TutorialController : MonoBehaviour
     {
         TurnOffTextBoxAndMarker();
         currentTutorialPhase++;
-        Debug.Log(String.Format("Tutorial Phase: {0}", currentTutorialPhase));
+        //Debug.Log(String.Format("Tutorial Phase: {0}", currentTutorialPhase));
 
         FunctionTimer.StopAllTimersWithName(currentTutorialPhase.ToString());
         StepCondition1Met = false;
