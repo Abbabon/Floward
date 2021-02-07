@@ -13,7 +13,13 @@ public class BoostController : MonoBehaviour
     private static readonly object padlock = new object();
 
     public float boostPercentage = 0f; //from 0 to 100 of course
- 
+
+    public delegate void BoostFull();
+    public event BoostFull OnBoostFull;
+
+    public delegate void BoostUsed();
+    public event BoostUsed OnBoostUsed;
+
     private void Awake()
     {
         lock (padlock)
@@ -34,12 +40,16 @@ public class BoostController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.IsRunning)
+        if (GameManager.Instance.IsRunning && !ShipSpeedController.Instance.IsFueling)
         {
-            //Manage boost bar color: 
+            //Manage boost bar color:   
             if (boostPercentage >= GlobalGameplayVariables.Instance.BoostThreshold)
             {
-                DashboardManager.Instance.TurnOnBoostPullie();
+                if (TutorialController.Instance.EnableBoostHandle)
+                {
+                    DashboardManager.Instance.TurnOnBoostPullie();
+                    OnBoostFull();
+                }
             }
 
             if (ShipSpeedController.Instance.IsBoosting)
@@ -62,7 +72,10 @@ public class BoostController : MonoBehaviour
 
     internal void AddBoost()
     {
-        float newValue = boostPercentage + (GlobalGameplayVariables.Instance.BoostPerSecondInOverdrive * Time.deltaTime);
+        float newValue = boostPercentage + ((TutorialController.Instance.InTutorial && TutorialController.Instance.currentTutorialPhase < 7 ?
+                                             GlobalGameplayVariables.Instance.BoostPerSecondInOverdriveInTutorial :
+                                             GlobalGameplayVariables.Instance.BoostPerSecondInOverdrive)
+                                             * Time.deltaTime);
         boostPercentage = Mathf.Clamp(newValue, 0f, 100f);
     }
 
@@ -75,27 +88,22 @@ public class BoostController : MonoBehaviour
 
     public void BoostHandlePulled()
     {
-        if (!ShipSpeedController.Instance.IsBoosting && IsBoostAvailable())
+        if (!ShipSpeedController.Instance.IsBoosting &&
+            IsBoostAvailable() &&
+            !EngineController.Instance.EngineInShutdown &&
+            !FuelingStationController.Instance.FuelingStationAvailable() &&
+            boostPercentage >= GlobalGameplayVariables.Instance.BoostThreshold)
         {
-            if (boostPercentage >= GlobalGameplayVariables.Instance.BoostThreshold)
-            {
-                //TODO: make this an additive thing like tweening
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1f, 0.02f)), 0f);
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(1.6f, 0.4f)), 1f);
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(3.4f, 0.08f)), 2.6f);
-                FunctionTimer.Create(() => StartCoroutine(CameraShake.Instance.Shake(5f, 0.04f)), 6f);
-                
-                //Handheld.Vibrate();
 
-                //DashboardManager.Instance.TurnOffDashboard();
-                DashboardManager.Instance.TurnOffBoostPullie();
-                SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.Dashboard_Boost);
-                ShipSpeedController.Instance.StartBoosting();
-            }
+            DashboardManager.Instance.TurnOffBoostPullie();
+            SoundManager.Instance.ChangeParameter("Activate Boost", 1f);
+            ShipSpeedController.Instance.StartBoosting();
+            OnBoostUsed?.Invoke();
 
             //TODO: animate emptying...
             //TODO: sound of negative feedback if the handle was used when tank not critical:
             boostPercentage = 0;
+            BoostLightsController.Instance.Restart();
         }
     }
 }

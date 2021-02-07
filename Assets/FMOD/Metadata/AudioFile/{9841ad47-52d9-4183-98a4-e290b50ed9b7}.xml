@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{9841ad47-52d9-4183-98a4-e290b50ed9b7}">
+        <property name="assetPath">
+            <value>Boost Avilable - Sphere Sound.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>4.6713333333333331</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4917fe1b-d311-404a-97e9-d55ac644cb72}</destination>
+        </relationship>
+    </object>
+</objects>

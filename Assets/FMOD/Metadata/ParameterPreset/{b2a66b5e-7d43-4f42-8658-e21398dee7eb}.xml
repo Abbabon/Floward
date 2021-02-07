@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{b2a66b5e-7d43-4f42-8658-e21398dee7eb}">
+        <property name="name">
+            <value>Fuel Tank is Full</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{748e581a-3771-43b1-bf5c-fedef868a2f3}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{748e581a-3771-43b1-bf5c-fedef868a2f3}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

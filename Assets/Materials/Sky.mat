@@ -54,7 +54,7 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DirX: 0
-    - _DirY: 41.5
+    - _DirY: 20.7
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _Exponent: 1.25
@@ -76,11 +76,11 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Color1: {r: 0.64386797, g: 0.81508374, b: 0.8584906, a: 1}
-    - _Color2: {r: 0.3058473, g: 0.4107305, b: 0.745283, a: 1}
+    - _Color1: {r: 0.63403344, g: 0.94190013, b: 0.9811321, a: 1}
+    - _Color2: {r: 0.21186365, g: 0.31771326, b: 0.6509434, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _UpVector: {r: 0, g: 0.7489557, b: 0.66262007, a: 0}
+    - _UpVector: {r: 0, g: 0.93544406, b: 0.35347486, a: 0}
 --- !u!114 &4050739191352942453
 MonoBehaviour:
   m_ObjectHideFlags: 11

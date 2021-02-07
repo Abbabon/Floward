@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{28096e3b-0a57-40be-a4f0-0be7c01bf5a2}">
+        <property name="name">
+            <value>Plant withrawal</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{33134d01-cdf0-4123-9bc3-3647421ed9b6}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{33134d01-cdf0-4123-9bc3-3647421ed9b6}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

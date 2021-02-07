@@ -15,13 +15,13 @@ TagManager:
   - 
   - 
   - Fabric
+  - Back
+  - Main object
+  - 
+  - Post Processing
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Plants
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Forground
     uniqueID: 681353891
+    locked: 0
+  - name: dock FG
+    uniqueID: 2275901763
     locked: 0

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{79d24279-9197-4660-af84-6f517a82588c}">
+        <property name="assetPath">
+            <value>Unger Band 1 (No Name).ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>10.888479166666666</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4917fe1b-d311-404a-97e9-d55ac644cb72}</destination>
+        </relationship>
+    </object>
+</objects>

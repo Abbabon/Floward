@@ -12,19 +12,19 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get { return _instance; } }
     private static readonly object padlock = new object();
 
-    [Space(10)]
-    private AudioSource currentSoundEffectsAudioSource;
-    private AudioSource currentRadioAudioSource;
-
-    [SerializeField] private float StartingMusicVolume = 1f;
-    [SerializeField] private float MuffledMusicVolume = 0.2f;
-    [SerializeField] private float CurrentMusicVolume = 1f;
-
-    [SerializeField] private float StartingEffectsVolume = 1f;
-    [SerializeField] private float CurrentEffectsVolume = 1f;
+    [SerializeField] private float MusicVolume = 1f;
+    [SerializeField] private float SFXVolume = 1f;
 
     [SerializeField] private Slider MusicVolumeSlider;
     [SerializeField] private Slider EffectsVolumeSlider;
+
+    [SerializeField] private List<string> parameters;
+
+    private Transform _emittingLocation;
+
+    [FMODUnity.EventRef]
+    public string _RadioEventName;
+    FMOD.Studio.EventInstance _radioEventInstance;
 
     // Start is called before the first frame update
     void Awake()
@@ -33,116 +33,69 @@ public class SoundManager : MonoBehaviour
         {
             if (_instance != null && _instance != this)
             {
-                Debug.Log("DESTROY");
                 Destroy(this.gameObject);
             }
             else
             {
                 _instance = this;
-                LoadSoundEffects();
+                _emittingLocation = GetComponent<Transform>();
+                LoadSoundPrefs();
+                _radioEventInstance = FMODUnity.RuntimeManager.CreateInstance(_RadioEventName);
             }
         }
 
-        //ontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void Play()
+    {
+        FMOD.Studio.PLAYBACK_STATE playbackState;
+        _radioEventInstance.getPlaybackState(out playbackState);
+        bool isPlaying = playbackState != FMOD.Studio.PLAYBACK_STATE.STOPPED;
+        if (!isPlaying)
+            _radioEventInstance.start();
+    }
+
+    private void LoadSoundPrefs()
+    {
+        MusicVolume = PlayerPrefs.HasKey("MusicVolume") ? PlayerPrefs.GetFloat("MusicVolume") : 1f;
+        SFXVolume = PlayerPrefs.HasKey("SoundEffectsVolume") ? PlayerPrefs.GetFloat("SoundEffectsVolume") : 1f;
     }
 
     private void Start()
     {
-        //TODO: set volumes according to the level set by the used
-        //TODO: set sliders according to the levels previously set
-
-        MusicVolumeSlider.value = StartingMusicVolume;
-        EffectsVolumeSlider.value = StartingEffectsVolume;
-
-        RegisterRadioAudioSource(GetComponent<AudioSource>());
-        PlayRadioMusic();
-    }
-
-    public void RegisterSoundEffectsAudioSource(AudioSource audioSource){
-        currentSoundEffectsAudioSource = audioSource;
-    }
-
-    public void RegisterRadioAudioSource(AudioSource audioSource){
-        currentRadioAudioSource = audioSource;
-        currentRadioAudioSource.volume = MuffledMusicVolume;
+        EffectsVolumeSlider.value = SFXVolume;
+        MusicVolumeSlider.value = MusicVolume;
     }
 
     #region SoundEffects
 
-    public enum SoundEffect
-    {
-        Boat_FuelFillingUp,
-        Boat_GreenLightOff,
-        Boat_GreenLightOn,
-        Boat_PotentialLoading,
-
-        Dashboard_Boost,
-        Dashboard_Sails,
-        Dashboard_Pump,
-        Dashboard_PotentialHandle,
-        Dashboard_Cooler,
-
-        WindChange,
-        WavingFlag,
+    public void ChangeParameter(string name, float value){
+        _radioEventInstance.setParameterValue(name, value);
     }
 
-    private Dictionary<SoundEffect, AudioClip> soundEffects;
-    private void LoadSoundEffects()
+    public void SetAllParameters(float value)
     {
-        soundEffects = new Dictionary<SoundEffect, AudioClip>();
-        foreach (SoundEffect soundEffect in (SoundEffect[])Enum.GetValues(typeof(SoundEffect)))
-        {
-            soundEffects.Add(soundEffect, Resources.Load<AudioClip>(String.Format("Effects/{0}", soundEffect)));
-        }
-    }
-
-    public void PlaySoundEffect(SoundEffect soundEffect, bool cancelIfNotPlaying=false)
-    {
-        //C# doesnt have unless :(((
-        if (!(currentSoundEffectsAudioSource.isPlaying && cancelIfNotPlaying))
-            currentSoundEffectsAudioSource.PlayOneShot(soundEffects[soundEffect]);
+        parameters.ForEach(p => _radioEventInstance.setParameterValue(p, value));
     }
 
     #endregion
-
-    #region Radio
-
-    public void PlayRadioMusic()
-    {
-        if (currentRadioAudioSource != null)
-        {
-            //TODO: change here according to changes in the radio system
-            currentRadioAudioSource.Play();
-        }
-    }
-
-    public void DisableRadioMuffle()
-    {
-        currentRadioAudioSource.volume = CurrentMusicVolume;
-    }
-
-    #endregion Radio
 
     #region Menu 
     //handle value change from UI
 
     public void SetMusicVolume(float value)
     {
-        if (currentRadioAudioSource != null)
-        {
-            CurrentMusicVolume = value;
-            currentRadioAudioSource.volume = value;
-        }
+        MusicVolume = value;
+        ChangeParameter("Music Volume", 1 - value);
+        PlayerPrefs.SetFloat("MusicVolume", value);
     }
 
     public void SetEffectsVolume(float value)
     {
-        if (currentSoundEffectsAudioSource != null)
-        {
-            CurrentEffectsVolume = value;
-            currentSoundEffectsAudioSource.volume = value;
-        }
-        
+        SFXVolume = value;
+        ChangeParameter("SFX Volume", 1 - value);
+        PlayerPrefs.SetFloat("SoundEffectsVolume", value);
     }
 
     #endregion

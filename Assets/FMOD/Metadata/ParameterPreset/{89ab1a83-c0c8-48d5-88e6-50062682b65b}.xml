@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{89ab1a83-c0c8-48d5-88e6-50062682b65b}">
+        <property name="name">
+            <value>Radio Noises</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{78416081-ca3a-475d-973f-6a721023dd84}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{78416081-ca3a-475d-973f-6a721023dd84}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="seekSpeedDescending">
+            <value>0.87000006437301636</value>
+        </property>
+        <property name="seekSpeedAsymmetric">
+            <value>true</value>
+        </property>
+    </object>
+</objects>

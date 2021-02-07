@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{4d37f76c-6fc3-458c-89de-f457cc99d4cb}">
+        <property name="assetPath">
+            <value>Engine Power 1.ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>11.6</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4917fe1b-d311-404a-97e9-d55ac644cb72}</destination>
+        </relationship>
+    </object>
+</objects>

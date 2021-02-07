@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EventFolder" id="{a67874a2-7710-41d7-8297-7a5ff1cbd49e}">
+        <property name="name">
+            <value>Radio Broadcast</value>
+        </property>
+        <relationship name="folder">
+            <destination>{7b1b8cd0-2c69-4360-a5ab-5e3cb71c981a}</destination>
+        </relationship>
+    </object>
+</objects>

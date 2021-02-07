@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{716971b3-30ea-47e5-a9b7-a64385f1bfe8}">
+        <property name="assetPath">
+            <value>Things I've Learned Today Ver. 1.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>208.77061224489796</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4917fe1b-d311-404a-97e9-d55ac644cb72}</destination>
+        </relationship>
+    </object>
+</objects>

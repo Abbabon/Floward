@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{1297526e-46f7-4400-b0c4-fcff2207cd4b}">
+        <property name="name">
+            <value>Engine Shut Down</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{a37b6153-803a-4a32-bfb5-b09a1f57ea37}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{a37b6153-803a-4a32-bfb5-b09a1f57ea37}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

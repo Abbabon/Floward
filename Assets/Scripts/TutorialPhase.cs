@@ -6,6 +6,7 @@ using UnityEngine;
 public class TutorialPhase : ScriptableObject
 {
     [SerializeField] public int PhaseID;
-    [SerializeField] public string Text;
+    [SerializeField] public string UpperText;
+    [SerializeField] public string LowerText;
     [SerializeField] public float SecondsToAppear;
 }

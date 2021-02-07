@@ -32,7 +32,7 @@ public class Speedometer : MonoBehaviour {
     }
 
     private void Update() {
-        float newTargetSpeed = ShipSpeedController.Instance.Speed;
+        float newTargetSpeed = ShipSpeedController.Instance.CurrentSpeed;
 
         if (newTargetSpeed != targetSpeed)
         {

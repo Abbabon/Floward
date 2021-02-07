@@ -20,6 +20,10 @@ public class SailsController : MonoBehaviour
     public bool Locked = false;
 
     public float SailsDurability; // in percentage
+    public bool SailsAttached;
+
+    public delegate void SailsChange();
+    public event SailsChange OnSailsChange;
 
     [SerializeField] private Animator sailsAnimator;
 
@@ -45,27 +49,45 @@ public class SailsController : MonoBehaviour
     {
         state = SailsState.SailsDown;
         SailsDurability = 100f;
+        SailsAttached = true;
     }
 
     public void SetState(SailsState newState)
     {
-        if (state != newState)
+        if (SailsAttached && state != newState)
         {
             state = newState;
             if (state == SailsState.SailsUp)
             {
-                //TODO: sound?
-                SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.WavingFlag);
+                if (WindController.Instance.Strength() > 0 && WindController.Instance.Direction() == WindDirection.FrontWind)
+                {
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.6f);
+                }
+                if (WindController.Instance.Strength() > 0 && WindController.Instance.Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.4f);
+                }
+                else if (WindController.Instance.Strength() == 0)
+                {
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.3f);
+                }
+
+                if (WindController.Instance.Direction() == WindDirection.FrontWind && EngineController.Instance.IsWorking())
+                {
+                    FuelController.Instance.FuelDrop(GlobalGameplayVariables.Instance.FuelDropOpenSails, GlobalGameplayVariables.Instance.FuelDropOpenSailsHeatLoss);
+                }
+
             }
             else if (state == SailsState.SailsDown)
             {
-                //TODO: sound?
+                SoundManager.Instance.ChangeParameter("Sails + Flag", 0.2f);
 
                 //too hard:
                 //if (WindManager.Instance.State == WindState.BackWind)
-                    //PressureController.Instance.ReleaseRandomValve();
+                //PressureController.Instance.ReleaseRandomValve();
             }
             sailsAnimator.SetBool("SailOpen", state == SailsState.SailsUp);
+            OnSailsChange();
         }
     }
 
@@ -77,11 +99,15 @@ public class SailsController : MonoBehaviour
         }
 
         //TODO: somehow reflect this to the player!
-
-        if (SailsDurability < 0.1f)
-        {
-            //TODO: Trigger tearing animation and only after that - game over sequence
-            GameManager.Instance.StartGameOverSequence();
+        if (SailsDurability < 0.1f){
+            TearSailOff();
         }
+    }
+
+    private void TearSailOff()
+    {
+        SailsAttached = false;
+        //TODO: call animation
+        Debug.Log("Sails Torn!");
     }
 }

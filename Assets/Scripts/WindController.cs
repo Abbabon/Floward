@@ -6,7 +6,8 @@ using UnityEngine;
 public enum WindDirection
 {
     FrontWind=-1,
-    BackWind=1
+    NoWind = 0,
+    BackWind =1
 }
 
 public class WindController : MonoBehaviour
@@ -16,7 +17,10 @@ public class WindController : MonoBehaviour
 
     private static readonly object padlock = new object();
 
-    public int State; // runs between -3 and 3
+    public int State; // runs between -2 and 2
+
+    public delegate void WindChange();
+    public event WindChange OnWindChange;
 
     public int Strength()
     {
@@ -25,7 +29,15 @@ public class WindController : MonoBehaviour
 
     public WindDirection Direction()
     {
-        return (State < 0) ? WindDirection.FrontWind : WindDirection.BackWind;
+        if (State > 0){
+            return WindDirection.BackWind;
+        }
+        else if (State == 0){
+            return WindDirection.NoWind;
+        }
+        else{
+            return WindDirection.FrontWind;
+        }
     }
 
     private void Awake()
@@ -46,17 +58,53 @@ public class WindController : MonoBehaviour
         //DontDestroyOnLoad(this.gameObject);
     }
 
-
     public void ChangeState(int amount)
     {
         int newWind = State + amount;
-        newWind = Math.Min(Math.Max(newWind, -3), 3);
-
-        //Wind changed direction
-        if (newWind * State < 0){
-            SoundManager.Instance.PlaySoundEffect(SoundManager.SoundEffect.WindChange);
-        }
+        newWind = Math.Min(Math.Max(newWind, -2), 2);
 
         State = newWind;
+        SoundManager.Instance.ChangeParameter("Sails + Flag", 0.1f);
+
+        //Wind changed direction
+        SetFlagSound(newWind);
+        SetWindSound();
+        OnWindChange();
+    }
+
+    private void SetWindSound()
+    {
+        switch (Strength())
+        {
+            case 0:
+                SoundManager.Instance.ChangeParameter("Wind Level", 0);
+                break;
+            case 1:
+                SoundManager.Instance.ChangeParameter("Wind Level", 0.5f);
+                break;
+            case 2:
+                SoundManager.Instance.ChangeParameter("Wind Level", 1);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void SetFlagSound(int newWind)
+    {
+        if (newWind * State <= 0)
+        {
+            if (SailsController.Instance.State == SailsState.SailsUp)
+            {
+                if (Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.4f);
+                }
+                if (Direction() == WindDirection.BackWind)
+                {
+                    SoundManager.Instance.ChangeParameter("Sails + Flag", 0.6f);
+                }
+            }
+        }
     }
 }
