@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b49ae3ab-da2e-4bc9-ac72-c93b0e9f30d2}">
+		<property name="name">
+			<value>Sails + Flag</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{505a808d-b1d3-4a1b-8cb8-7495656fea90}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{505a808d-b1d3-4a1b-8cb8-7495656fea90}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

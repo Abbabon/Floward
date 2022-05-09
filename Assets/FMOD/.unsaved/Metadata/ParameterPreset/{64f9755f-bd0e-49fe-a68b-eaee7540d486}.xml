@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{64f9755f-bd0e-49fe-a68b-eaee7540d486}">
+		<property name="name">
+			<value>Activate Boost</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{86c43023-a95e-42b6-aee4-af6398a048df}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{86c43023-a95e-42b6-aee4-af6398a048df}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="velocity">
+			<value>-0.099999994039535522</value>
+		</property>
+	</object>
+</objects>

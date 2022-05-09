@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{dd9c76c1-b5dc-4146-bcc5-37c391b579e1}">
+        <property name="name">
+            <value>Petrol Station</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{7224085d-7837-4b2d-a4d0-3d03ce309233}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{7224085d-7837-4b2d-a4d0-3d03ce309233}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>0.33000001311302185</value>
+        </property>
+        <property name="seekSpeedDescending">
+            <value>0.70000004768371582</value>
+        </property>
+        <property name="seekSpeedAsymmetric">
+            <value>true</value>
+        </property>
+    </object>
+</objects>

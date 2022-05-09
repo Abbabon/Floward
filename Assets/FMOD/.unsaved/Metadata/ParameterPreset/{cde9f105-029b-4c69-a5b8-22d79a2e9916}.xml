@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{cde9f105-029b-4c69-a5b8-22d79a2e9916}">
+		<property name="name">
+			<value>Engine Overdrive</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e33968a3-125d-4e88-9f08-e867547b589c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e33968a3-125d-4e88-9f08-e867547b589c}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

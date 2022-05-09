@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{e3f1452d-deff-4902-9fe5-3e663b6fa664}">
+        <property name="name">
+            <value>Kilometrag</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{b82421e4-5d48-41d7-99b3-0f059058bb87}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{b82421e4-5d48-41d7-99b3-0f059058bb87}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

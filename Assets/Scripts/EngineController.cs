@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using CodeMonkey.Utils;
+using FMODUnity;
 using UnityEngine;
 
 public enum Gear
@@ -31,7 +32,7 @@ public class EngineController : MonoBehaviour
 
     public bool EngineInShutdown = false;
 
-    [FMODUnity.EventRef]
+    [EventRef(MigrateTo="<fieldname>")]
     public string _EngineSoundEventName;
     FMOD.Studio.EventInstance _engineSoundInstance;
 
@@ -61,7 +62,7 @@ public class EngineController : MonoBehaviour
         HeatLevel = 0;
         OverheatLevel = GlobalGameplayVariables.Instance.MaxOverheat;
         EngineCooling = false;
-        _engineSoundInstance.setParameterValue("Engine Level", 0);
+        _engineSoundInstance.setParameterByName("Engine Level", 0);
         _engineSoundInstance.start();
     }
 
@@ -237,7 +238,7 @@ public class EngineController : MonoBehaviour
         //Cooler opening:
         //TODO: consider adding a factor, so opening will not always take 1 second
         ship_Ctrl.compressS = (Mathf.Clamp(CompressorOpeningTimer, 0f, 1f) * CompressionTimeFactor);
-        _engineSoundInstance.setParameterValue("Engine Level", HeatLevel / 100f);
+        _engineSoundInstance.setParameterByName("Engine Level", HeatLevel / 100f);
     }
 
     public void PumpEngine(){

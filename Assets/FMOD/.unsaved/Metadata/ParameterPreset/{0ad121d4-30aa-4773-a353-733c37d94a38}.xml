@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{0ad121d4-30aa-4773-a353-733c37d94a38}">
+		<property name="name">
+			<value>Light Bulbs</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7d74ce83-a447-4a7f-b247-e787c58590ef}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7d74ce83-a447-4a7f-b247-e787c58590ef}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

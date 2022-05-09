@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{0cc7766a-0ab6-4917-93b5-6362cddd7379}">
+		<property name="name">
+			<value>Timeline Control</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b3482661-3945-4fa2-9709-9c9418c0159a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b3482661-3945-4fa2-9709-9c9418c0159a}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

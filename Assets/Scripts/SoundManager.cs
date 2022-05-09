@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,7 +23,7 @@ public class SoundManager : MonoBehaviour
 
     private Transform _emittingLocation;
 
-    [FMODUnity.EventRef]
+    [EventRef(MigrateTo="<fieldname>")]
     public string _RadioMockEventName;
     FMOD.Studio.EventInstance _radioMockEventInstance;
 

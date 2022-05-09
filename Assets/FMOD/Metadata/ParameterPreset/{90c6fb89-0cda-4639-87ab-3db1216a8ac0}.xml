@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{90c6fb89-0cda-4639-87ab-3db1216a8ac0}">
+        <property name="name">
+            <value>Cooling Stops</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{61c5a1ef-31a4-4654-9e79-4869f9038b3a}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{61c5a1ef-31a4-4654-9e79-4869f9038b3a}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

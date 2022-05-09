@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4ea17518-8399-4190-9177-18c2794f1760}">
+		<property name="name">
+			<value>Cooling</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d4e247a8-3996-49c3-b79d-36554d2e624a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d4e247a8-3996-49c3-b79d-36554d2e624a}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class BoostLightsController : MonoBehaviour
@@ -11,7 +12,7 @@ public class BoostLightsController : MonoBehaviour
 
     private float _boostPerLight;
 
-    [FMODUnity.EventRef]
+    [EventRef(MigrateTo="<fieldname>")]
     public string _HummingSound;
     FMOD.Studio.EventInstance _hummingEvent;
 

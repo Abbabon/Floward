@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{328288c4-51c5-4a4d-9d7b-9c85da944706}">
+		<property name="name">
+			<value>Overdrive Red Light</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a32d92a9-7696-4be8-a270-84e4abce9fd6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a32d92a9-7696-4be8-a270-84e4abce9fd6}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

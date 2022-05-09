@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{bb6dfee8-c28f-4c09-8c25-95b8002d8198}">
+        <property name="name">
+            <value>Engine Power Goes Up</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{e5f461b1-01c0-46d8-b110-f1ca94aa67a8}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{e5f461b1-01c0-46d8-b110-f1ca94aa67a8}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

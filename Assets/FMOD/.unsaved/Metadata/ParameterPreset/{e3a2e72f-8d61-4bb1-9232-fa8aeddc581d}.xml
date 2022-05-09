@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e3a2e72f-8d61-4bb1-9232-fa8aeddc581d}">
+		<property name="name">
+			<value>Toturial Message</value>
+		</property>
+		<relationship name="folder">
+			<destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{54c1fffb-3a8a-4513-b138-771174cb9da1}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{54c1fffb-3a8a-4513-b138-771174cb9da1}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public enum WindDirection
@@ -22,7 +23,7 @@ public class WindController : MonoBehaviour
     public delegate void WindChange();
     public event WindChange OnWindChange;
 
-    [FMODUnity.EventRef]
+    [EventRef(MigrateTo="<fieldname>")]
     public string _WindSoundEventName;
     FMOD.Studio.EventInstance _windSoundInstance;
 
@@ -65,7 +66,7 @@ public class WindController : MonoBehaviour
 
     private void Start()
     {
-        _windSoundInstance.setParameterValue("Wind Level", 0);
+        _windSoundInstance.setParameterByName("Wind Level", 0);
         _windSoundInstance.start();
     }
 
@@ -89,13 +90,13 @@ public class WindController : MonoBehaviour
             //    break;
             case 0:
             case 1:
-                _windSoundInstance.setParameterValue("Wind Level", 0);
+                _windSoundInstance.setParameterByName("Wind Level", 0);
                 break;
             case 2:
-                _windSoundInstance.setParameterValue("Wind Level", 0.5f);
+                _windSoundInstance.setParameterByName("Wind Level", 0.5f);
                 break;
             case 3:
-                _windSoundInstance.setParameterValue("Wind Level", 1f);
+                _windSoundInstance.setParameterByName("Wind Level", 1f);
                 break;
             default:
                 break;

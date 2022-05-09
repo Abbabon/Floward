@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{292a4403-2100-4826-b9e5-79cc94f163af}">
+        <property name="name">
+            <value>Fuel Pump Out</value>
+        </property>
+        <relationship name="folder">
+            <destination>{78326b34-c8ed-4382-911d-5605c61b1a67}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{54b5964e-3c18-47ea-b568-833e89099897}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{54b5964e-3c18-47ea-b568-833e89099897}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
